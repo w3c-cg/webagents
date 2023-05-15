@@ -1,5 +1,8 @@
+# Autonomous Agents on the Web (WebAgents) Community Group
 
-# Specification 'webagents'
+This is the repository for the [W3C Autonomous Agents on the Web (WebAgents) Community 
+Group](https://www.w3.org/community/webagents/).
 
-This is the repository for webagents. You're welcome to contribute! Let's make the Web rock our socks
-off!
+## Contact
+
+Please open issues or email the chairs.
