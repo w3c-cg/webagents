@@ -14,7 +14,7 @@ meeting (to be confirmed).
 The main objective of this f2f kick-off meeting is that, together, we build an overview of the 
 WebAgents CG and the joint interests of its members. Therefore, we would like to hear from you and 
 organize the content in a bottom-up fashion based on position statements:
-- you are invited to submit a position statement of 1-2 pages by ~~**July 31**~~ **August 14** (see 
+- you are invited to submit a position statement of 1-2 pages by ~~**July 31**~~ **August 31** (see 
 [Call for Position Statements](#call-for-position-statements) below);
 - all CG members will be invited to check out the position statements before the TPAC;
 - a selection of position statements will be invited for 5-min presentations at the TPAC.
@@ -33,7 +33,7 @@ organize the content in a bottom-up fashion based on position statements:
 We are currently discussing to organize a joint meeting with the WoT CG/WG.
 
 ## Call for Position Statements
-In preparation for the TPAC, we invite you to submit a position statement by **July 31** (1-2 pages, 
+In preparation for the TPAC, we invite you to submit a position statement by ~~**July 31**~~ **August 31** (1-2 pages, 
 A4 format, any template of your choosing). A selection of position statements will also be invited 
 for 5-min presentations at the TPAC (cf. draft agenda above).
 
