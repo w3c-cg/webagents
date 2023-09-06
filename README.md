@@ -6,3 +6,8 @@ Group](https://www.w3.org/community/webagents/).
 ## Contact
 
 Please open issues or email the chairs.
+
+## Events
+
+We use the W3C Calendar to record upcoming and past events.
+Find our events at <https://www.w3.org/groups/cg/webagents/calendar/>.
