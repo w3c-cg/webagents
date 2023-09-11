@@ -12,6 +12,8 @@ September 11) — all times are CEST (Seville local time):
 
 ### [09:30-11:00] F2F Kick-off Meeting
 
+**Meeting Notes URL:** https://hackmd.io/@U6kq3KikTwSQiGSvlEw7vA/BJBOUknR3
+
 The main objective of the f2f kick-off meeting is that, together, we build an overview of the 
 WebAgents CG and the joint interests of its members. Therefore, we would like to hear from you and 
 organize the content in a bottom-up fashion based on position statements:
@@ -27,6 +29,8 @@ organize the content in a bottom-up fashion based on position statements:
 | 10:45-11:00 | Wrap-up & Next Steps                         |
  
 ### [11:30-13:00] Joint Meeting with the WoT CG/WG
+
+**Meeting Notes URL:** https://hackmd.io/@U6kq3KikTwSQiGSvlEw7vA/SyB0DJ3Cn
 
 This joint meeting will focus on open challenges that were identified in the work of the WoT CG/WG and
 are related to the topics of the WebAgents CG.
