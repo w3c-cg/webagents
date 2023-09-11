@@ -14,6 +14,9 @@ September 11) — all times are CEST (Seville local time):
 
 **Meeting Notes URL:** https://hackmd.io/@U6kq3KikTwSQiGSvlEw7vA/BJBOUknR3
 
+[Concept Board](https://jamboard.google.com/d/11hKXLsNIYD1ftfgMcsMp_-KlXXldjd5m0csKe-p2ro0/edit?usp=sharing)
+
+
 The main objective of the f2f kick-off meeting is that, together, we build an overview of the 
 WebAgents CG and the joint interests of its members. Therefore, we would like to hear from you and 
 organize the content in a bottom-up fashion based on position statements:
