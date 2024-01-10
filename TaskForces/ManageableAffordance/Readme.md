@@ -22,7 +22,7 @@ Suggested activities for this task force:
 - identifying and documenting current limitations and gaps
 - proposing mechanisms for manageable action affordances
 
-The TF will meet regularly every two weeks and will also interact async.
+The TF will meet regularly every two weeks and will also interact asynchronously.
 
 ## Expected Outcome
 
