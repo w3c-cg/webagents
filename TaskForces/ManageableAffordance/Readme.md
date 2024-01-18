@@ -27,3 +27,8 @@ The TF will meet regularly every two weeks and will also interact asynchronously
 ## Expected Outcome
 
 A CG group report on manageable affordances.
+
+## Related Resources
+
+- Preliminary proposals on the WoT WG repository: https://github.com/w3c/wot-thing-description/tree/main/proposals (hypermedia-control 1, 2, and 3).
+- Hydra: https://www.hydra-cg.com/
