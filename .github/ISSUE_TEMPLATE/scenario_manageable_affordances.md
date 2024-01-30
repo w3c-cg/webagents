@@ -1,3 +1,11 @@
+---
+name: Propose a scenario for manageable affordances
+about: Scenario template for manageable affordances
+title: ''
+labels: scenario
+assignees: ''
+---
+
 ## Title: <Pick a descriptive title>
 
 ### Submitter(s): 
@@ -30,11 +38,6 @@
 
 ### Identified Requirements by the TF:
 
-<To be filled after use case submission>
-  
-Examples of requirements include usage of specific communication protocols, media types, platforms, security and privacy mechanisms, or accesibility.
+<To be filled after use case submission. Examples of requirements include usage of specific communication protocols, media types, platforms, security and privacy mechanisms, or accesibility.>
 
 ### Comments:
-
-<!-- **Acknowledgement:** This template was adapted from the [WoT IG Use Cases template](https://github.com/w3c/wot-usecases/blob/main/USE-CASES/use-case-template.md). -->
-
