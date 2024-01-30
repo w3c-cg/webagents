@@ -1,12 +1,12 @@
 ---
 name: Propose a scenario for manageable affordances
 about: Scenario template for manageable affordances
-title: ''
+title: "[Manageable Affordances TF] Add Scenario Title"
 labels: scenario
 assignees: ''
 ---
 
-## Title: Pick a descriptive title
+## Title: Pick a descriptive title for your scenario
 
 ### Submitter(s): 
 
