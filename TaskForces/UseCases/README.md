@@ -25,3 +25,5 @@ A CG report containing all use case descriptions, sorted according to the catego
 
 Initially, it was expected that the Wiki of the repository would be used to collect use cases (see the UC *[Assistant on discussion boards](https://github.com/w3c-cg/webagents/wiki/Use-cases-for-Autonomous-Web-Agents)*). However, it would be better to have all use cases pulled to this folder, with regular pull requests.
 The Web of Thingsinterest group has [a template for WoT use cases](https://github.com/w3c/wot-usecases/blob/main/USE-CASES/use-case-template.md) that could be the basis of our own template.
+
+An example Use Case template has been created and is available [here](../../.github/ISSUE_TEMPLATE/use_case.md)
