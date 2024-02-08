@@ -15,7 +15,7 @@ Suggested activities for this task force:
 - identifying the challenges in use cases and balancing them with the benefits
 - analysing and categorising use cases in order to find requirements
 
-The TF will meet regularly every *X* weeks and will also interact asynchronously (TO BE DECIDED).
+The TF will meet online on an as needed basis with most interaction taking place asynchronously via the issue tracker and the CG mailing list (TO BE DECIDED).
 
 ## Expected Outcome
 
