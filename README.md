@@ -11,3 +11,9 @@ Please open issues or email the chairs.
 
 We use the W3C Calendar to record upcoming and past events.
 Find our events at <https://www.w3.org/groups/cg/webagents/calendar/>.
+
+## Reports
+
+### Draft
+
+- Manageable Affordances: https://w3c-cg.github.io/webagents/TaskForces/ManageableAffordance/Reports/report-ma-gap-analysis.html
