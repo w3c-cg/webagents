@@ -12,7 +12,7 @@ Software agents that must interact with an open set of web resources must have m
 | Time (Irish Summer Time) | Activity                                                                       |
 |--------------------------|--------------------------------------------------------------------------------|
 |   9:00 - 9:10            | Intro                                                                          |
-|   9:10 - 10:00           | keynote                                                                        |
+|   9:10 - 10:00           | keynote: Alessandro Ricci                                                      |
 |  10:00 - 10:30           | break                                                                          |
 |  10:30 - 12:30           | presentations (input for a knowledge model for web agents)                     |
 |  12:30 - 14:00           | Lunch                                                                          |
