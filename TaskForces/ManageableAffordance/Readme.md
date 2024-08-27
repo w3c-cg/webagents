@@ -28,6 +28,22 @@ The TF will meet regularly every two weeks and will also interact asynchronously
 
 A CG group report on manageable affordances.
 
+## Workflow
+
+1. We get motivating scenarios via GitHub issues using an issue template. 
+2. We extract the requirements together with the submitter using [the requirements template](./Requirements.md).
+3. Identify the gaps in the standards (WoT, other W3C, other SDOs) and open specifications (e.g. Hydra, JSON-HAL)
+4. (Optional) Propose a concrete mechanism to satisfy the gap. This can be some diagram that gives enough information to implement or can be a proof of concept implementation
+
+Regarding the mechanical workflow:
+
+1. Description and requirements are collected in the issue. The issue owner can edit and extend their first comment with further information. Click [here](https://github.com/w3c-cg/webagents/issues/new?assignees=&labels=scenario&projects=&template=scenario_manageable_affordances.md&title=%5BManageable+Affordances+TF%5D+Add+Scenario+Title) to create one.
+2. Once there are enough requirements (see [the requirements template](./Requirements.md)), the moderators or the issue creator opens a Pull Request to <https://github.com/w3c-cg/webagents/tree/main/TaskForces/ManageableAffordance/Submissions> by copy-pasting their first comment contents in markdown. The file should be named `{issue number}-{title of the scenario}.md` to avoid name conflicts and track the submission back to the issue.
+3. A wider group extends the submission with the gap analysis as a follow-up Pull Request. A conversation can happen in the Pull Request
+4. Once the Pull Request is merged, the group turns it into a section in the report HTML document.
+
+Once we have enough contributions to the HTML and it is reviewed, it can be published as a CG report.
+
 ## Related Resources
 
 - Preliminary proposals on the WoT WG repository: https://github.com/w3c/wot-thing-description/tree/main/proposals (hypermedia-control 1, 2, and 3).
