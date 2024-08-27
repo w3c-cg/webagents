@@ -21,9 +21,42 @@ Software agents that must interact with an open set of web resources must have m
 |  15:30 - 17:30           | work on a use case: what do we need in terms of KGs to implement the use case? |
 |  17:30 - 17:45           | wrap up                                                                        |
 
+## Keynote
+
+**Speaker:** Alessandro Ricci, Università di Bologna, Italy
+
+**Title:** TBD
+
+**Summary:** TBD
+
+## Presentations
+
+All participants can submit a short position statement by issuing a pull request that adds a file to the directory "[Statements](https://github.com/w3c-cg/webagents/tree/main/Meetings/2024-08-29-DKG-workshop/Statements)".
+
+## Demos
+
+Depending on how may tools we will have this session may be shortened to allow more time for the working session at the end.
+
+## Use case
+
+In order to have a concrete use case to work on during the workshop, we will focus on a very simple scenario that can be complexified easily to extend coverage.
+
+We assume there is an autonomous vacuum cleaner that wants to clean a home every day. The occupants of the house should not have to setup a specific cleaning schedule, but the vacuum cleaner should take advantage of knowledge on the Web and possibly other agents to infer when the occupants should not be disturbed.
+
+As a baseline, we assume the vacuum cleaner knows an entry point to a knowledge graph about the home and graphs about the occupants.
+
+The occupants have calendars semantically describing their current and future activities (e.g., an occupant is at home and have a videoconference between 10 and 11 am).
+
+The house may have a smart mattress that can be queried to know if a person lies on the bed. Occupants may have smart wristbands that detect sleep.
+The house may be associated with a "do-not-disturb" agent that can inform other agents when to not disturb. The do-not-disturb agent may be aware of the occupants' calendars or even directly interact with the occupants to ask them if they can tolerate noise.
+
+Other agents may exist to proactively trigger cleaning, or provide more knowledge that implies a do-not-disturb situation.
+
+Our goal is to describe what knowledge graphs should be made available, and how, in order for the vacuum cleaner to operate without prior knowledge of the home, occupants, devices and other agents. However, some assumptions will have to be made and encoded in the vacuum cleaner agent, such as knowledge of the vocabularies.
+
 ## Expected output
 
-This could be a detailed list of ontologies that exist for describing pieces of the Web agents ecosystem, and list of software implementation and libraries that support this ecosystem.
+Some contributions that we can envisioned: list of existing ontologies that can be used for the scenario; additional ontology requirements; draft of ontologies; architecture for the publication and sharing of knowledge; additional requirements, rules, norms, etc to make the overall system more robust and generic.
 
 ## Attendance-type
 
