@@ -31,7 +31,7 @@ Software agents that must interact with an open set of web resources must have m
 
 ## Presentations
 
-All participants can submit a short position statement by issuing a pull request that adds a file to the directory "[Statements](https://github.com/w3c-cg/webagents/tree/main/Meetings/2024-08-29-DKG-workshop/Statements)".
+All participants can submit a short position statement by issuing a pull request that adds a file to the directory "[Statements](https://github.com/w3c-cg/webagents/tree/main/Meetings/2024-08-29-DKG-workshop/Statements)". Additionally, everyone on site will be invited to present themselves and tell others about their interest in this workshop, or how they will contribute.
 
 ## Demos
 
