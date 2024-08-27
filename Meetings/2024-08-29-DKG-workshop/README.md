@@ -25,7 +25,7 @@ Software agents that must interact with an open set of web resources must have m
 
 **Speaker:** Alessandro Ricci, Università di Bologna, Italy
 
-**Title:** TBD
+**Title:** TBD (in relation to *The Web of Digital Twins*)
 
 **Summary:** TBD
 
