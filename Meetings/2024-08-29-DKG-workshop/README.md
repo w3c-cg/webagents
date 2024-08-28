@@ -25,9 +25,9 @@ Software agents that must interact with an open set of web resources must have m
 
 **Speaker:** Alessandro Ricci, Università di Bologna, Italy
 
-**Title:** TBD (in relation to *The Web of Digital Twins*)
+**Title:** From Mirror Worlds to the Web of Digital Twins
 
-**Summary:** TBD
+**Summary:** In recent years, digital twins have been pervading different application domains -- from manufacturing to healthcare -- as an approach for virtualising different kinds of physical entities (things, products, machines).  The dominant view developed in the literature is being about the virtualisation of individual physical assets, in a closed-system perspective. In this talk, I will give an account of another, broader perspective - called Web of Digital Twins (WoDT) -- in which the digital twin paradigm is exploited for the pervasive softwarisation of possibly large-scale interrelated physical realities. A WoDT can be conceived as an open, distributed and dynamic ecosystem of connected digital twins, functioning as an interoperable service-oriented layer  for applications running on top, especially smart applications and multiagent systems. The WoDT idea is rooted on Gelernter's seminal work on Mirror Worlds and adopts (Distributed) Knowledge Graphs as reference approach to define an explict distributed semantic layer that agents can exploit at runtime.
 
 ## Presentations
 
@@ -68,7 +68,7 @@ In-person.
 
 ## Where
 
-University College Dublin, Ireland.
+University College Dublin, Ireland. [School of Computer Science](https://www.openstreetmap.org/way/23653391#map=18/53.308973/-6.223916), room B1.06, first floor. There will be signposts.
 
 ## Funding
 
