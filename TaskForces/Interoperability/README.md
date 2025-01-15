@@ -28,4 +28,4 @@ The TF will meet regularly every month and will also interact async.
 
 ## Expected Outcome
 
-An CG group report on interoperable Web-based MAS (initial report).
+A CG group report on interoperable Web-based MAS (initial report).
