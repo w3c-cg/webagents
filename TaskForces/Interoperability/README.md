@@ -4,7 +4,7 @@
 
 ## Description
 
-The vision of a world-wide open network of agents has been around since the late '90s. Prominent initiatives included the [Foundation for Intelligent Physical Agents (FIPA)](http://www.fipa.org/) standardization efforts, AgentCities (see [EPFL Technical Report](https://infoscience.epfl.ch/record/52462)), and the DARPA Agent Markup Language (DAML) research program. DAML paved the way for several cornerstones of the Semantic Web, such as the [OWL Web Ontology Language](https://www.w3.org/TR/owl-features/) and [Semantic Markup for Web Services (OWL-S)](https://www.w3.org/submissions/2004/07/).
+The vision of a world-wide open network of agents has been around since the late '90s. Prominent initiatives included the [Foundation for Intelligent Physical Agents (FIPA)](http://www.fipa.org/) standardization efforts, AgentCities (see [AgentCities.RTD](https://cordis.europa.eu/project/id/IST-2000-28385), [AgentCities.NET](https://cordis.europa.eu/project/id/IST-2000-28384), and [EPFL Technical Report](https://infoscience.epfl.ch/record/52462)), and the DARPA Agent Markup Language (DAML) research program. DAML paved the way for several cornerstones of the Semantic Web, such as the [OWL Web Ontology Language](https://www.w3.org/TR/owl-features/) and [Semantic Markup for Web Services (OWL-S)](https://www.w3.org/submissions/2004/07/).
 
 The Interoperability Task Force resurfaces this vision to enable interoperability among modern implementations of Web-based agents and Multi-Agent Systems (MAS) using the latest Web standards and protocols. The scope of the investigation includes but is not limited to:
 - Agent Identifiers: how agents are identified, how their credentials are verified, etc.
