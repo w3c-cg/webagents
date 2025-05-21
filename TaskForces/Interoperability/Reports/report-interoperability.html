@@ -12,8 +12,10 @@
       // All config options at https://respec.org/docs/
       var respecConfig = {
         specStatus: "CG-DRAFT",
+        latestVersion: null,
+        edDraftURI: "https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html",
         editors: [{ name: "Your Name", url: "https://your-site.com" }],
-        github: "https://github.com/w3c-cg/webagents/tree/tf-interoperability",
+        github: "https://github.com/w3c-cg/webagents/",
         shortName: "webagents-interop",
         xref: "web-platform",
         group: "webagents",
@@ -22,84 +24,125 @@
   </head>
   <body>
     <section id="abstract">
-      <p>This is a Community Group report on related work and requirements for interoperability in Web-based Multi-Agent Systems.</p>
+      <p>Advances in language agents that can follow instructions and use tools have renewed interest in autonomous agents and multi-agent systems. Like previous generations of agents, language agents are designed for specific tasks, highlighting the need for open networks of agents that complement each other's abilities to tackle more complex problems. New protocols are rapidly emerging to allow agents to discover and use tools, or to discover and interact with other agents. Some of these protocols build on Web standards to promote interoperability, but their alignments, misalignments, and overlaps are unclear. This report synthesizes the large body of research on autonomous agents and multi-agent systems (MAS) to define a conceptual model for understanding Web-based MAS. We use this conceptual model to classify existing technologies and frameworks, to identify relevant standards within the W3C, and to discover standardization gaps (if any).</p>
     </section>
     <section id="sotd">
-      <p>
-        This report was published by the <a href="https://www.w3.org/community/webagents/">Autonomous Agents on the Web Community Group</a>. 
-        It is not a W3C Standard nor is it on the W3C Standards Track. 
-        Please note that under the <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a> there is a limited opt-out and other conditions apply. 
-        Learn more about <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
-      </p>
+      <aside class="note" title="A Living Report">
+        <p>This report is a living document meant to evolve as the group's investigation develops. Versions of the report may be released as separate documents.</p>
+      </aside>
     </section>
     <section class="informative">
       <h2>Introduction</h2>
-      <p>Some informative introductory text.</p>
-      <aside class="note" title="A useful note">
-        <p>I'm a note!</p>
-      </aside>
+      
     </section>
     <section>
       <h2>Agents on the Web</h2>
       
-      <aside class="example">
-        <p>This is an example.</p>
-        <pre class="js">
-        // Automatic syntax highlighting
-        function someJavaScript(){}
-        </pre>
-      </aside>
       <section data-dfn-for="Foo">
         <h3>Visions of Agents on the Web</h3>
-      
+
+        <aside class="issue">
+          <p>The vision of agents on the Web is almost as old as the Web itself. This section is to give a concise overview for contextualization. Relevant: WWW94 keynote, DARPA research programs (CoABS and DAML) and the Semantic Web, AgentCities and FIPA, and the recent Dagstuhl seminars.</p>
+        </aside>
       </section>
       <section data-dfn-for="Foo">
         <h3>State of Web-based Multi-Agent Systems</h3>
 
+        <aside class="issue">
+          <p>This section is to summarize the large body of related work. We provide a concise overview and defer the details to annexes and existing literature.</p>
+        </aside>
+        <aside class="issue">
+          <p>Here we should include a comparison table for existing works (a first draft to be added soon).</p>
+        </aside>
         <section data-dfn-for="Foo">
           <h3>Agents and Web Services</h3>
           
+          <aside class="issue">
+            <p>This section is to summarize the research on Web-based MAS, from service-oriented computing in the early 2000s to current work on Hypermedia MAS.</p>
+          </aside>
         </section>
-
         <section data-dfn-for="Foo">
           <h3>Agents and the Decentralized Social Web</h3>
           
+          <aside class="issue">
+            <p>This section discusses agents in the context of the decentralized Social Web — and especially the Solid ecosystem.</p>
+          </aside>
         </section>
 
         <section data-dfn-for="Foo">
           <h3>Agentic AI</h3>
           
+          <aside class="issue">
+            <p>This section is to summarize relevant developments around AI agents and agentic AI (e.g., MCP, A2A, ANP, LMOS, etc.).</p>
+          </aside>
         </section>
 
       </section>
       <section data-dfn-for="Foo">
         <h3>Architectural Considerations</h3>
       
+        <aside class="issue">
+          <p>Different approaches choose different distribution styles, e.g. MCP uses an RPC-style of distribution. This section discusses these different styles with reference to the Web architecture. The discussion could go into many directions, what emerged in our meetings is a need to look deeper than the agent level of abstraction. What seems important is to identify alignments and misalignments with the Web architecture.</p>
+        </aside>
       </section>
       <section data-dfn-for="Foo">
         <h3>Conceptual Overview and Modeling Dimensions</h3>
       
+        <aside class="issue">
+          <p>We need a conceptual model for Web-based MAS to organize the discussion and emerging technologies. We can follow the four modelling dimensions used in research on engineering MAS: agent, environment, interaction, and organization.</p>
+        </aside>
       </section>
       <section data-dfn-for="Foo">
         <h3>Terminology</h3>
       
+        <aside class="issue">
+          <p>Define the terminology, e.g. agent, agentic workflow, tool, etc.</p>
+        </aside>
       </section>
     </section>
     <section data-dfn-for="Foo">
-      <h2>Agent Identification</h2>
+      <h2>Identity</h2>
+
+      <section data-dfn-for="Foo">
+        <h3>Agent Identity</h3>
       
+      </section>
+      <section data-dfn-for="Foo">
+        <h3>Tool Identity</h3>
+      
+      </section>
     </section>
     <section>
-      <h2>Agent Description</h2>
+      <h2>Profiles</h2>
       
+      <section data-dfn-for="Foo">
+        <h3>Agent Profiles</h3>
+      
+      </section>
+      <section data-dfn-for="Foo">
+        <h3>Tool Profiles</h3>
+      
+      </section>
     </section>
     <section>
-      <h2>Agent Discovery</h2>
+      <h2>Discovery</h2>
+
+      <section data-dfn-for="Foo">
+        <h3>Agent Discovery</h3>
       
+      </section>
+      <section data-dfn-for="Foo">
+        <h3>Tool Discovery</h3>
+      
+      </section>
     </section>
     <section>
       <h2>Agent-to-Agent Interaction</h2>
+
+      <section>
+        <h3>Agents and People</h3>
       
+      </section>
     </section>
     <section>
       <h2>Agent-Environment Interaction</h2>
@@ -108,10 +151,6 @@
         <h3>Tool Use</h3>
       
       </section>
-    </section>
-    <section>
-      <h2>Agents and People</h2>
-      
     </section>
     <section>
       <h2>Norms, Policies, and Organizations</h2>
