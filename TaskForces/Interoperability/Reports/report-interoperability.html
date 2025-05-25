@@ -52,8 +52,113 @@
           <p>This section is to summarize the large body of related work. We provide a concise overview and defer the details to annexes and existing literature.</p>
         </aside>
         <aside class="issue">
-          <p>Here we should include a comparison table for existing works (a first draft to be added soon).</p>
+          <p>What follows is a first draft of a comparison table for existing works. This table with evolve with the report. This first draft did not receive any feedback yet, it is only meant to start the discussion — and is bound to be incomplete and inaccurate:</p>
         </aside>
+        <table class="index">
+          <tr>
+            <th></th>
+            <th>Relevant Concepts</th>
+            <th>Agent Interaction</th>
+            <th>Tool Use</th>
+            <th>Identifiers</th>
+            <th>Descriptions</th>
+            <th>Discovery Mechanisms</th>
+            <th>Arch. Style</th>
+          </tr>
+          <tr>
+            <td>MCP</td>
+            <td><a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/tools">Tool</a>,</br>
+              <a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/resources">Resource</a>,</br>
+              <a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/prompts">Prompt</a></td>
+            <td>N/A</td>
+            <td>Function calling</td>
+            <td>Strings (Tools and Prompts),</br>URIs (Resources)</td>
+            <td><a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/tools#tool-definition-structure">Tool definition</a>,</br>
+              <a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/resources#resource-discovery">Resource descriptions</a>,</br>
+              <a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/prompts#prompt-structure">Prompt definitions</a>,</br>(JSON)</td>
+            <td>Directories (via */list)</td>
+            <td>Client-Server with streaming RPC connectors (JSON-RPC 2.0, HTTP+SSE)</td>
+          </tr>
+          <tr>
+            <td>A2A</td>
+            <td><a target="_blank" href="https://google.github.io/A2A/topics/key-concepts/#fundamental-communication-elements">Agent Card</a>,</br>
+              <a target="_blank" href="https://google.github.io/A2A/topics/key-concepts/#fundamental-communication-elements">Task</a></br>
+              <!-- <a target="_blank" href="https://google.github.io/A2A/topics/key-concepts/#fundamental-communication-elements">Message</a>,</br> -->
+              <!-- <a target="_blank" href="https://google.github.io/A2A/topics/key-concepts/#fundamental-communication-elements">Part</a>,</br> -->
+              <!-- <a target="_blank" href="https://google.github.io/A2A/topics/key-concepts/#fundamental-communication-elements">Artifact</a> -->
+              </td>
+            <td>Task invocation</td>
+            <td>N/A</td>
+            <td>Strings?</td>
+            <td><a target="_blank" href="https://google.github.io/A2A/specification/#5-agent-discovery-the-agent-card">Agent Card</a>,</br>
+              <a target="_blank" href="https://google.github.io/A2A/specification/#61-task-object">Task description</a>,</br>(JSON)</td>
+            <td>Well-known URIs,</br>Directories</td>
+            <td>Async. Client-Server with streaming RPC connectors and webhooks (JSON-RPC 2.0, HTTP+SSE)</td>
+          </tr>
+          <tr>
+            <td>ANP</td>
+            <td>Agent,</br><a target="_blank" href="https://agent-network-protocol.com/specs/agent-description.html">Agent Description</a>,</br>Communication Protocol</td>
+            <td>Communication protocols with protocol negotiation</td>
+            <td>N/A</td>
+            <td>W3C DID with custom <a target="_blank" href="https://agent-network-protocol.com/specs/did-method.html">Web-based Agent DID Method</a></td>
+            <td><a target="_blank" href="https://agent-network-protocol.com/specs/agent-description.html">Agent Description</a> (RDF/JSON-LD)</td>
+            <td>Directories</td>
+            <td>Peer-to-Peer?</br>(WebSocket subprotocol)</td>
+          </tr>
+          <tr>
+            <td>LMOS</td>
+            <td><a target="_blank" href="https://eclipse.dev/lmos/docs/agent/">Agent</a>,</br>
+              <a target="_blank" href="https://eclipse.dev/lmos/docs/multi_agent_system/group_management/">Agent Group</a>,
+              <a target="_blank" href="https://eclipse.dev/lmos/docs/tool/">Tool</a>,</br>
+              <a target="_blank" href="https://eclipse.dev/lmos/docs/lmos_protocol/agent_description/">Agent Description</a>,</br>
+              <a target="_blank" href="https://eclipse.dev/lmos/docs/lmos_protocol/tool_description/">Tool Description</a></td>
+            <td>Message passing?</br>(in principle: TD interaction affordances)</td>
+            <td>Property Affordances,</br>Event Affordances,</br>Action Affordances</br>(<a target="_blank" href="https://www.w3.org/TR/wot-thing-description11/">W3C WoT TD</a>)</td>
+            <td>Uniform identifiers (IRIs, W3C DIDs)</td>
+            <td><a target="_blank" href="https://eclipse.dev/lmos/docs/lmos_protocol/agent_description/">Agent Description</a>,</br>
+              <a target="_blank" href="https://eclipse.dev/lmos/docs/lmos_protocol/tool_description/">Tool Description</a></br>(W3C WoT TD; JSON, RDF/JSON-LD)</td>
+            <td>DNS-SD/mDNS,</br>Well-known URIs,</br>Directories</br>(<a target="_blank" href="https://www.w3.org/TR/wot-discovery/">W3C WoT Discovery</a>)</td>
+            <td>W3C WoT Arch.? with protocol bindings for HTTP and WebSocket subprotocol</td>
+          </tr>
+          <tr>
+            <td>FIPA</td>
+            <td>Agent,</br>Agent Directory,</br>Service Directory,</br>Agent Communication Language,</br>Interaction Protocol</br></td>
+            <td><a target="_blank" href="http://www.fipa.org/specs/fipa00037/SC00037J.html">FIPA Agent Communication Langauge</a>,</br><a target="_blank" href="http://www.fipa.org/repository/standardspecs.html">FIPA Agent Interaction Protocols</a></td>
+            <td>N/A</td>
+            <td>FIPA Agent Name</td>
+            <td><a target="_blank" href="http://www.fipa.org/specs/fipa00023/SC00023K.html#_Toc75951012">FIPA Agent Identifier Description</a></td>
+            <td>Directories</td>
+            <td>TODO</td>
+          </tr>
+          <!-- <tr>
+            <td>Solid</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>URI</td>
+            <td>FOAF Profile</td>
+            <td></td>
+          </tr> -->
+          <tr>
+            <td>hMAS</td>
+            <td><a target="_blank" href="http://purl.org/hmas/Agent">Agent</a>,</br>
+              <a target="_blank" href="http://purl.org/hmas/Artifact">Artifact</a>,</br>
+              Agent Body,</br>
+              <a target="_blank" href="http://purl.org/hmas/Workspace">Workspace</a>,</br>
+              <a target="_blank" href="http://purl.org/hmas/Signifier">Signifier</a>,</br>
+              <a target="_blank" href="http://purl.org/hmas/Role">Role</a>,</br>
+              <a target="_blank" href="http://purl.org/hmas/Group">Group</a>,</br>
+              <a target="_blank" href="http://purl.org/hmas/Organization">Organization</a>,</br>
+              <!-- <a target="_blank" href="http://purl.org/hmas/HypermediaMASPlatform">hMAS Platform</a>,</br> -->
+              <a target="_blank" href="http://purl.org/hmas/ResourceProfile">Resource Profile</a></td>
+            <td>Message passing,</br>Signifiers for agent body affordances</td>
+            <td>Signifiers</br>(<a target="_blank" href="https://www.w3.org/TR/wot-thing-description11/">W3C WoT TD</a>, <a target="_blank" href="http://purl.org/hmas/">hMAS ontology</a>)</td>
+            <td>Uniform identifiers (IRIs, W3C DIDs)</td>
+            <td><a target="_blank" href="http://purl.org/hmas/ResourceProfile">Resource Profile</a></br>(<a target="_blank" href="https://www.w3.org/TR/wot-thing-description11/">W3C WoT TD</a> or <a target="_blank" href="http://purl.org/hmas/">hMAS ontology</a>; RDF/Turtle)</td>
+            <td>Hypermedia crawling,</br>Search engines,</br>Directories</td>
+            <td>Async. Client-Server with REST connectors (HTTP) and brokered pub/sub (W3C WebSub)</td>
+          </tr>
+        </table>
         <section data-dfn-for="Foo">
           <h3>Agents and Web Services</h3>
           
