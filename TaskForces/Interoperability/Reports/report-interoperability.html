@@ -19,6 +19,50 @@
         shortName: "webagents-interop",
         xref: "web-platform",
         group: "webagents",
+        localBiblio: {
+          AUML: {
+            authors: [
+              "James J. Odell",
+              "H. Van Dyke Parunak",
+              "Bernhard Bauer",
+            ],
+            title: "Representing Agent Interaction Protocols in UML",
+            date: "2002",
+            href: "https://doi.org/10.1007/3-540-44564-1_8",
+            publisher: "Springer",
+          },
+          FRANKLIN96: {
+            authors: [
+              "S. Franklin",
+              "A. Graesser",
+            ],
+            title: "Is It an agent, or just a program?: A taxonomy for autonomous agents",
+            date: "1996",
+            href: "https://doi.org/10.1007/BFb0013570",
+            publisher: "Springer",
+          },
+          JACAMO: {
+            authors: [
+              "Olivier Boissier",
+              "Rafael H. Bordini",
+              "Jomi F. Hübner",
+              "Alessandro Ricci",
+            ],
+            title: "Multi-agent oriented programming: programming multi-agent systems using JaCaMo",
+            date: "2020",
+            href: "https://mitpress.mit.edu/9780262044578/",
+            publisher: "MIT Press",
+          },
+          BSPL: {
+            authors: [
+              "Munindar P. Singh",
+            ],
+            title: "Information-driven interaction-oriented programming: BSPL, the blindingly simple protocol language",
+            date: "2011",
+            href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
+            publisher: "IFAAMAS",
+          },
+        }
       };
     </script>
   </head>
@@ -35,15 +79,38 @@
       <h2>Introduction</h2>
       
     </section>
+    <section data-dfn-for="Foo">
+      <h2>Terminology</h2>
+
+      <dl>
+        <dt><dfn id="dfn-agent">Agent</dfn></dt>
+        <dd>An entity <a href="#dfn-situated">situated</a> in an environment that perceives its environment and acts on it, over time, in pursuit of its goals. For a detailed discussion of agent definitions, see [[FRANKLIN96]].</dd>
+
+        <dt><dfn id="dfn-aip">Agent Interaction Protocol</dfn></dt>
+        <dd>A specification of communication among two or more <a href="#dfn-agent">agents</a> that states who can say what to whom and when — for example, as message sequence diagrams [[AUML]] or information flows [[BSPL]].</dd>
+
+        <dt><dfn id="dfn-artifact">Artifact</dfn> or <dfn id="dfn-tool">Tool</dfn></dt>
+        <dd>A resource that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].</dd>
+
+        <dt><dfn id="dfn-mas">Multi-Agent System</dfn></dt>
+        <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, or competition.</dd>
+
+        <dt><dfn id="dfn-situated">Situatedness</dfn></dt>
+        <dd>The ability of an <a href="#dfn-agent">agent</a> to interact with its environment directly through perception and action, and to respond in a timely fashion to sensory input.</dd>
+
+        <dt>[Term]</dt>
+        <dd>[To be added]</dd>
+      </dl>
+    </section>
     <section>
       <h2>Agents on the Web</h2>
       
       <section data-dfn-for="Foo">
         <h3>Visions of Agents on the Web</h3>
 
-        <aside class="issue">
+        <!-- <aside class="issue">
           <p>The vision of agents on the Web is almost as old as the Web itself. This section is to give a concise overview for contextualization. Relevant: WWW94 keynote, DARPA research programs (CoABS and DAML) and the Semantic Web, AgentCities and FIPA, and the recent Dagstuhl seminars.</p>
-        </aside>
+        </aside> -->
 
         <p>The vision of intelligent agents on the Web is almost as old as the Web itself: in a <a href="https://videos.cern.ch/record/2671957">keynote at WWW'94</a>, Sir Tim Berners-Lee was noting that documents on the Web describe real objects and relationships among them, and if the semantics of these objects are represented explicitly then machines can browse through and manipulate reality. This vision was published in 2001 as the Semantic Web [Berners-Lee et al., 2001] — and is now closer to its realization through the standardization of the <a href="https://www.w3.org/WoT/">Web of Things (WoT)</a> at the W3C and the IETF.</p>
 
@@ -208,14 +275,7 @@
 
       </section>
       <section data-dfn-for="Foo">
-        <h3>Architectural Considerations</h3>
-      
-        <aside class="issue">
-          <p>Different approaches choose different distribution styles, e.g. MCP uses an RPC-style of distribution. This section discusses these different styles with reference to the Web architecture. The discussion could go into many directions, what emerged in our meetings is a need to look deeper than the agent level of abstraction. What seems important is to identify alignments and misalignments with the Web architecture.</p>
-        </aside>
-      </section>
-      <section data-dfn-for="Foo">
-        <h3>Modeling Dimensions and Conceptual Overview</h3>
+        <h3>Conceptual Overview and Modeling Dimensions</h3>
       
         <aside class="issue">
           <p>We need a conceptual model for Web-based MAS to organize the discussion and emerging technologies. We can follow the four modelling dimensions used in research on engineering MAS: agent, environment, interaction, and organization.</p>
@@ -227,10 +287,10 @@
         </div>
       </section>
       <section data-dfn-for="Foo">
-        <h3>Terminology</h3>
+        <h3>Architectural Considerations</h3>
       
         <aside class="issue">
-          <p>Define the terminology, e.g. agent, agentic workflow, tool, etc.</p>
+          <p>Different approaches choose different distribution styles, e.g. MCP uses an RPC-style of distribution. This section discusses these different styles with reference to the Web architecture. The discussion could go into many directions, what emerged in our meetings is a need to look deeper than the agent level of abstraction. What seems important is to identify alignments and misalignments with the Web architecture.</p>
         </aside>
       </section>
     </section>
