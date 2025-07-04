@@ -31,6 +31,14 @@
             href: "https://doi.org/10.1007/3-540-44564-1_8",
             publisher: "Springer",
           },
+          DEMAZEAU95: {
+            authors: [
+              "Yves Demazeau",
+            ],
+            title: "From interactions to collective behaviour in agent-based systems",
+            date: "1995",
+            publisher: "1st European Conference on Cognitive Science"
+          },
           FRANKLIN96: {
             authors: [
               "S. Franklin",
@@ -40,6 +48,20 @@
             date: "1996",
             href: "https://doi.org/10.1007/BFb0013570",
             publisher: "Springer",
+          },
+          HMAS: {
+            authors: [
+              "Andrei Ciortea",
+              "Simon Mayer",
+              "Fabien Gandon",
+              "Olivier Boissier",
+              "Alessandro Ricci",
+              "Antoine Zimmermann",
+            ],
+            title: "A Decade in Hindsight: The Missing Bridge Between Multi-Agent Systems and the World Wide Web",
+            date: "2019",
+            href: "https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p1659.pdf",
+            publisher: "18th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2019), IFAAMAS",
           },
           JACAMO: {
             authors: [
@@ -93,7 +115,7 @@
         <dd>A resource that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].</dd>
 
         <dt><dfn id="dfn-mas">Multi-Agent System</dfn></dt>
-        <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, or competition.</dd>
+        <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, and/or competition.</dd>
 
         <dt><dfn id="dfn-situated">Situatedness</dfn></dt>
         <dd>The ability of an <a href="#dfn-agent">agent</a> to interact with its environment directly through perception and action, and to respond in a timely fashion to sensory input.</dd>
@@ -277,14 +299,35 @@
       <section data-dfn-for="Foo">
         <h3>Conceptual Overview and Modeling Dimensions</h3>
       
-        <aside class="issue">
+<!--         <aside class="issue">
           <p>We need a conceptual model for Web-based MAS to organize the discussion and emerging technologies. We can follow the four modelling dimensions used in research on engineering MAS: agent, environment, interaction, and organization.</p>
+        </aside> -->
+
+        <p>A <a href="#dfn-mas">multi-agent system</a> (<abbr title="multi-agent system">MAS</abbr>) has several distinguishing features. A key feature is decentralized control: each <a href="#dfn-agent">agent</a> is a decision-making entity with control over its own behavior, and yet the system as a whole exhibits coordinated behavior aimed at achieving a design objective. Capabilities, knowledge, and resources are distributed among the agents, which implies that dependencies typically arise: agents are part of the MAS because they need to interact with one another to solve problems that would otherwise exceed their individual capacities. If the MAS were merely a collection of agents working in isolation, then arguably it would not constitute a system at all.</p>
+
+        <p>A non-trivial MAS is a complex system that consists of more than just agents: it may also include the <a href="#dfn-tool">tools</a> that agents use to achieve their goals, the <a href="#dfn-aip">protocols</a> through which they interact, and the <a href="#dfn-policy">policies</a> or <a href="#dfn-norm">norms</a> that govern their behavior. As such, a MAS is typically modelled along four conceptual dimensions [[DEMAZEAU95]]:
+          <ul>
+            <li><strong>Agent dimension</strong>: abstractions for designing and programming agents;</li>
+            <li><strong>Environment dimension</strong>: abstractions for designing and programming the shared environment;</li>
+            <li><strong>Interaction dimension</strong>: abstractions for specifying interactions among agents and other entities;</li>
+            <li><strong>Organization dimension</strong>: abstractions for structuring and governing agent behavior.</li>
+          </ul>
+        </p>
+
+        <aside class="issue">
+          <p>This report is focused on MAS that use the Web for distribution across the Internet. The conceptual view we take on MAS impacts how we use the Web in MAS. The following two images are meant to illustrate that and are based on [[HMAS]].</p>
         </aside>
 
         <div class="figure">
-          <img class="figure" src="images/MAS-modelling-dimensions.png" alt="Modelling dimensions for Multi-Agent Systems" width="500" />
-          <p class="caption">Modelling Dimensions for Engineering Multi-Agent Systems [Demazeu, 1995]</p>
+          <img class="figure" src="images/mas-web-transport-layer.png" alt="The Web as a transport layer for messages exchanged among agents." width="350" />
+          <p class="caption">Figure 1: The Web as a transport layer for messages exchanged among agents.</p>
         </div>
+
+        <div class="figure">
+          <img class="figure" src="images/mas-web-rich-application-layer.png" alt="The Web as a rich application layer that can support all sorts of interaction in a MAS." width="600" />
+          <p class="caption">Figure 2: The Web as an application layer that supports discovery and rich interaction in open MAS.</p>
+        </div>
+
       </section>
       <section data-dfn-for="Foo">
         <h3>Architectural Considerations</h3>
