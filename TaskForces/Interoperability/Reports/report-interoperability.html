@@ -14,7 +14,24 @@
         specStatus: "CG-DRAFT",
         latestVersion: null,
         edDraftURI: "https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html",
-        editors: [{ name: "Your Name", url: "https://your-site.com" }],
+        editors: [
+          {
+            name: "Andrei Ciortea",
+            company: "Inria and University of St.Gallen",
+            url: "https://andreiciortea.ro",
+            orcid: "0000-0003-0721-4135"
+          },
+          {
+            name: "Your Name",
+            url: "https://your-site.com"
+          }
+        ],
+        authors: [
+          {
+            name: "Your Name",
+            url: "https://your-site.com"
+          }
+        ],
         github: "https://github.com/w3c-cg/webagents/",
         shortName: "webagents-interop",
         xref: "web-platform",
@@ -38,6 +55,14 @@
             title: "From interactions to collective behaviour in agent-based systems",
             date: "1995",
             publisher: "1st European Conference on Cognitive Science"
+          },
+          FIELDING00: {
+            authors: [
+              "Roy T. Fielding"
+            ],
+            title: "Architectural styles and the design of network-based software architectures",
+            date: "2000",
+            publisher: "Ph.D. Dissertation. University of California, Irvine",
           },
           FRANKLIN96: {
             authors: [
@@ -141,6 +166,37 @@
         <p>The DARPA CoABS program demonstrated the use of agent technology in large-scale practical applications, but also raised a number of challenges, such as enabling software agents to dynamically identify and understand information sources [TODO]. To address these, DARPA launched the Agent Markup Language (DAML) research program, which built on top of existing Web standards and paved the way for the Web Ontology Language (OWL), Semantic Markup for Web Services (OWL-S), and other cornerstones of the Semantic Web. The DAML program thus advanced the original vision of the Web as an information space not only for people but also for intelligent agents, and promoted a shift from custom-built middleware for MAS — such as CoABS Grid or FIPA implementations — to offloading many of those responsibilities to the existing Web infrastructure. Web-based MAS received significant attention over the years, especially with the advent of service-oriented computing in the early 2000s [Singh and Huhns, 2006].</p>
 
         <p>Recent years have brought renewed interest in Web-based MAS, as evidenced by the <a href="https://www.dagstuhl.de/21072">Dagstuhl Seminar 21072</a> (Feb. 2021) and <a href="https://dagstuhl.de/23081">Dagstuhl Seminar 23081</a> (Feb. 2023) on "Agents on the Web" that led to the creation of the <a href="https://www.w3.org/community/webagents/">W3C Autonomous Agents on the Web (WebAgents) Community Group</a>. One key development is the Web of Things (WoT) [TODO], which unlocks new practical use cases for agents on the Web — and implements several visionary ideas expressed in the motivating scenarios from the original Semantic Web paper [Berners-Lee et al., 2001]. Another key development is the recent progreess in language agents that can follow instructions and use tools: just like previous generations of agents, language agents are designed for specific tasks, highlighting the need for open networks of agents that complement each other's abilities to tackle more complex problems. New protocols and frameworks are rapidly emerging to allow agents to discover and use tools, or to discover and interact with other agents — and many of these initiatives build on Web standards tos promote interoperability (e.g., see the <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>, <a href="https://google-a2a.github.io/A2A/">Agent2Agent Protocol</a>, <a href="https://agent-network-protocol.com/">Agent Network Protocol</a>, <a href="https://eclipse.dev/lmos/">Eclipse LMOS</a>).</p>
+      </section>
+      <section data-dfn-for="Foo">
+        <h3>Conceptual Dimensions for Web-based Multi-Agent Systems</h3>
+
+        <p>A <a href="#dfn-mas">multi-agent system</a> (<abbr title="multi-agent system">MAS</abbr>) has several distinguishing features. One key feature is decentralized control, where each <a href="#dfn-agent">agent</a> makes its own decisions and controls its own behavior—yet the MAS as a whole exhibits coordinated behavior to achieve system-level design objectives. Another key feature is that capabilities, knowledge, and resources are distributed among agents, which creates inter-dependencies: agents participate in a MAS because they need to interact with one another to solve problems that would otherwise exceed their individual capacities. Without such inter-dependencies, the MAS would be a collection of isolated agents—and would not constitute a system at all.</p>
+
+        <p>A non-trivial MAS therefore consists of more than just agents: for example, it may also include the <a href="#dfn-tool">tools</a> that agents use to achieve their goals, the <a href="#dfn-aip">protocols</a> through which they interact, and the <a href="#dfn-policy">policies</a> or <a href="#dfn-norm">norms</a> that govern their behavior. In research on Engineering MAS, these concerns have been organized along four conceptual dimensions [[DEMAZEAU95]]:
+          <ul>
+            <li><strong>Agent dimension</strong>: abstractions for designing and programming agents;</li>
+            <li><strong>Environment dimension</strong>: abstractions for designing and programming the shared environment;</li>
+            <li><strong>Interaction dimension</strong>: abstractions for specifying interactions among agents and potentially other entities;</li>
+            <li><strong>Organization dimension</strong>: abstractions for structuring and governing agent behavior.</li>
+          </ul>
+        </p>
+
+        <p>These conceptual dimensions help organize the complexity of non-trivial MAS. They are particularly relevant when designing Web-based MAS because they offer a broader conceptual view of MAS—broader than just agents—while also defining the scope of the design space [HMAS]. For example, [[[#mas-web-transport-layer]]] shows a MAS modeled as agents that exchange messages. In this view, the Web is reduced to a message transport layer, an early perspective in research on Web-based MAS (see Section&nbsp;[[[#agents-web-services]]]). However, the Web was not designed as a transport layer (see Section 6.5.3 in [[FIELDING00]]).</p>
+
+        <figure id="mas-web-transport-layer">
+          <img src="images/mas-web-transport-layer.png" alt="The Web as a transport layer for messages exchanged among agents." width="350" />
+          <figcaption>The Web as a transport layer for messages exchanged among agents.</figcaption>
+        </figure>
+
+        <p>A broader conceptual view of MAS enables deeper integration with the Web. Instead of limiting the Web to a transport layer for agent messages, such a model uses the Web as an application layer for MAS [[HMAS]]. For example, [[[#mas-web-application-layer]]] shows a MAS that incorporates concepts from all four dimensions. In this case, the Web serves as the application layer for the agent environment—for example, providing agents with shared tools, resources, and governance mechanisms. This perspective expands the design space for Web-based MAS and aligns more closely with the Web's original purpose and capabilities.</p>
+
+        <figure id="mas-web-application-layer">
+          <img src="images/mas-web-rich-application-layer.png" alt="The Web as a rich application layer that can support all sorts of interaction in a MAS." width="600" />
+          <figcaption>The Web as an application layer that supports discovery and rich interaction in open MAS.</figcaption>
+        </figure>
+
+        Throughout this report, we use these conceptual dimensions to organize the discussion and emerging technologies.
+
       </section>
       <section data-dfn-for="Foo">
         <h3>State of Web-based Multi-Agent Systems</h3>
@@ -272,7 +328,7 @@
             <td>Microservices Architecture, Event Driven Architecture, REST</td>
           </tr>
         </table>
-        <section data-dfn-for="Foo">
+        <section id="agents-web-services">
           <h3>Agents and Web Services</h3>
           
           <aside class="issue">
@@ -294,39 +350,6 @@
             <p>This section is to summarize relevant developments around AI agents and agentic AI (e.g., MCP, A2A, ANP, LMOS, etc.).</p>
           </aside>
         </section>
-
-      </section>
-      <section data-dfn-for="Foo">
-        <h3>Conceptual Overview and Modeling Dimensions</h3>
-      
-<!--         <aside class="issue">
-          <p>We need a conceptual model for Web-based MAS to organize the discussion and emerging technologies. We can follow the four modelling dimensions used in research on engineering MAS: agent, environment, interaction, and organization.</p>
-        </aside> -->
-
-        <p>A <a href="#dfn-mas">multi-agent system</a> (<abbr title="multi-agent system">MAS</abbr>) has several distinguishing features. A key feature is decentralized control: each <a href="#dfn-agent">agent</a> is a decision-making entity with control over its own behavior, and yet the system as a whole exhibits coordinated behavior aimed at achieving a design objective. Capabilities, knowledge, and resources are distributed among the agents, which implies that dependencies typically arise: agents are part of the MAS because they need to interact with one another to solve problems that would otherwise exceed their individual capacities. If the MAS were merely a collection of agents working in isolation, then arguably it would not constitute a system at all.</p>
-
-        <p>A non-trivial MAS is a complex system that consists of more than just agents: it may also include the <a href="#dfn-tool">tools</a> that agents use to achieve their goals, the <a href="#dfn-aip">protocols</a> through which they interact, and the <a href="#dfn-policy">policies</a> or <a href="#dfn-norm">norms</a> that govern their behavior. As such, a MAS is typically modelled along four conceptual dimensions [[DEMAZEAU95]]:
-          <ul>
-            <li><strong>Agent dimension</strong>: abstractions for designing and programming agents;</li>
-            <li><strong>Environment dimension</strong>: abstractions for designing and programming the shared environment;</li>
-            <li><strong>Interaction dimension</strong>: abstractions for specifying interactions among agents and other entities;</li>
-            <li><strong>Organization dimension</strong>: abstractions for structuring and governing agent behavior.</li>
-          </ul>
-        </p>
-
-        <aside class="issue">
-          <p>This report is focused on MAS that use the Web for distribution across the Internet. The conceptual view we take on MAS impacts how we use the Web in MAS. The following two images are meant to illustrate that and are based on [[HMAS]].</p>
-        </aside>
-
-        <div class="figure">
-          <img class="figure" src="images/mas-web-transport-layer.png" alt="The Web as a transport layer for messages exchanged among agents." width="350" />
-          <p class="caption">Figure 1: The Web as a transport layer for messages exchanged among agents.</p>
-        </div>
-
-        <div class="figure">
-          <img class="figure" src="images/mas-web-rich-application-layer.png" alt="The Web as a rich application layer that can support all sorts of interaction in a MAS." width="600" />
-          <p class="caption">Figure 2: The Web as an application layer that supports discovery and rich interaction in open MAS.</p>
-        </div>
 
       </section>
       <section data-dfn-for="Foo">
