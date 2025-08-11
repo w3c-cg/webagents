@@ -37,6 +37,12 @@
         xref: "web-platform",
         group: "webagents",
         localBiblio: {
+          ANTHROPIC24: {
+            title: "Building Effective Agents",
+            date: "2024",
+            href: "https://www.anthropic.com/engineering/building-effective-agents",
+            publisher: "Anthropic",
+          },
           AUML: {
             authors: [
               "James J. Odell",
@@ -47,6 +53,15 @@
             date: "2002",
             href: "https://doi.org/10.1007/3-540-44564-1_8",
             publisher: "Springer",
+          },
+          BSPL: {
+            authors: [
+              "Munindar P. Singh",
+            ],
+            title: "Information-driven interaction-oriented programming: BSPL, the blindingly simple protocol language",
+            date: "2011",
+            href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
+            publisher: "IFAAMAS",
           },
           DEMAZEAU95: {
             authors: [
@@ -100,15 +115,14 @@
             href: "https://mitpress.mit.edu/9780262044578/",
             publisher: "MIT Press",
           },
-          BSPL: {
-            authors: [
-              "Munindar P. Singh",
-            ],
-            title: "Information-driven interaction-oriented programming: BSPL, the blindingly simple protocol language",
-            date: "2011",
-            href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
-            publisher: "IFAAMAS",
-          },
+          TMLR23: {
+            authors: [ "G. Mialon" ],
+            etAl: true,
+            title: "Augmented Language Models: A Survey",
+            date: "2023",
+            href: "https://arxiv.org/abs/2302.07842",
+            publisher: "Transactions on Machine Learning Research (TMLR)",
+          }
         }
       };
     </script>
@@ -137,10 +151,13 @@
         <dd>A specification of communication among two or more <a href="#dfn-agent">agents</a> that states who can say what to whom and when — for example, as message sequence diagrams [[AUML]] or information flows [[BSPL]].</dd>
 
         <dt><dfn id="dfn-artifact">Artifact</dfn> or <dfn id="dfn-tool">Tool</dfn></dt>
-        <dd>A resource that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].</dd>
+        <dd>A <a href="https://www.w3.org/TR/webarch/#def-resource">resource</a> [[WEBARCH]] that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].</dd>
 
-        <dt><dfn id="dfn-mas">Multi-Agent System</dfn></dt>
-        <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, and/or competition.</dd>
+        <dt><dfn id="dfn-augmented-llm">Augmented Language Model</dfn></dt>
+        <dd>A language model augmented with abilities such as reasoning, tool use, information retrieval, or storing context across interactions. Unlike an <a href="#dfn-agent">agent</a>, an augmented language model does not actively pursue goals and is not <a href="#dfn-situated">situated</a> in an environment. See also [[TMLR23]] and [[ANTHROPIC24]].</dd>
+
+        <dt><dfn id="dfn-mas">Multi-Agent System (MAS)</dfn></dt>
+        <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, and/or competition. A MAS can be either an open or a closed system. This report is primarily concerned with open MAS.</dd>
 
         <dt><dfn id="dfn-situated">Situatedness</dfn></dt>
         <dd>The ability of an <a href="#dfn-agent">agent</a> to interact with its environment directly through perception and action, and to respond in a timely fashion to sensory input.</dd>
@@ -539,10 +556,6 @@
     </section>
     <section>
       <h2>Acknowledgements</h2>
-      
-    </section>
-    <section>
-      <h2>References</h2>
       
     </section>
     <!-- <section id="conformance">
