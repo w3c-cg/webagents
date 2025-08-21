@@ -76,6 +76,31 @@
             href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
             publisher: "IFAAMAS",
           },
+          AGORA: {
+            authors: [
+              "Marro, Samuele", "La Malfa, Emanuele", "Wright, Jesse", "Li, Guohao", "Shadbolt, Nigel", "Wooldridge, Michael", "Torr, Philip"
+            ],
+            title: "A scalable communication protocol for networks of large language models",
+            date: "2024",
+            href: "https://arxiv.org/pdf/2410.11905",
+          },
+          COALA: {
+            authors: [
+              "Sumers, Theodore","Yao, Shunyu", "Narasimhan, Karthik", "Griffiths, Thomas"
+            ],
+            title: "Cognitive architectures for language agents",
+            date: "2023",
+            href: "https://openreview.net/pdf?id=1i6ZCvflQJ",
+            publisher: "Transactions on Machine Learning Research"
+          },
+          TOOL: {
+            authors: [
+              "Wang, Zhiruo", "Cheng, Zhoujun", "Zhu, Hao", "Fried, Daniel", "Neubig, Graham"
+            ],
+            title: "What are tools anyway? a survey from the language model perspective",
+            date: "2024",
+            href: "arXiv preprint arXiv:2403.15452",
+          }
         }
       };
     </script>
@@ -104,10 +129,13 @@
         <dd>A specification of communication among two or more <a href="#dfn-agent">agents</a> that states who can say what to whom and when — for example, as message sequence diagrams [[AUML]] or information flows [[BSPL]].</dd>
 
         <dt><dfn id="dfn-artifact">Artifact</dfn> or <dfn id="dfn-tool">Tool</dfn></dt>
-        <dd>A <a href="https://www.w3.org/TR/webarch/#def-resource">resource</a> [[WEBARCH]] that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].</dd>
+        <dd>A <a href="https://www.w3.org/TR/webarch/#def-resource">resource</a> [[WEBARCH]] that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].In the context of agentic AI, a tool is a is a functional interface to a program that a language model can use. A tool can enable an LLM to perceive or act in an environment or to perform computations. [[TOOL]]</dd>
 
         <dt><dfn id="dfn-augmented-llm">Augmented Language Model</dfn></dt>
         <dd>A language model augmented with abilities such as reasoning, tool use, information retrieval, or storing context across interactions. Unlike an <a href="#dfn-agent">agent</a>, an augmented language model does not actively pursue goals and is not <a href="#dfn-situated">situated</a> in an environment. See also [[TMLR23]] and [[ANTHROPIC24]].</dd>
+
+        <dt><dfn id="dfn-language-agent">Language Agent</dfn></dt>
+        <dd>A language agent is an agent that relies on a language model to interact with their environment. [[COALA]] The language model can be used to process observations represented in natural or formal languages, generate the actions to perform, and make decisions [[COALA]] </dd>
 
         <dt><dfn id="dfn-mas">Multi-Agent System (MAS)</dfn></dt>
         <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, and/or competition. A MAS can be either an open or a closed system. This report is primarily concerned with open MAS.</dd>
@@ -169,7 +197,17 @@
               <a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/resources#resource-discovery">Resource descriptions</a>,</br>
               <a target="_blank" href="https://modelcontextprotocol.io/docs/concepts/prompts#prompt-structure">Prompt definitions</a>,</br>(JSON)</td>
             <td>Directories (via */list)</td>
-            <td>Client-Server with streaming RPC connectors (JSON-RPC 2.0, HTTP+SSE)</td>
+            <td>Client-Server with streaming RPC connectors (JSON-RPC 2.0, Streamable HTTP)</td>
+          </tr>
+          <tr>
+            <td>NLWeb</td>
+            <td>Natural-language query endpoint</td>
+            <td>N/A</td>
+            <td>Function calling via MCP</td>
+            <td>URIs (Resources)</td>
+            <td>JSON with schema.org</td>
+            <td>N/A</td>
+            <td>Client-Server with streaming RPC connectors through MCP, REST API for human interaction, Web Syndication with RSS</td>
           </tr>
           <tr>
             <td>A2A</td>
@@ -186,6 +224,16 @@
               <a target="_blank" href="https://google.github.io/A2A/specification/#61-task-object">Task description</a>,</br>(JSON)</td>
             <td>Well-known URIs,</br>Directories</td>
             <td>Async. Client-Server with streaming RPC connectors and webhooks (JSON-RPC 2.0, HTTP+SSE)</td>
+          </tr>
+          <tr>
+            <td>Agora</td>
+            <td>Agent,</br><a target="_blank" href="https://agoraprotocol.org/docs/protocol/specification#8-protocol-documents-and-hashing">Protocol Document</a>, </br><a href="https://agoraprotocol.org/docs/protocol/specification#6-message-structure">Message</a></br>Communication Protocol</td>
+            <td>Communication protocols with protocol negotiation</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td><a target="_blank" href="https://agoraprotocol.org/docs/protocol/specification#8-protocol-documents-and-hashing">Protocol Document</a>, </br><a href="https://agoraprotocol.org/docs/protocol/specification#6-message-structure">Message</a></td>
+            <td>N/A</td>
+            <td>Client-Server(HTTPS)</td>
           </tr>
           <tr>
             <td>ANP</td>
@@ -288,6 +336,10 @@
           <aside class="issue">
             <p>This section is to summarize relevant developments around AI agents and agentic AI (e.g., MCP, A2A, ANP, LMOS, etc.).</p>
           </aside>
+	  <p>The concept of Agentic AI refers to AI systems that are able to take autonomous decisions in order to achieve goals. The term is commonly used to refer more specifically to autonomous generative AI systems. </p>
+	  <p>Large Language Models (LLMs) are a core technology to create agentic AI systems. More precisely, a core component to create <a>language agents</a>, is an <a>Augmented Language Model</a> (ALM), which is an LLM extended with the ability to reason and the ability to use <a>tools</a> [[TMLR23]]. These ALMs are building blocks to create agents [[ANTHROPIC24]]. The <a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a> is a protocol to enable ALMs and language agents to connect with external tools and data sources. The protocol thus enables a separation of concerns between agents and tools/data sources. In practice, MCP servers can be run on the same machine or can be accessed through the Internet via streamable HTTP. <a href="https://github.com/nlweb-ai/NLWeb">NLWeb</a> relies on MCP to integrate conversational interfaces within websites, thus aiming to become the HTML of the agentic web. </p>
+
+	  <p> Agentic AI is also considering communication among language agents. Different protocols are being developed to enable communication of language agents on the Web. The <a href="https://www.a2aprotocol.net/docs/introduction">Agent to Agent (A2A)</a> protocol is a protocol that is meant as a complement to MCP for agent communication. Agents using this protocol describe themselves and their capabilities in an Agent Card that is available on the Web for other agents to read and use. The protocol defines tasks that an agent can achieve on behalf of another and messages to support communication among agents. The protocol relies on <a href="https://www.jsonrpc.org/specification">JSON-RPC</a> for communication. The <a href="">Agora protocol</a> is protocol meant to be as versatile, efficient, and portable as possible, within the limit of the Agent Communication Dilemma between these three properties [[AGORA]]. The <a href="https://agent-network-protocol.com/specs/white-paper.html"> Agent Network Protcol (ANP)</a> is another protocol for agents on the Web. ANP defines three layers: the Identity layer, the Meta-Protocol layer, and the Application layer. The Identity layer relies on <a href="https://www.w3.org/TR/did-1.0/">Decentralized Identifiers (DID)</a> to identity the agents. ANP defines a custom DID method <code>did:wba</code>, for Web-based Agents, to enable agents to prove their identities without relying on a central authority. The Meta-Protocol layer enables agents to select which protocol to use for communication. Once a protocol has been selected, the agents communicate using that protocol. Finally, the Application layer defines a JSON-LD Agent Description (AD) to enable agents to provide information about themselves to other agents and an Agent Discovery Protocol to enable agents to discover the ADs of other agents. <a href="https://eclipse.dev/lmos/">Eclipse LMOS (Language Model Operating System)</a> is another project to build an Internet of Agents. Eclipse LMOS relies on DIDs to identify software agents. It also defines an Agent Description Format to describe agents and a Tool Description Format to describe tools. Both description formats are defined as built on top of the <a href="https://www.w3.org/TR/wot-thing-description/"> Thing Description (TD) Format</a>. Eclipse LMOS also defines mecanisms for discovery, and a communication protocol that relies on WebSocket. </p>
         </section>
 
       </section>
