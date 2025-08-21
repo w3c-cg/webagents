@@ -76,6 +76,55 @@
             href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
             publisher: "IFAAMAS",
           },
+          AGENTCITIES: {
+            authors: [
+              "Willmott, Steven", "Dale, Jonathan", "Burg, Bernard", "Charlton, Patricia", "O'Brien, Paul",
+            ],
+            title: "Agentcities: a worldwide open agent network",
+            date: "2001"
+          },
+          SEMWEB: {
+            authors: [
+              "Lee, T Berners", "Hendler, James", "Lassila, Ora",
+            ],
+            title: "The Semantic Web",
+            date: "2001",
+            publisher: "Scientific American",
+          },
+          MAMS: {
+            authors: [
+              "Collier, Rem", "O'Neill, Eoin", "Lillis, David", "O'Hare, Gregory",
+            ],
+            title: "MAMS: Multi-Agent MicroServices",
+            date: "2019",
+            publisher: "Companion proceedings of the 2019 world wide web conference",
+          },
+          YGGDRASIL2018: {
+            authors: [
+              "Ciortea, Andrei", "Boissier, Olivier", "Ricci, Alessandro",
+            ],
+            title: "Engineering world-wide multi-agent systems with hypermedia",
+            date: "2018",
+            publisher: "International Workshop on Engineering Multi-Agent Systems",
+          },
+          OWLS: {
+            authors: [
+              "David Martin", "Massimo Paolucci" , "Sheila McIlraith", "Mark Burstein",
+"Drew McDermott", "Deborah McGuinness", "Bijan Parsia", "Terry Payne",
+"Marta Sabou", "Monika Solanki", "Naveen Srinivasan", and "Katia Sycara",
+            ],
+            title: "Bringing semantics to web services: The OWL-S approach",
+            date: "2004",
+            publisher: "International Workshop on Semantic Web Services and Web Process Composition",
+          },
+          DECADE: {
+            authors: [
+              "Ciortea, Andrei", "Mayer, Simon", "Gandon, Fabien", "Boissier, Olivier", "Ricci, Alessandro", "Zimmermann, Antoine"
+            ],
+            title: "A decade in hindsight: the missing bridge between multi-agent systems and the world wide web",
+            date: "2019",
+            publisher: "Proceedings of the International Conference on Autonomous Agents and Multiagent Systems",
+          }
         }
       };
     </script>
@@ -220,7 +269,17 @@
             <td>FIPA Agent Name</td>
             <td><a target="_blank" href="http://www.fipa.org/specs/fipa00023/SC00023K.html#_Toc75951012">FIPA Agent Identifier Description</a></td>
             <td>Directories</td>
-            <td>TODO</td>
+            <td>Service-oriented architecture</td>
+          </tr>
+          <tr>
+            <td>OWL-S</td>
+            <td>Service, Service Profile, Process, Service Grounding</br></td>
+            <td>N/A</td>
+            <td>Service grounding</td>
+            <td>URIs</td>
+            <td><a href="https://www.w3.org/submissions/2004/SUBM-OWL-S-20041122/#4">Service Profile</a>, <a href="https://www.w3.org/submissions/2004/SUBM-OWL-S-20041122/#5">Process</a>, <a href="https://www.w3.org/submissions/2004/SUBM-OWL-S-20041122/#6">Service Grounding</a></td>
+            <td>Service Registry</td>
+            <td>Service-oriented architecture</td>
           </tr>
           <!-- <tr>
             <td>Solid</td>
@@ -273,6 +332,8 @@
           <aside class="issue">
             <p>This section is to summarize the research on Web-based MAS, from service-oriented computing in the early 2000s to current work on Hypermedia MAS.</p>
           </aside>
+          <p>The integration of agents with Web services is about as old as the history of Web services themselves. In 1996, the <a href="http://fipa.org/">Foundation for Intelligent Physical Agents (FIPA)</a> was created to develop standards for MAS. These standards include FIPA-ACL, an agent communication language, but also a standardization on the <a href="http://fipa.org/specs/fipa00001/SC00001L.pdf">abstract architecture</a> of a MAS and its components, such as directory facilitators to discover services. While these standards were not all specific to Web-based MAS and could be used to develop local MAS applications, for example using <a href="https://jade.tilab.com/">JADE (Java Agent DEvelopment Framework)</a>, many were applied to the development of Web-based MAS. In particular, the AgentCities project relied on FIPA standards to develop an international Web-based MAS [[AGENTCITIES]]. A related development was the development of the Semantic Web to provide machine-readable information describing Web resources for Web-based agents [[SEMWEB]]. The Semantic Web led to the creation of ontologies to describe Web services so that they can be used by machines. While other standards have been developed to describe Web services, such as the <a href="https://www.w3.org/TR/wsdl/">Web Services Description Language (WSDL)</a>, Semantic Web representations can be used to provide richer semantics to enable the use of these services by software agents through the use of specific ontologies. The OWL-S ontology is one of the ontologies that has been developed for that purpose [[OWLS]]. OWL-S can be used to describe what a service does, the processes associated with the service and how to use the service. </p>
+          <p> The early approaches on Web-based MAS were considering the Web mostly  as a transport layer for messages among agents rather than an application architecture for a MAS across its different dimensions, including the environment dimension [[DECADE]]. New approaches to develop Web-based MAS relying on the REST architectural style were created. One of them is Multi-Agent Microservices (MAMS), an approach that relies on the REST and microservice architectural styles to design Web-based Multi-Agent Systems [[MAMS]]. In a MAMS system, agents and other entities present in a MAS, such as artifacts, are exposed as microservices on the Web and can therefore be interacted with as such. The <a href="https://www.w3.org/TR/wot-architecture/">Web of Things (WoT)</a> provides a way to integrate Internet of Things (IoT) devices as part of the Web. A core standard of the WoT is the <a href="https://www.w3.org/TR/wot-thing-description/"> Thing Description (TD)</a>, which provides a hypermedia semantic description of a Thing using JSON-LD. Given similarities between the TD model and the concept of artifacts, used to represent environmental entities in the Agents & Artifacts (A&A) meta-model, TDs can be used to integrate MAS environments, developed using the A&A model, as part of the Web of Things [[YGGDRASIL2018]]. This insight leads to the practical instantiation of hypermedia MAS, which are MAS that are integrated within the Web architecture and hypermedia principles [[DECADE]], are used to enable the discovery of entities in the MAS and how to interact with them. Yggdrasil is a platform that enables the creation of hypermedia MAS by exposing artifacts as Thing Descriptions [[YGGDRASIL2018]]. More recently, the <a href="https://purl.org/hmas">HMAS Ontology</a> can be used instead of the <a href="https://w3c.github.io/wot-thing-description/ontology/td.html">Thing Description Ontology</a> to describe the components of an hypermedia MAS. </p>
         </section>
         <section data-dfn-for="Foo">
           <h3>Agents and the Decentralized Social Web</h3>
