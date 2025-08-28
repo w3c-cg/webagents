@@ -63,6 +63,33 @@
             href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
             publisher: "IFAAMAS",
           },
+          COABS1: {
+            authors: [
+              "Martha L. Kahn",
+              "Cynthia Della Torre Cicalese",
+            ],
+            title: "The CoABS Grid",
+            date: "2003",
+            href: "https://doi.org/10.1007/978-3-540-45173-0_9",
+            publisher: "Springer Berlin Heidelberg",
+          },
+          COABS2: {
+            authors: [ "James Hendler" ],
+            title: "Control of Agent Based Systems (CoABS) & DARPA Agent Markup Language (DAML)",
+            date: "2000",
+            href: "https://www.dependability.org/wg10.4/meeting38/10-Lala.pdf",
+          },
+          DALE03: {
+            authors: [ 
+              "Jonathan Dale",
+              "Bernard Burg",
+              "Steven Willmott"
+            ],
+            title: "The Agentcities Initiative: Connecting Agents Across the World",
+            date: "2003",
+            href: "https://doi.org/10.1007/978-3-540-45173-0_36",
+            publisher: "Springer Berlin Heidelberg",
+          },
           DEMAZEAU95: {
             authors: [
               "Yves Demazeau",
@@ -115,6 +142,37 @@
             href: "https://mitpress.mit.edu/9780262044578/",
             publisher: "MIT Press",
           },
+          JADE: {
+            authors: [ 
+              "Fabio Bellifemine",
+              "Federico Bergenti",
+              "Giovanni Caire",
+              "Agostino Poggi"
+            ],
+            title: "Jade — A Java Agent Development Framework",
+            date: "2005",
+            href: "https://doi.org/10.1007/0-387-26350-0_5",
+            publisher: "Springer US",
+          },
+          SINGH06: {
+            authors: [
+              "Munindar P. Singh",
+              "Michael N. Huhns",
+            ],
+            title: "Service-oriented Computing: Semantics, Processes, Agents",
+            date: "2006",
+            publisher: "John Wiley & Sons",
+          },
+          SEMWEB01: {
+            authors: [
+              "Tim Berners-Lee",
+              "James Hendler",
+              "Ora Lassila",
+            ],
+            title: "The Semantic Web",
+            date: "2001",
+            publisher: "Scientific American",
+          },
           TMLR23: {
             authors: [ "G. Mialon" ],
             etAl: true,
@@ -122,14 +180,22 @@
             date: "2023",
             href: "https://arxiv.org/abs/2302.07842",
             publisher: "Transactions on Machine Learning Research (TMLR)",
-          }
+          },
+          WILLMOTT02: {
+            authors: [ "Steven Willmott" ],
+            etAl: true,
+            title: "The Agentcities Network Architecture",
+            date: "2002",
+            href: "https://infoscience.epfl.ch/record/52462",
+            publisher: "EPFL Technical Report",
+          },
         }
       };
     </script>
   </head>
   <body>
     <section id="abstract">
-      <p>Advances in language agents that can follow instructions and use tools have renewed interest in autonomous agents and multi-agent systems. Like previous generations of agents, language agents are designed for specific tasks, highlighting the need for open networks of agents that complement each other's abilities to tackle more complex problems. New protocols are rapidly emerging to allow agents to discover and use tools, or to discover and interact with other agents. Some of these protocols build on Web standards to promote interoperability, but their alignments, misalignments, and overlaps are unclear. This report synthesizes the large body of research on autonomous agents and multi-agent systems (MAS) to define a conceptual model for understanding Web-based MAS. We use this conceptual model to classify existing technologies and frameworks, to identify relevant standards within the W3C, and to discover standardization gaps (if any).</p>
+      <p>Advances in large language models (LLMs) that can follow instructions and use tools have renewed interest in autonomous agents and multi-agent systems. Like previous generations of agents, LLM-based agents are designed for specific tasks, highlighting the need for open networks of agents that complement each other's abilities to tackle more complex problems. New protocols are rapidly emerging to allow agents to discover and use tools, or to discover and interact with other agents. Some of these protocols build on Web standards to promote interoperability, but their alignments, misalignments, and overlaps are unclear. This report synthesizes the large body of research on autonomous agents and multi-agent systems (MAS) to define a conceptual model for understanding Web-based MAS. We use this conceptual model to classify existing technologies and frameworks, to identify relevant standards within the W3C, and to discover standardization gaps (if any).</p>
     </section>
     <section id="sotd">
       <aside class="note" title="A Living Report">
@@ -176,20 +242,20 @@
           <p>The vision of agents on the Web is almost as old as the Web itself. This section is to give a concise overview for contextualization. Relevant: WWW94 keynote, DARPA research programs (CoABS and DAML) and the Semantic Web, AgentCities and FIPA, and the recent Dagstuhl seminars.</p>
         </aside> -->
 
-        <p>The vision of intelligent agents on the Web is almost as old as the Web itself: in a <a href="https://videos.cern.ch/record/2671957">keynote at WWW'94</a>, Sir Tim Berners-Lee was noting that documents on the Web describe real objects and relationships among them, and if the semantics of these objects are represented explicitly then machines can browse through and manipulate reality. This vision was published in 2001 as the Semantic Web [Berners-Lee et al., 2001] — and is now closer to its realization through the standardization of the <a href="https://www.w3.org/WoT/">Web of Things (WoT)</a> at the W3C and the IETF.</p>
+        <p>The vision of intelligent agents on the Web is almost as old as the Web itself: in a <a href="https://videos.cern.ch/record/2671957">keynote at WWW'94</a>, Sir Tim Berners-Lee was noting that documents on the Web describe real objects and relationships among them, and if the semantics of these objects are represented explicitly then machines can browse through and manipulate reality. This vision was articulated more fully in the 2001 Semantic Web paper [[SEMWEB01]] and is now closer to realization through the standardization of the Web of Things at <a href="https://www.w3.org/WoT/">the W3C</a> and <a href="https://datatracker.ietf.org/wg/core/">the IETF</a>.</p>
 
-        <p>In the AI community, the vision of a world-wide open network of intelligent agents can be traced back to the late '90s. In 2002, the <a href="https://cordis.europa.eu/project/id/IST-2000-28385/">AgentCities</a> initiative was reporting a network of 41 agent platforms deployed in 21 countries [Willmott et al., 2002] — with up to 60 registered platforms reported in 2003 [Dale et al., 2003] and 160 platforms in 2005 [Bellifemine et al., 2005]. The network was based on the <a href="http://www.fipa.org/repository/standardspecs.html">standards produced by the Foundation for Intelligent Physical Agents (FIPA)</a>, but quickly faded after the mid-2000s as industry attention shifted to Web services. Another prominent initative was the DARPA Control of Agent-Based Systems (CoABS) research program [TODO], which investigated the control, coordination, and management of large systems of autonomous software agents in military applications. Central to this program, CoABS Grid was the middleware integrating heterogeneous agent-based systems, object-based applications, and legacy systems using remote method invocation as a client-server style for network-based interaction.</p>
+        <p>In the AI community, the vision of a world-wide open network of intelligent agents also emerged in the '90s. In 2002, the <a href="https://cordis.europa.eu/project/id/IST-2000-28385/">AgentCities</a> initiative was reporting a network of 41 agent platforms deployed in 21 countries [[WILLMOTT02]], which grew to 60 registered platforms in 2003 [[DALE03]] and 160 by 2005 [[JADE]]. This network was based on <a href="http://www.fipa.org/repository/standardspecs.html">standards developed by the Foundation for Intelligent Physical Agents (FIPA)</a> but declined after the mid-2000s as industry attention shifted toward Web services. In parallel with AgentCities, the DARPA Control of Agent-Based Systems (CoABS) research program investigated the control, coordination, and management of large systems of autonomous software agents in military applications. Its central middleware, the CoABS Grid [[COABS1]], integrated heterogeneous agent-based systems, object-based applications, and legacy systems.</p>
 
-        <p>The DARPA CoABS program demonstrated the use of agent technology in large-scale practical applications, but also raised a number of challenges, such as enabling software agents to dynamically identify and understand information sources [TODO]. To address these, DARPA launched the Agent Markup Language (DAML) research program, which built on top of existing Web standards and paved the way for the Web Ontology Language (OWL), Semantic Markup for Web Services (OWL-S), and other cornerstones of the Semantic Web. The DAML program thus advanced the original vision of the Web as an information space not only for people but also for intelligent agents, and promoted a shift from custom-built middleware for MAS — such as CoABS Grid or FIPA implementations — to offloading many of those responsibilities to the existing Web infrastructure. Web-based MAS received significant attention over the years, especially with the advent of service-oriented computing in the early 2000s [Singh and Huhns, 2006].</p>
+        <p>The DARPA CoABS program demonstrated the practical utility of agent technologies in large-scale deployments, while also highlighting significant challenges — for example, enabling agents to dynamically identify and interpret information sources [[COABS2]]. To address such issues, DARPA launched the Agent Markup Language (DAML) research program, which extended existing Web standards and laid the groundwork for the Web Ontology Language (OWL), Semantic Markup for Web Services (OWL-S), and other cornerstones of the Semantic Web. The DAML program advanced the original vision of the Web as an information space for both people and intelligent agents, and encouraged a shift from custom-built MAS middleware (e.g., CoABS Grid or FIPA platforms) to leveraging the Web's existing infrastructure. Such Web-based MAS received significant attention over the years, especially in the early 2000s with the advent of service-oriented computing [[SINGH06]].</p>
 
-        <p>Recent years have brought renewed interest in Web-based MAS, as evidenced by the <a href="https://www.dagstuhl.de/21072">Dagstuhl Seminar 21072</a> (Feb. 2021) and <a href="https://dagstuhl.de/23081">Dagstuhl Seminar 23081</a> (Feb. 2023) on "Agents on the Web" that led to the creation of the <a href="https://www.w3.org/community/webagents/">W3C Autonomous Agents on the Web (WebAgents) Community Group</a>. One key development is the Web of Things (WoT) [TODO], which unlocks new practical use cases for agents on the Web — and implements several visionary ideas expressed in the motivating scenarios from the original Semantic Web paper [Berners-Lee et al., 2001]. Another key development is the recent progreess in language agents that can follow instructions and use tools: just like previous generations of agents, language agents are designed for specific tasks, highlighting the need for open networks of agents that complement each other's abilities to tackle more complex problems. New protocols and frameworks are rapidly emerging to allow agents to discover and use tools, or to discover and interact with other agents — and many of these initiatives build on Web standards tos promote interoperability (e.g., see the <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>, <a href="https://google-a2a.github.io/A2A/">Agent2Agent Protocol</a>, <a href="https://agent-network-protocol.com/">Agent Network Protocol</a>, <a href="https://eclipse.dev/lmos/">Eclipse LMOS</a>).</p>
+        <p>Recent years have brought renewed interest in Web-based MAS — as evidenced by the <a href="https://www.dagstuhl.de/21072">Dagstuhl Seminar 21072</a> (Feb. 2021) and <a href="https://dagstuhl.de/23081">Dagstuhl Seminar 23081</a> (Feb. 2023) on "Agents on the Web", which led to the creation of the <a href="https://www.w3.org/community/webagents/">W3C Autonomous Agents on the Web (WebAgents) Community Group</a>. A key enabler for this renewed interest is the Web of Things, which provides new practical use cases for Web agents and realizes several visionary ideas anticipated in the original Semantic Web paper [[SEMWEB01]]. Another key enabler is the recent progress in LLM-based agents that can follow instructions and use tools: just like previous generations of agents, LLM-based agents are designed for specific tasks, underscoring the need for open networks in which agents complement one another's abilities to solve more complex problems. New protocols and frameworks are emerging to support LLM-based agents to discover and use tools, or to discover and interact with other agents — many of them explicitly building on Web standards to foster interoperability (e.g., see the <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>, <a href="https://google-a2a.github.io/A2A/">Agent2Agent Protocol</a>, <a href="https://agent-network-protocol.com/">Agent Network Protocol</a>, <a href="https://eclipse.dev/lmos/">Eclipse LMOS</a>).</p>
       </section>
       <section data-dfn-for="Foo">
         <h3>Conceptual Dimensions for Web-based Multi-Agent Systems</h3>
 
-        <p>A <a href="#dfn-mas">multi-agent system</a> (<abbr title="multi-agent system">MAS</abbr>) has several distinguishing features. One key feature is decentralized control, where each <a href="#dfn-agent">agent</a> makes its own decisions and controls its own behavior—yet the MAS as a whole exhibits coordinated behavior to achieve system-level design objectives. Another key feature is that capabilities, knowledge, and resources are distributed among agents, which creates inter-dependencies: agents participate in a MAS because they need to interact with one another to solve problems that would otherwise exceed their individual capacities. Without such inter-dependencies, the MAS would be a collection of isolated agents—and would not constitute a system at all.</p>
+        <p>A <a href="#dfn-mas">multi-agent system</a> (<abbr title="multi-agent system">MAS</abbr>) has several distinguishing features. One key feature is decentralized control, where each <a href="#dfn-agent">agent</a> makes its own decisions and controls its own behavior — yet the MAS as a whole exhibits coordinated behavior to achieve system-level design objectives. Another key feature is that capabilities, knowledge, and resources are distributed among agents, which creates inter-dependencies: agents participate in a MAS because they need to interact with one another to solve problems that would otherwise exceed their individual capacities. Without such inter-dependencies, the MAS would be a collection of isolated agents — and would not constitute a system at all.</p>
 
-        <p>A non-trivial MAS therefore consists of more than just agents: for example, it may also include the <a href="#dfn-tool">tools</a> that agents use to achieve their goals, the <a href="#dfn-aip">protocols</a> through which they interact, and the <a href="#dfn-policy">policies</a> or <a href="#dfn-norm">norms</a> that govern their behavior. In research on Engineering MAS, these concerns have been organized along four conceptual dimensions [[DEMAZEAU95]]:
+        <p>A non-trivial MAS therefore consists of more than just agents: for example, it may also include the <a href="#dfn-tool">tools</a> that agents use to achieve their goals, the <a href="#dfn-aip">protocols</a> through which they interact, and the <a href="#dfn-policy">policies</a> or <a href="#dfn-norm">norms</a> that govern their behavior. In research on <a href="https://emas.in.tu-clausthal.de/">Engineering MAS</a>, these concerns have been organized along four conceptual dimensions [[DEMAZEAU95]]:
           <ul>
             <li><strong>Agent dimension</strong>: abstractions for designing and programming agents;</li>
             <li><strong>Environment dimension</strong>: abstractions for designing and programming the shared environment;</li>
@@ -198,21 +264,21 @@
           </ul>
         </p>
 
-        <p>These conceptual dimensions help organize the complexity of non-trivial MAS. They are particularly relevant when designing Web-based MAS because they offer a broader conceptual view of MAS—broader than just agents—while also defining the scope of the design space [[HMAS]]. For example, [[[#mas-web-transport-layer]]] shows a MAS modeled as agents that exchange messages. In this view, the Web is reduced to a message transport layer, an early perspective in research on Web-based MAS (see Section&nbsp;[[[#agents-web-services]]]). However, the Web was not designed as a transport layer (see Section 6.5.3 in [[FIELDING00]]).</p>
+        <p>These conceptual dimensions help organize the complexity of non-trivial MAS — and are particularly relevant when designing Web-based MAS [[HMAS]]: they offer a broader conceptual view of MAS (broader than just agents) while also defining the scope of the design space. For example, [[[#mas-web-transport-layer]]] shows a MAS modeled as agents that exchange messages. In this view, the Web is reduced to a message transport layer, an early perspective in research on Web-based MAS (see Section&nbsp;[[[#agents-web-services]]]). However, the Web was not designed as a transport layer (see Section 6.5.3 in [[FIELDING00]]).</p>
 
         <figure id="mas-web-transport-layer">
           <img src="images/mas-web-transport-layer.png" alt="The Web as a transport layer for messages exchanged among agents." width="350" />
           <figcaption>The Web as a transport layer for messages exchanged among agents.</figcaption>
         </figure>
 
-        <p>A broader conceptual view of MAS enables deeper integration with the Web. Instead of limiting the Web to a transport layer for agent messages, such a model uses the Web as an application layer for MAS [[HMAS]]. For example, [[[#mas-web-application-layer]]] shows a MAS that incorporates concepts from all four dimensions. In this case, the Web serves as the application layer for the agent environment—for example, providing agents with shared tools, resources, and governance mechanisms. This perspective expands the design space for Web-based MAS and aligns more closely with the Web's original purpose and capabilities.</p>
+        <p>In contrast, a broader conceptual view of MAS enables deeper integration with the Web: instead of limiting the Web to a transport layer for agent messages, it can leverage the Web as an application layer for MAS [[HMAS]]. For example, [[[#mas-web-application-layer]]] shows a MAS that incorporates concepts from all four dimensions mentioned above. In this view, the Web serves as the application layer for the agent environment — for example, providing agents with shared tools, resources, and governance mechanisms. This perspective expands the design space for Web-based MAS and aligns more closely with the Web's original purpose and capabilities.</p>
 
         <figure id="mas-web-application-layer">
           <img src="images/mas-web-rich-application-layer.png" alt="The Web as a rich application layer that can support all sorts of interaction in a MAS." width="600" />
           <figcaption>The Web as an application layer that supports discovery and rich interaction in open MAS.</figcaption>
         </figure>
 
-        Throughout this report, we use these conceptual dimensions to organize the discussion and emerging technologies.
+        Throughout this report, we use these four conceptual dimensions to organize the discussion and emerging technologies.
 
       </section>
       <section data-dfn-for="Foo">
