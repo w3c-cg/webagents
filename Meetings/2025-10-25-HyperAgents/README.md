@@ -12,7 +12,7 @@ The WebAgents CG joins this event for a hybrid meeting in the afternoon of Octob
 | 14:15 - 15:30 | Focused Discussion                   |
 | 15:30 - 16:00 | Coffee Break                         |
 | 16:00 - 17:00 | Demo / Hands-on session              |
-| 17:00 - 18:30 | Wrap-up and Next Steps               |
+| 17:00 - 17:30 | Wrap-up and Next Steps               |
 
 The main topic of the focussed discussion are the architectural patterns discussed in the context of the interoperability report (see [current version](https://deploy-preview-92--w3cwebagentscg.netlify.app/)).
 
