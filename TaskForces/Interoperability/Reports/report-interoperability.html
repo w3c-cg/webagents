@@ -251,7 +251,7 @@
         <p>Recent years have brought renewed interest in Web-based MAS — as evidenced by the <a href="https://www.dagstuhl.de/21072">Dagstuhl Seminar 21072</a> (Feb. 2021) and <a href="https://dagstuhl.de/23081">Dagstuhl Seminar 23081</a> (Feb. 2023) on "Agents on the Web", which led to the creation of the <a href="https://www.w3.org/community/webagents/">W3C Autonomous Agents on the Web (WebAgents) Community Group</a>. A key enabler for this renewed interest is the Web of Things, which provides new practical use cases for Web agents and realizes several visionary ideas anticipated in the original Semantic Web paper [[SEMWEB01]]. Another key enabler is the recent progress in LLM-based agents that can follow instructions and use tools: just like previous generations of agents, LLM-based agents are designed for specific tasks, underscoring the need for open networks in which agents complement one another's abilities to solve more complex problems. New protocols and frameworks are emerging to support LLM-based agents to discover and use tools, or to discover and interact with other agents — many of them explicitly building on Web standards to foster interoperability (e.g., see the <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>, <a href="https://google-a2a.github.io/A2A/">Agent2Agent Protocol</a>, <a href="https://agent-network-protocol.com/">Agent Network Protocol</a>, <a href="https://eclipse.dev/lmos/">Eclipse LMOS</a>).</p>
       </section>
       <section data-dfn-for="Foo">
-        <h3>Conceptual Dimensions for Web-based Multi-Agent Systems</h3>
+        <h3>Conceptual Dimensions</h3>
 
         <p>A <a href="#dfn-mas">multi-agent system</a> (<abbr title="multi-agent system">MAS</abbr>) has several distinguishing features. One key feature is decentralized control, where each <a href="#dfn-agent">agent</a> makes its own decisions and controls its own behavior — yet the MAS as a whole exhibits coordinated behavior to achieve system-level design objectives. Another key feature is that capabilities, knowledge, and resources are distributed among agents, which creates inter-dependencies: agents participate in a MAS because they need to interact with one another to solve problems that would otherwise exceed their individual capacities. Without such inter-dependencies, the MAS would be a collection of isolated agents — and would not constitute a system at all.</p>
 
@@ -289,7 +289,7 @@
         </aside>
 
         <section>
-          <h3>Design Goals [Non-functional Requirements]</h3>
+          <h3>Design Goals</h3>
 
           <aside class="issue">
             <p>MAS are a class of systems known for NFPs such as <strong>flexibility/adaptability</strong>, <strong>openness</strong>, <strong>robustness</strong>, and <strong>scalability</strong> [Weyns, 2010]. The Web is a distributed hypermedia system specifcally designed to meet a well-defined set of NFPs, among which <strong>scalability</strong>, <strong>heterogeneity</strong>, <strong>evolvability</strong>, and <strong>extensibility</strong> [Fielding and Taylor, 2002; Taylor et al, 2010]. Inhereting the properties of the Web in Web-based MAS is desirable, which means we need to design MAS that are aligned with the Web Arch [[HMAS]].</p>
@@ -298,7 +298,7 @@
         </section>
 
         <section data-dfn-for="Foo">
-          <h3>Architectural Patterns for Web-based MAS</h3>
+          <h3>Architectural Patterns</h3>
 
           <aside class="issue">
             <p>Components, connectors, and data view of Web-based MAS. See also Weyns' architectural patterns for situated MAS [Weyns, 2010] and the work on hMAS [Ciortea et al, 2018].</p>
@@ -615,7 +615,7 @@
       </section>
     </section>
     <section>
-      <h2>Norms, Policies, and Organizations</h2>
+      <h2>Policies, Norms, and Accountability</h2>
       
       <aside class="issue">
         <p>See <a href="https://github.com/w3c/odrl/issues/112">ODRL Issue 112</a></p>
@@ -623,6 +623,8 @@
 
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
+
+        <p>ODRL, DIDs?</p>
       
       </section>
       <section data-dfn-for="Foo">
@@ -653,8 +655,14 @@
       </section>
     </section>
     <section>
-      <h2>Conclusions: A Strategy for Agents on the Web</h2>
-      
+      <h2>Conclusions: A Roadmap for Agents on the Web</h2>
+
+      <section>
+          <h3>Accountability</h3>
+
+          <p>Make a case for accountability; what do we need to enable accountability, e.g. transparency? answerability (building a dialogue)?</p>
+          
+      </section>
     </section>
     <section>
       <h2>Acknowledgements</h2>
