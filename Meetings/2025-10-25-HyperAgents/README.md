@@ -1,10 +1,10 @@
 # HyperAgents 2025: Hybrid Meeting
 
-The [Second International Workshop on Hypermedia Multi-Agent Systems (HyperAgents 2025)](https://ecai2025.hyperagents.org/) will be organized in conjunction with [ECAI 2025](https://ecai2025.org/) on October 26, 2025, in Bologna, Italy. The workshop program is available [at this link](https://ecai2025.hyperagents.org/program/).
+The [Second International Workshop on Hypermedia Multi-Agent Systems (HyperAgents 2025)](https://ecai2025.hyperagents.org/) is organized in conjunction with [ECAI 2025](https://ecai2025.org/) on October 26, 2025, in Bologna, Italy. The workshop program is available [at this link](https://ecai2025.hyperagents.org/program/).
 
-The WebAgents CG will join this event for a hybrid meeting in the afternoon of October 25, 2025. The connection details for the online participation to the hybrid meeting will be added to the CG calendar event.
+The WebAgents CG joins this event for a hybrid meeting in the afternoon of October 25, 2025.
 
-## Tentative Agenda for the Hybrid Meeting
+## Agenda
 
 |      CET      | Agenda                               |
 |---------------|--------------------------------------|
@@ -14,4 +14,10 @@ The WebAgents CG will join this event for a hybrid meeting in the afternoon of O
 | 16:00 - 17:00 | Demo / Hands-on session              |
 | 17:00 - 18:30 | Wrap-up and Next Steps               |
 
-The main topic of the focussed discussion will be the architectural patterns discussed in the context of the interoperability report (see [current version](https://deploy-preview-92--w3cwebagentscg.netlify.app/)).
+The main topic of the focussed discussion are the architectural patterns discussed in the context of the interoperability report (see [current version](https://deploy-preview-92--w3cwebagentscg.netlify.app/)).
+
+## Meeting Coordinates
+
+The meeting is held in Sala del Consiglio, the Engineering School, University of Bologna [(see venue details)](https://ecai2025.org/venues/).
+
+For the Zoom connection details, see the [calendar entry](http://w3.org/events/meetings/11085779-70fd-46de-8759-5aaf0616f892/). Online participation is on a best-effort basis.
