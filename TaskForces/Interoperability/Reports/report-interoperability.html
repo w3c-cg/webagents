@@ -28,6 +28,12 @@
         ],
         authors: [
           {
+            name: "Jérémy Lemée",
+            company: "University of St.Gallen",
+            url: "https://www.alexandria.unisg.ch/entities/person/Jeremy_Lemee",
+            orcid: "0000-0003-0828-1188"
+          },
+          {
             name: "Your Name",
             url: "https://your-site.com"
           }
@@ -78,6 +84,15 @@
             title: "Control of Agent Based Systems (CoABS) & DARPA Agent Markup Language (DAML)",
             date: "2000",
             href: "https://www.dependability.org/wg10.4/meeting38/10-Lala.pdf",
+          },
+          COALA: {
+            authors: [
+              "Sumers, Theodore","Yao, Shunyu", "Narasimhan, Karthik", "Griffiths, Thomas"
+            ],
+            title: "Cognitive architectures for language agents",
+            date: "2023",
+            href: "https://openreview.net/pdf?id=1i6ZCvflQJ",
+            publisher: "Transactions on Machine Learning Research"
           },
           DALE03: {
             authors: [ 
@@ -181,6 +196,14 @@
             href: "https://arxiv.org/abs/2302.07842",
             publisher: "Transactions on Machine Learning Research (TMLR)",
           },
+          TOOL: {
+            authors: [
+              "Wang, Zhiruo", "Cheng, Zhoujun", "Zhu, Hao", "Fried, Daniel", "Neubig, Graham"
+            ],
+            title: "What are tools anyway? a survey from the language model perspective",
+            date: "2024",
+            href: "arXiv preprint arXiv:2403.15452",
+          },
           WILLMOTT02: {
             authors: [ "Steven Willmott" ],
             etAl: true,
@@ -210,23 +233,29 @@
       <h2>Terminology</h2>
 
       <dl>
-        <dt><dfn id="dfn-agent">Agent</dfn></dt>
+        <dt><dfn id="dfn-agent">Agent</dfn> or <dfn id="dfn-agent">Autonomous Agent</dfn></dt>
         <dd>An entity <a href="#dfn-situated">situated</a> in an environment that perceives its environment and acts on it, over time, in pursuit of its goals. For a detailed discussion of agent definitions, see [[FRANKLIN96]].</dd>
 
         <dt><dfn id="dfn-aip">Agent Interaction Protocol</dfn></dt>
         <dd>A specification of communication among two or more <a href="#dfn-agent">agents</a> that states who can say what to whom and when — for example, as message sequence diagrams [[AUML]] or information flows [[BSPL]].</dd>
 
-        <dt><dfn id="dfn-artifact">Artifact</dfn> or <dfn id="dfn-tool">Tool</dfn></dt>
-        <dd>A <a href="https://www.w3.org/TR/webarch/#def-resource">resource</a> [[WEBARCH]] that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents can construct artifacts to instrument their environments [[JACAMO]].</dd>
-
         <dt><dfn id="dfn-augmented-llm">Augmented Language Model</dfn></dt>
         <dd>A language model augmented with abilities such as reasoning, tool use, information retrieval, or storing context across interactions. Unlike an <a href="#dfn-agent">agent</a>, an augmented language model does not actively pursue goals and is not <a href="#dfn-situated">situated</a> in an environment. See also [[TMLR23]] and [[ANTHROPIC24]].</dd>
+
+        <dt><dfn id="dfn-llm-agent">LLM Agent</dfn> or <dfn id="dfn-language-agent">Language Agent</dfn></dt>
+        <dd>An <a href="#dfn-agent">agent</a> that relies on an LLM to guide their internal processes and interactions with the environment, while maintaining control over how they accomplish tasks [[ANTHROPIC24]][[COALA]]. [This is the sort of agent people think about when they talk about Agentic AI.]</dd>
 
         <dt><dfn id="dfn-mas">Multi-Agent System (MAS)</dfn></dt>
         <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, and/or competition. A MAS can be either an open or a closed system. This report is primarily concerned with open MAS.</dd>
 
         <dt><dfn id="dfn-situated">Situatedness</dfn></dt>
         <dd>The ability of an <a href="#dfn-agent">agent</a> to interact with its environment directly through perception and action, and to respond in a timely fashion to sensory input.</dd>
+
+        <dt><dfn id="dfn-tool">Tool</dfn> or <dfn id="dfn-artifact">Artifact</dfn></dt>
+        <dd>An instrument that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents construct artifacts to instrument their environments [[JACAMO]]. In the context of agentic AI, a tool is a functional interface to a program that a language model can invoke. Tools extend the capabilities of LLMs by enabling them to retrieve knowledge not seen during training, perform complex computations, mitigate hallucinations, and perceive or act in an environment [[TOOL]].</dd>
+
+        <dt><dfn id="dfn-web-tool">Web-based Tool</dfn> or <dfn id="dfn-web-artifact">Web-based Artifact</dfn></dt>
+        <dd>A <a href="#dfn-tool">tool</a> or <a href="#dfn-artifact">artifact</a> represented as a <a href="https://www.w3.org/TR/webarch/#def-resource">resource</a>  [[WEBARCH]] and accessible through the Web. Such tools may expose interfaces over Web or non-Web protocols—for example, a weather service exposing an HTTP API, a lamp exposing a CoAP API, or a telemetry service exposing an MQTT API. Non-Web protocols can be encapsulated behind hypermedia controls published in a description accessible through the Web, such as a W3C Web of Things (WoT) Thing Description [[wot-thing-description11]].</dd>
 
         <dt>[Term]</dt>
         <dd>[To be added]</dd>
