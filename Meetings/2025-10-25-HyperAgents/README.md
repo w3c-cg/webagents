@@ -21,3 +21,5 @@ The main topic of the focussed discussion are the architectural patterns discuss
 The meeting is held in Sala del Consiglio, the Engineering School, University of Bologna [(see venue details)](https://ecai2025.org/venues/).
 
 For the Zoom connection details, see the [calendar entry](http://w3.org/events/meetings/11085779-70fd-46de-8759-5aaf0616f892/). Online participation is on a best-effort basis.
+
+For taking notes collaboratively, we set up a [shared editable online document](https://semestriel.framapad.org/p/webagents-ecai2025-ahj0).
