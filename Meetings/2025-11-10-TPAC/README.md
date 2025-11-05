@@ -11,7 +11,7 @@ See the [calendar entry](https://www.w3.org/events/meetings/cf8f76b2-8756-44f5-9
 
 ## Agenda
 
-| CET         | Agenda                                       |
+| JST         | Agenda                                       |
 |-------------|----------------------------------------------|
 | 15:30-15:45 | Welcome to the WebAgents CG                  |
 | 15:45-16:20 | Hypermedia Multi-Agent Systems               |
