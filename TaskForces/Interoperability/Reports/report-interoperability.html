@@ -326,6 +326,73 @@
             <p>MAS are a class of systems known for NFPs such as <strong>flexibility/adaptability</strong>, <strong>openness</strong>, <strong>robustness</strong>, and <strong>scalability</strong> [Weyns, 2010]. The Web is a distributed hypermedia system specifcally designed to meet a well-defined set of NFPs, among which <strong>scalability</strong>, <strong>heterogeneity</strong>, <strong>evolvability</strong>, and <strong>extensibility</strong> [Fielding and Taylor, 2002; Taylor et al, 2010]. Inhereting the properties of the Web in Web-based MAS is desirable, which means we need to design MAS that are aligned with the Web Arch [[HMAS]].</p>
           </aside>
 
+          <p>Agent-level design goals:</p>
+
+          <table class="def">
+            <thead>
+              <th>Goal</th>
+              <th>Description</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Situatedness</td>
+                <td>The agent interacts with its hypermedia environment directly through perception and action, and responds in a timely fashion to sensory input.</td>
+              </tr>
+              <tr>
+                <td>Embodiment</td>
+                <td>The agent is represented explicitly in the hypermedia environment, allowing end-users and other agents to discover and interact with it.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>System-level design goals:</p>
+
+          <table class="def">
+            <thead>
+              <th>Goal</th>
+              <th>Description</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Scalability</td>
+                <td>The system can accommodate large numbers of agents, tools, and other <a href="https://www.w3.org/TR/webarch/#def-resource">resources</a> across geographical and organizational boundaries.</td>
+              </tr>
+              <!-- <tr>
+                <td>Heterogeneity</td>
+                <td>The ability of a Hypermedia <a href="#dfn-mas">MAS</a> to consist of multiple disparate constituents or function in multiple disparate computing environments.</td>
+              </tr> -->
+              <tr>
+                <td>Interoperability</td>
+                <td>The system uses Web standards to enable the integration of components developed independently, and to support communication and interaction with other systems.</td>
+              </tr>
+              <tr>
+                <td>Extensibility</td>
+                <td>The system can be expanded with new functionality and <a href="https://www.w3.org/TR/webarch/#def-resource">resources</a>.</td>
+              </tr>
+              <tr>
+                <td>Evolvability</td>
+                <td>The system can accommodate changes at run time without disrupting existing functionality.</td>
+              </tr>
+              <tr>
+                <td>Discoverability</td>
+                <td>The system enables end-users and <a href="#dfn-agent">agents</a> to discover the rest of the system starting from a single entry URL.</td>
+              </tr>
+              <!-- <tr>
+                <td>Robustness</td>
+                <td>TODO</td>
+              </tr> -->
+              <tr>
+                <td>Transparency</td>
+                <td>The system enables the representation, inspection, and reproduction of autonomous behaviors and interactions.</td>
+              </tr>
+              <tr>
+                <td>Security</td>
+                <td>The system provides sufficient assurance for the autonomous discovery of and interaction with agents, tools, and other <a href="https://www.w3.org/TR/webarch/#def-resource">resources</a>.</td>
+              </tr>
+            </tbody>
+          </table>
+
+
         </section>
 
         <section data-dfn-for="Foo">
@@ -335,14 +402,36 @@
             <p>Components, connectors, and data view of Web-based MAS. See also Weyns' architectural patterns for situated MAS [Weyns, 2010] and the work on hMAS [Ciortea et al, 2018].</p>
           </aside>
 
+        <figure id="pattern-language">
+          <img src="images/pattern-language.png" alt="A pattern languge for Web-based agents and MAS." width="500" />
+          <figcaption>A pattern languge for Web-based agents and MAS.</figcaption>
+        </figure>
+
+        <figure id="situated-agent">
+          <img src="images/situated-agent.png" alt="A pattern for situated hypermedia agents." width="500" />
+          <figcaption>A pattern for situated hypermedia agents.</figcaption>
+        </figure>
+
+        <figure id="virtual-environment">
+          <img src="images/virtual-environment.png" alt="A pattern for (virtual) hypermedia environments." width="450" />
+          <figcaption>A pattern for (virtual) hypermedia environments.</figcaption>
+        </figure>
+
         </section>
 
         <section data-dfn-for="Foo">
-          <h3>Considerations</h3>
+          <h3>Architectural Constraints</h3>
 
           <aside class="issue">
             <p>The main considerations we draw from the above. The focus is on alignment with the design of the Web.</p>
           </aside>
+
+          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS and relations among them should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+
+          <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents can discover the knowledge and resources required to participate in the system by following hypermedia links.</p>
+
+          <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents are observable using Web standards, enabling agents to monitor and reason about relevant changes in their environment.</p>
+
         </section>
       </section>
       <section data-dfn-for="Foo">
