@@ -62,6 +62,15 @@
             href: "https://doi.org/10.1007/3-540-44564-1_8",
             publisher: "Springer",
           },
+          TBL89: {
+            authors: [
+              "Tim Berners-Lee",
+            ],
+            title: "Information management: a proposal",
+            date: "1989",
+            href: "https://cds.cern.ch/record/369245/",
+            publisher: "CERN",
+          },
           BSPL: {
             authors: [
               "Munindar P. Singh",
@@ -170,6 +179,14 @@
             date: "2005",
             href: "https://doi.org/10.1007/0-387-26350-0_5",
             publisher: "Springer US",
+          },
+          RUSSELL19: {
+            authors: [ 
+              "Stuart Russell"
+            ],
+            title: "Human compatible: AI and the problem of control",
+            date: "2019",
+            publisher: "Penguin Books UK",
           },
           SINGH06: {
             authors: [
@@ -315,22 +332,25 @@
       <section data-dfn-for="Foo">
         <h3>Architectural Considerations</h3>
       
-        <aside class="issue">
+        <!-- <aside class="issue">
           <p>Different approaches choose different distribution styles, e.g. MCP uses an RPC-style of distribution. This section discusses these different styles with reference to the Web architecture. The discussion could go into many directions, what emerged in our meetings is a need to look deeper than the agent level of abstraction. What seems important is to identify alignments and misalignments with the Web architecture.</p>
-        </aside>
+        </aside> -->
 
-        <section>
+        <p>This section discusses how architectures for MAS can integrate with the Web architecture [[WEBARCH]]. Section <a href="#design-goals">3.3.1</a> defines design goals for Web-based MAS and explains why alignment with the Web architecture is desirable. Section <a href="#architectural-patterns">3.3.2</a> introduces architectural patterns that describe MAS in terms of components and connectors, facilitating their mapping to the Web architecture [[FIELDING00]]. Section <a href="#architectural-constraints">3.3.3</a> presents a set of architectural constraints that specify the roles and features of components and connectors in a MAS to ensure alignment with the Web architecture.</p>
+
+        <section id="design-goals">
           <h3>Design Goals</h3>
 
-          <aside class="issue">
+          <!-- <aside class="issue">
             <p>MAS are a class of systems known for NFPs such as <strong>flexibility/adaptability</strong>, <strong>openness</strong>, <strong>robustness</strong>, and <strong>scalability</strong> [Weyns, 2010]. The Web is a distributed hypermedia system specifcally designed to meet a well-defined set of NFPs, among which <strong>scalability</strong>, <strong>heterogeneity</strong>, <strong>evolvability</strong>, and <strong>extensibility</strong> [Fielding and Taylor, 2002; Taylor et al, 2010]. Inhereting the properties of the Web in Web-based MAS is desirable, which means we need to design MAS that are aligned with the Web Arch [[HMAS]].</p>
-          </aside>
+          </aside> -->
 
-          <p>Agent-level design goals:</p>
+          <p>We distinguish between agent-level and system-level design goals for Web-based MAS.</p>
 
           <table class="def">
+            <caption>Agent-level Design Goals</caption>
             <thead>
-              <th style="width:20%">Goal</th>
+              <th style="width:20%">Design Goal</th>
               <th style="width:80%">Description</th>
             </thead>
             <tbody>
@@ -349,11 +369,12 @@
             </tbody>
           </table>
 
-          <p>System-level design goals:</p>
+          <p>Situatedness is central to distinguishing agents from other types of programs [[FRANKLIN96]]. Embodiment enables agents to discover and interact with one another on the open Web. Value alignment is fundamental not only to intelligent agents [[RUSSELL19]] but also to Web <a href="https://www.w3.org/TR/webarch/#def-user-agent">user agents</a> in general (see the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a>'s draft note on <a href="https://w3ctag.github.io/user-agents/">Web User Agents</a>).</p>
 
           <table class="def">
+            <caption>System-level Design Goals</caption>
             <thead>
-              <th style="width:20%">Goal</th>
+              <th style="width:20%">Design Goal</th>
               <th style="width:80%">Description</th>
             </thead>
             <tbody>
@@ -400,10 +421,14 @@
             </tbody>
           </table>
 
+          <p>Scalability, interoperability, extensibility, and evolvability are central goals for designing MAS that can be deployed at scale on the open Web. These goals also motivated many of the key architectural decisions underpinning the Web itself [[TBL89]][[FIELDING00]]. The central hypothesis of this report is that aligning MAS architectures with the Web architecture enables them to inherit these desirable non-functional properties.</p>
+
+          <p>Discoverability is essential for any open system, as demonstrated by the Web itself. Resource monitoring is necessary for agents to perceive the hypermedia environments in which they are situated. Transperency is a prerequisite for accountability, explainability, and trust. Security is a fundamental requirement that is even more critical if agents are to discover and use tools, or to discover and interact with one another on the open Web.</p>
+
 
         </section>
 
-        <section data-dfn-for="Foo">
+        <section id="architectural-patterns">
           <h3>Architectural Patterns</h3>
 
           <aside class="issue">
