@@ -80,6 +80,17 @@
             href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
             publisher: "IFAAMAS",
           },
+          CIORTEA19: {
+            authors: [
+              "Andrei Ciortea",
+              "Olivier Boissier",
+              "Alessandro Ricci"
+            ],
+            title: "Engineering World-Wide Multi-Agent Systems with Hypermedia",
+            date: "2019",
+            href: "https://doi.org/10.1007/978-3-030-25693-7_15",
+            publisher: "Springer, Cham"
+          },
           COABS1: {
             authors: [
               "Martha L. Kahn",
@@ -135,6 +146,15 @@
             date: "2000",
             publisher: "Ph.D. Dissertation. University of California, Irvine",
           },
+          FIELDING17: {
+            authors: [
+              "Roy T. Fielding"
+            ],
+            etAl: true,
+            title: "Reflections on the REST architectural style and &quot;principled design of the modern web architecture&quot; (impact paper award)",
+            date: "2017",
+            publisher: "ACM",
+          },
           FRANKLIN96: {
             authors: [
               "S. Franklin",
@@ -145,7 +165,7 @@
             href: "https://doi.org/10.1007/BFb0013570",
             publisher: "Springer",
           },
-          HMAS: {
+          HMAS19: {
             authors: [
               "Andrei Ciortea",
               "Simon Mayer",
@@ -182,6 +202,16 @@
             date: "2005",
             href: "https://doi.org/10.1007/0-387-26350-0_5",
             publisher: "Springer US",
+          },
+          KHARE04: {
+            authors: [ 
+              "Rohit Khare",
+              "Richard N. Taylor"
+            ],
+            title: "Extending the Representational State Transfer (REST) architectural style for decentralized systems",
+            date: "2004",
+            href: "https://ieeexplore.ieee.org/document/1317465/",
+            publisher: "IEEE",
           },
           KIKO23: {
             authors: [ 
@@ -343,14 +373,14 @@
           </ul>
         </p>
 
-        <p>These conceptual dimensions help organize the complexity of non-trivial MAS — and are particularly relevant when designing Web-based MAS [[HMAS]]: they offer a broader conceptual view of MAS (broader than just agents) while also defining the scope of the design space. For example, [[[#mas-web-transport-layer]]] shows a MAS modeled as agents that exchange messages. In this view, the Web is reduced to a message transport layer, an early perspective in research on Web-based MAS (see Section&nbsp;[[[#agents-web-services]]]). However, the Web was not designed as a transport layer (see Section 6.5.3 in [[FIELDING00]]).</p>
+        <p>These conceptual dimensions help organize the complexity of non-trivial MAS — and are particularly relevant when designing Web-based MAS [[HMAS19]]: they offer a broader conceptual view of MAS (broader than just agents) while also defining the scope of the design space. For example, [[[#mas-web-transport-layer]]] shows a MAS modeled as agents that exchange messages. In this view, the Web is reduced to a message transport layer, an early perspective in research on Web-based MAS (see Section&nbsp;[[[#agents-web-services]]]). However, the Web was not designed as a transport layer (see Section 6.5.3 in [[FIELDING00]]).</p>
 
         <figure id="mas-web-transport-layer">
           <img src="images/mas-web-transport-layer.png" alt="The Web as a transport layer for messages exchanged among agents." width="350" />
           <figcaption>The Web as a transport layer for messages exchanged among agents.</figcaption>
         </figure>
 
-        <p>In contrast, a broader conceptual view of MAS enables deeper integration with the Web: instead of limiting the Web to a transport layer for agent messages, it can leverage the Web as an application layer for MAS [[HMAS]]. For example, [[[#mas-web-application-layer]]] shows a MAS that incorporates concepts from all four dimensions mentioned above. In this view, the Web serves as the application layer for the agent environment — for example, providing agents with shared tools, resources, and governance mechanisms. This perspective expands the design space for Web-based MAS and aligns more closely with the Web's original purpose and capabilities.</p>
+        <p>In contrast, a broader conceptual view of MAS enables deeper integration with the Web: instead of limiting the Web to a transport layer for agent messages, it can leverage the Web as an application layer for MAS [[HMAS19]]. For example, [[[#mas-web-application-layer]]] shows a MAS that incorporates concepts from all four dimensions mentioned above. In this view, the Web serves as the application layer for the agent environment — for example, providing agents with shared tools, resources, and governance mechanisms. This perspective expands the design space for Web-based MAS and aligns more closely with the Web's original purpose and capabilities.</p>
 
         <figure id="mas-web-application-layer">
           <img src="images/mas-web-rich-application-layer.png" alt="The Web as a rich application layer that can support all sorts of interaction in a MAS." width="600" />
@@ -369,7 +399,7 @@
           <h3>Design Goals</h3>
 
           <!-- <aside class="issue">
-            <p>MAS are a class of systems known for NFPs such as <strong>flexibility/adaptability</strong>, <strong>openness</strong>, <strong>robustness</strong>, and <strong>scalability</strong> [Weyns, 2010]. The Web is a distributed hypermedia system specifcally designed to meet a well-defined set of NFPs, among which <strong>scalability</strong>, <strong>heterogeneity</strong>, <strong>evolvability</strong>, and <strong>extensibility</strong> [Fielding and Taylor, 2002; Taylor et al, 2010]. Inhereting the properties of the Web in Web-based MAS is desirable, which means we need to design MAS that are aligned with the Web Arch [[HMAS]].</p>
+            <p>MAS are a class of systems known for NFPs such as <strong>flexibility/adaptability</strong>, <strong>openness</strong>, <strong>robustness</strong>, and <strong>scalability</strong> [Weyns, 2010]. The Web is a distributed hypermedia system specifcally designed to meet a well-defined set of NFPs, among which <strong>scalability</strong>, <strong>heterogeneity</strong>, <strong>evolvability</strong>, and <strong>extensibility</strong> [Fielding and Taylor, 2002; Taylor et al, 2010]. Inhereting the properties of the Web in Web-based MAS is desirable, which means we need to design MAS that are aligned with the Web Arch [[HMAS19]].</p>
           </aside> -->
 
           <p>We distinguish between agent-level and system-level design goals for Web-based MAS.</p>
@@ -506,14 +536,36 @@
           <h3>Architectural Constraints</h3>
 
           <!-- <aside class="issue">
-            <p>The main considerations we draw from the above. The focus is on alignment with the design of the Web.</p>
+            <p>This section is currently too condensed. It should also better trace back to Section&nbsp;[[[#design-goals]]].</p>
           </aside> -->
 
-          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS and relations among them should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+          <p>This section introduces three design principles that constrain the roles and features of components, connectors, and data elements in a Web-based MAS to ensure alignment with the Web architecture. We refer to Web-based MAS that follow these principles as <i>Hypermedia MAS</i>.</p>
 
-          <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents can discover the knowledge and resources required to participate in the system by following hypermedia links.</p>
+          <p>The principles are adapted from — and discussed in detail in — [[CIORTEA19]]. Their theoretical foundation lies in the REST architectural style [[FIELDING00]], but they extend beyond REST to address requirements specific to agents, such as <i>Resource Monitoring</i> (see also [[KHARE04]][[FIELDING17]]).</p>
 
-          <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents are observable using Web standards, enabling agents to monitor and reason about relevant changes in their environment.</p>
+          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+
+          <p>The core idea behind this first principle is to project the observable state of a Web-based MAS into a uniform, distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). This promotes <i>Scalability</i> by enabling the seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
+
+          <p>The trade-off is decreased efficiency: components must translate between their internal data representations and the uniform representations exposed via their interfaces, which are necessarily less optimized for the specific needs of individual components.</p>
+
+          <aside class="note" title="A Hypermedia-based Design Space">
+              <p>The <i>uniform resource space</i> serves as a hypermedia-based design space that can be exploited to provide agents with various levels of support — for example, to mediate access to their deployment context, discover and interact with other agents, or shape their environment to better suit their design goals, including <i>Embodiment</i> and <i>Transparency</i>.</p>
+          </aside>
+
+          <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents should be able to discover the rest of the system and the means to participate in it by following hyperlinks.</p>
+
+          <p>The core idea behind this second principle is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i>. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
+
+          <!-- <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents should be observable using Web standards, enabling agents to selectively monitor and perceive relevant changes in their environment.</p> -->
+
+          <p class="def"><strong>Principle 3 (Observability)</strong>: Agents should be able to selectively perceive relevant changes in their environment by monitoring resources of potential interest using Web standards.</p>
+
+          This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
+
+          <aside class="issue">
+            <p>Two design goals from Section&nbsp;<a href="#design-goals">3.3.1</a> are not directly addressed by the above design principles: <i>Value Alignment</i> and <i>Security</i>. To be discussed.</p>
+          </aside>
 
         </section>
       </section>
