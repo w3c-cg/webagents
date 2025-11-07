@@ -96,13 +96,16 @@
             date: "2000",
             href: "https://www.dependability.org/wg10.4/meeting38/10-Lala.pdf",
           },
-          COALA: {
+          COALA23: {
             authors: [
-              "Sumers, Theodore","Yao, Shunyu", "Narasimhan, Karthik", "Griffiths, Thomas"
+              "Theodore Sumers",
+              "Shunyu Yao",
+              "Karthik Narasimhan",
+              "Thomas Griffiths"
             ],
             title: "Cognitive architectures for language agents",
             date: "2023",
-            href: "https://openreview.net/pdf?id=1i6ZCvflQJ",
+            href: "https://arxiv.org/abs/2309.02427",
             publisher: "Transactions on Machine Learning Research"
           },
           DALE03: {
@@ -156,7 +159,7 @@
             href: "https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p1659.pdf",
             publisher: "18th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2019), IFAAMAS",
           },
-          JACAMO: {
+          JACAMO20: {
             authors: [
               "Olivier Boissier",
               "Rafael H. Bordini",
@@ -168,7 +171,7 @@
             href: "https://mitpress.mit.edu/9780262044578/",
             publisher: "MIT Press",
           },
-          JADE: {
+          JADE05: {
             authors: [ 
               "Fabio Bellifemine",
               "Federico Bergenti",
@@ -179,6 +182,17 @@
             date: "2005",
             href: "https://doi.org/10.1007/0-387-26350-0_5",
             publisher: "Springer US",
+          },
+          KIKO23: {
+            authors: [ 
+              "Samuel H. Christie",
+              "Munindar P. Singh",
+              "Amit K. Chopra",
+            ],
+            title: "Kiko: Programming Agents to Enact Interaction Models",
+            date: "2023",
+            href: "https://dl.acm.org/doi/abs/10.5555/3545946.3598758",
+            publisher: "IFAAMAS",
           },
           RUSSELL19: {
             authors: [ 
@@ -207,6 +221,16 @@
             date: "2001",
             publisher: "Scientific American",
           },
+          TAYLOR10: {
+            authors: [
+              "Richard N. Taylor",
+              "Nenad Medvidović",
+              "Eric M. Dashofy",
+            ],
+            title: "Software Architecture: Foundations, Theory, and Practice",
+            date: "2010",
+            publisher: "John Wiley & Sons, Inc.",
+          },
           TMLR23: {
             authors: [ "G. Mialon" ],
             etAl: true,
@@ -222,6 +246,13 @@
             title: "What are tools anyway? a survey from the language model perspective",
             date: "2024",
             href: "arXiv preprint arXiv:2403.15452",
+          },
+          WEYNS10: {
+            authors: [ "Danny Weyns" ],
+            title: "Architecture-based Design of Multi-Agent Systems",
+            date: "2010",
+            href: "https://doi.org/10.1007/978-3-642-01064-4",
+            publisher: "Springer Publishing Company, Inc.",
           },
           WILLMOTT02: {
             authors: [ "Steven Willmott" ],
@@ -262,7 +293,7 @@
         <dd>A language model augmented with abilities such as reasoning, tool use, information retrieval, or storing context across interactions. Unlike an <a href="#dfn-agent">agent</a>, an augmented language model does not actively pursue goals and is not <a href="#dfn-situated">situated</a> in an environment. See also [[TMLR23]] and [[ANTHROPIC24]].</dd>
 
         <dt><dfn id="dfn-llm-agent">LLM Agent</dfn> or <dfn id="dfn-language-agent">Language Agent</dfn></dt>
-        <dd>An <a href="#dfn-agent">agent</a> that relies on an LLM to guide their internal processes and interactions with the environment, while maintaining control over how they accomplish tasks [[ANTHROPIC24]][[COALA]]. [This is the sort of agent people think about when they talk about Agentic AI.]</dd>
+        <dd>An <a href="#dfn-agent">agent</a> that relies on an LLM to guide their internal processes and interactions with the environment, while maintaining control over how they accomplish tasks [[ANTHROPIC24]][[COALA23]]. [This is the sort of agent people think about when they talk about Agentic AI.]</dd>
 
         <dt><dfn id="dfn-mas">Multi-Agent System (MAS)</dfn></dt>
         <dd>A system composed of <a href="#dfn-agent">agents</a> that are situated in a shared environment and interact with one another to achieve individual or collective goals. Agents can work in collaboration, cooperation, and/or competition. A MAS can be either an open or a closed system. This report is primarily concerned with open MAS.</dd>
@@ -271,7 +302,7 @@
         <dd>The ability of an <a href="#dfn-agent">agent</a> to interact with its environment directly through perception and action, and to respond in a timely fashion to sensory input.</dd>
 
         <dt><dfn id="dfn-tool">Tool</dfn> or <dfn id="dfn-artifact">Artifact</dfn></dt>
-        <dd>An instrument that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents construct artifacts to instrument their environments [[JACAMO]]. In the context of agentic AI, a tool is a functional interface to a program that a language model can invoke. Tools extend the capabilities of LLMs by enabling them to retrieve knowledge not seen during training, perform complex computations, mitigate hallucinations, and perceive or act in an environment [[TOOL]].</dd>
+        <dd>An instrument that can be shared and used by <a href="#dfn-agent">agents</a> to support their activities. In some <a href="#dfn-mas">multi-agent systems</a>, agents construct artifacts to instrument their environments [[JACAMO20]]. In the context of agentic AI, a tool is a functional interface to a program that a language model can invoke. Tools extend the capabilities of LLMs by enabling them to retrieve knowledge not seen during training, perform complex computations, mitigate hallucinations, and perceive or act in an environment [[TOOL]].</dd>
 
         <dt><dfn id="dfn-web-tool">Web-based Tool</dfn> or <dfn id="dfn-web-artifact">Web-based Artifact</dfn></dt>
         <dd>A <a href="#dfn-tool">tool</a> or <a href="#dfn-artifact">artifact</a> represented as a <a href="https://www.w3.org/TR/webarch/#def-resource">resource</a>  [[WEBARCH]] and accessible through the Web. Such tools may expose interfaces over Web or non-Web protocols—for example, a weather service exposing an HTTP API, a lamp exposing a CoAP API, or a telemetry service exposing an MQTT API. Non-Web protocols can be encapsulated behind hypermedia controls published in a description accessible through the Web, such as a W3C Web of Things (WoT) Thing Description [[wot-thing-description11]].</dd>
@@ -292,7 +323,7 @@
 
         <p>The vision of intelligent agents on the Web is almost as old as the Web itself: in a <a href="https://videos.cern.ch/record/2671957">keynote at WWW'94</a>, Sir Tim Berners-Lee was noting that documents on the Web describe real objects and relationships among them, and if the semantics of these objects are represented explicitly then machines can browse through and manipulate reality. This vision was articulated more fully in the 2001 Semantic Web paper [[SEMWEB01]] and is now closer to realization through the standardization of the Web of Things at <a href="https://www.w3.org/WoT/">the W3C</a> and <a href="https://datatracker.ietf.org/wg/core/">the IETF</a>.</p>
 
-        <p>In the AI community, the vision of a world-wide open network of intelligent agents also emerged in the '90s. In 2002, the <a href="https://cordis.europa.eu/project/id/IST-2000-28385/">AgentCities</a> initiative was reporting a network of 41 agent platforms deployed in 21 countries [[WILLMOTT02]], which grew to 60 registered platforms in 2003 [[DALE03]] and 160 by 2005 [[JADE]]. This network was based on <a href="http://www.fipa.org/repository/standardspecs.html">standards developed by the Foundation for Intelligent Physical Agents (FIPA)</a> but declined after the mid-2000s as industry attention shifted toward Web services. In parallel with AgentCities, the DARPA Control of Agent-Based Systems (CoABS) research program investigated the control, coordination, and management of large systems of autonomous software agents in military applications. Its central middleware, the CoABS Grid [[COABS1]], integrated heterogeneous agent-based systems, object-based applications, and legacy systems.</p>
+        <p>In the AI community, the vision of a world-wide open network of intelligent agents also emerged in the '90s. In 2002, the <a href="https://cordis.europa.eu/project/id/IST-2000-28385/">AgentCities</a> initiative was reporting a network of 41 agent platforms deployed in 21 countries [[WILLMOTT02]], which grew to 60 registered platforms in 2003 [[DALE03]] and 160 by 2005 [[JADE05]]. This network was based on <a href="http://www.fipa.org/repository/standardspecs.html">standards developed by the Foundation for Intelligent Physical Agents (FIPA)</a> but declined after the mid-2000s as industry attention shifted toward Web services. In parallel with AgentCities, the DARPA Control of Agent-Based Systems (CoABS) research program investigated the control, coordination, and management of large systems of autonomous software agents in military applications. Its central middleware, the CoABS Grid [[COABS1]], integrated heterogeneous agent-based systems, object-based applications, and legacy systems.</p>
 
         <p>The DARPA CoABS program demonstrated the practical utility of agent technologies in large-scale deployments, while also highlighting significant challenges — for example, enabling agents to dynamically identify and interpret information sources [[COABS2]]. To address such issues, DARPA launched the Agent Markup Language (DAML) research program, which extended existing Web standards and laid the groundwork for the Web Ontology Language (OWL), Semantic Markup for Web Services (OWL-S), and other cornerstones of the Semantic Web. The DAML program advanced the original vision of the Web as an information space for both people and intelligent agents, and encouraged a shift from custom-built MAS middleware (e.g., CoABS Grid or FIPA platforms) to leveraging the Web's existing infrastructure. Such Web-based MAS received significant attention over the years, especially in the early 2000s with the advent of service-oriented computing [[SINGH06]].</p>
 
@@ -331,12 +362,8 @@
       </section>
       <section data-dfn-for="Foo">
         <h3>Architectural Considerations</h3>
-      
-        <!-- <aside class="issue">
-          <p>Different approaches choose different distribution styles, e.g. MCP uses an RPC-style of distribution. This section discusses these different styles with reference to the Web architecture. The discussion could go into many directions, what emerged in our meetings is a need to look deeper than the agent level of abstraction. What seems important is to identify alignments and misalignments with the Web architecture.</p>
-        </aside> -->
 
-        <p>This section discusses how architectures for MAS can integrate with the Web architecture [[WEBARCH]]. Section <a href="#design-goals">3.3.1</a> defines design goals for Web-based MAS and explains why alignment with the Web architecture is desirable. Section <a href="#architectural-patterns">3.3.2</a> introduces architectural patterns that describe MAS in terms of components and connectors, facilitating their mapping to the Web architecture [[FIELDING00]]. Section <a href="#architectural-constraints">3.3.3</a> presents a set of architectural constraints that specify the roles and features of components and connectors in a MAS to ensure alignment with the Web architecture.</p>
+        <p>This section discusses how architectures for MAS can integrate with the Web architecture [[WEBARCH]]. Section&nbsp;<a href="#design-goals">3.3.1</a> defines design goals for Web-based MAS to motivate why alignment with the Web architecture is desirable. Section&nbsp;<a href="#architectural-patterns">3.3.2</a> introduces architectural patterns that describe MAS in terms of components and connectors, facilitating their mapping to the Web architecture [[FIELDING00]]. Section&nbsp;<a href="#architectural-constraints">3.3.3</a> presents a set of architectural constraints that specify the roles and features of components and connectors in a MAS to ensure alignment with the Web architecture.</p>
 
         <section id="design-goals">
           <h3>Design Goals</h3>
@@ -425,39 +452,62 @@
 
           <p>Discoverability is essential for any open system, as demonstrated by the Web itself. Resource monitoring is necessary for agents to perceive the hypermedia environments in which they are situated. Transperency is a prerequisite for accountability, explainability, and trust. Security is a fundamental requirement that is even more critical if agents are to discover and use tools, or to discover and interact with one another on the open Web.</p>
 
-
         </section>
 
         <section id="architectural-patterns">
           <h3>Architectural Patterns</h3>
 
-          <aside class="issue">
-            <p>Components, connectors, and data view of Web-based MAS. See also Weyns' architectural patterns for situated MAS [Weyns, 2010] and the work on hMAS [Ciortea et al, 2018].</p>
-          </aside>
+        <p>An architectural pattern specifies a general solution to a recurring design problem. [[[#pattern-language]]] shows a set of architectural patterns for situated MAS adapted from [[WEYNS10]]. The patterns are described using components and connectors as the main architectural elements.</p>
+
+        <p>A <i>component</i> is "an abstract unit of software instructions and internal state that provides a transformation of data via its interface" [[FIELDING00]]. A <i>connector</i> is an abstract mechanism that mediates interaction among components [[TAYLOR10]]. We use component-and-connector models because they facilitate alignment with the design of the Web architecture, as captured by the <i>Representational State Transfer (REST)</i> architectural style [[FIELDING00]]: REST defines a set of architectural constraints that apply to the components and connectors of a distributed hypermedia system — and, in addition, treats <i>data elements</i> as first-class architectural elements subject to the same constraints. We return to REST in Section&nbsp;[[[#architectural-constraints]]].</p>
+
+        <p>The original pattern language introduced by Weyns includes five patterns [[WEYNS10]]: <i>situated agent</i>, <i>virtual environment</i>, <i>selective perception</i>, <i>protocol-based communication</i>, and <i>roles &amp; situated commitments</i>. In this report, we focus on the first two — the basic patterns — and leave the others for future work within the <a href="https://www.w3.org/community/webagents/">Autonomous Agents on the Web (WebAgents) Community Group</a>. The language may also be extended with new architectural patterns, such as the <i>policies &amp; norms</i> pattern shown in [[[#pattern-language]]].</p>
 
         <figure id="pattern-language">
           <img src="images/pattern-language.png" alt="A pattern languge for Web-based agents and MAS." width="500" />
           <figcaption>A pattern languge for Web-based agents and MAS.</figcaption>
         </figure>
 
+        <p>In the following, we present the two basic patterns using UML component diagrams. We give concise overviews of the each pattern and illustrate their application in both modern LLM-based MAS and classical MAS (for detailed descriptions, see [[WEYNS10]]). We then discuss network-based connectors, focusing on Web interactions.</p>
+
+        <aside class="note" title="Optional Components and Interfaces">
+          <p>The components shown in these architectural patterns are intended as modular building blocks. Depending on the system's requirements, not all components or their interfaces may be needed in a given implementation.</p>
+        </aside>
+
         <figure id="situated-agent">
-          <img src="images/situated-agent.png" alt="A pattern for situated hypermedia agents." width="500" />
-          <figcaption>A pattern for situated hypermedia agents.</figcaption>
+          <img src="images/situated-agent.png" alt="A pattern for situated agents." width="500" />
+          <figcaption>A pattern for situated agents.</figcaption>
         </figure>
 
+        <p>The <i>situated agent</i> pattern shown in [[[#situated-agent]]] includes a single data repository (<i>Memory</i>) and three components: <i>Perception</i>, <i>Decision Making</i>, and <i>Communication</i>. The <i>Memory</i> repository, accessible to all three components, stores both the agent's internal state and state that may be shared with other agents. This state may be static (e.g., a predefined list of contacts) or dynamic (e.g., a perceived change in the environment). <i>Perception</i> is responsible for sensing and interpreting run-time information from the virtual environment — and supports <i>selective perception</i>, enabling the agent to focus on information relevant to its current tasks. <i>Decision Making</i> is responsible for realizing the agent's tasks by invoking actions in the virtual environment. <i>Communication</i> is responsible for handling interactions with other agents.</p>
+
+        <p>One alteration we introduce relative to Weyns' original pattern is an explicit connection between <i>Communication</i> and <i>Decision Making</i>, allowing the latter to trigger communication acts. This configuration is common in more recent agent architectures, such as those employing information protocols [[KIKO23]].</p>
+
+        <p>The <i>situated agent</i> pattern applies naturally to classical agent architectures, such as <i>Belief-Desire-Intention (BDI)</i> agents [[JACAMO20]], which typically make use of all components. In contrast, many current implementations of LLM agents focus primarily on the <i>Decision Making</i> and <i>Memory</i> components: <i>Communication</i> may be implicit to <i>Decision Making</i> and <i>Perception</i>, and in many cases Perception may also be implicit — for example, when the agent perceives its environment only through observations returned by its actions.</p>
+
         <figure id="virtual-environment">
-          <img src="images/virtual-environment.png" alt="A pattern for (virtual) hypermedia environments." width="450" />
-          <figcaption>A pattern for (virtual) hypermedia environments.</figcaption>
+          <img src="images/virtual-environment.png" alt="A pattern for virtual environments." width="450" />
+          <figcaption>A pattern for virtual environments.</figcaption>
         </figure>
 
         </section>
 
+        <p>The <i>virtual environment</i> pattern shown in [[[#virtual-environment]]] describes an adaptation layer that bridges the agent's level of abstraction with its deployment context. This adaptation layer can be implemented, for example, by a <a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a> server, a <a href="https://www.utcp.io/">Universal Tool Calling Protocol (UTCP)</a> server, or a <a href="https://www.w3.org/TR/wot-architecture11/#dfn-wot-thing-description-directory">WoT Thing Description Directory</a>. The <i>virtual environment</i> exposes to agents a set of <i>provided interfaces</i> through which they can sense, act, or exchange messages (top of [[[#virtual-environment]]]), and may also define a set of <i>required interfaces</i> for interacting with the underlying infrastructure (bottom of [[[#virtual-environment]]]). For instance, an MCP server may wrap the HTTP endpoint of an industrial robot (the <i>Operate</i> required interface in [[[#virtual-environment]]]) to expose a set of <a href="#dfn-tool">tools</a> accessible to LLM agents.</p>
+
+        <p>Some virtual environments may include tools that maintain <i>State</i> and implement their own <i>Dynamics</i>, or host <a href="https://www.w3.org/TR/wot-architecture11/#dfn-digital-twin">Digital Twins</a> that mirror the state of physical assets through the <i>Synchronization</i> component.</p>
+
+        <p>So far, we have examined components and their interfaces for <i>situated agents</i> and <i>virtual environments</i>. Connectors specify how these components interact. In this report, we are particularly interested in cases where such interactions are realized through the network-based connectors that rely on Web standards and technologies. One of the objectives of this report is to identify existing standards for these connectors and to highlight potential gaps where further standardization may be needed.</p>
+
+        <aside class="issue">
+          <p>TODO: add diagram to illustrate examples of connectors.</p>
+        </aside>
+
         <section data-dfn-for="Foo">
           <h3>Architectural Constraints</h3>
 
-          <aside class="issue">
+          <!-- <aside class="issue">
             <p>The main considerations we draw from the above. The focus is on alignment with the design of the Web.</p>
-          </aside>
+          </aside> -->
 
           <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS and relations among them should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
 
