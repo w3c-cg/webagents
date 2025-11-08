@@ -543,7 +543,7 @@
 
           <p>The principles are adapted from — and discussed in detail in — [[CIORTEA19]]. Their theoretical foundation lies in the REST architectural style [[FIELDING00]], but they extend beyond REST to address requirements specific to agents, such as <i>Resource Monitoring</i> (see also [[KHARE04]][[FIELDING17]]).</p>
 
-          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, must be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
 
           <p>The core idea behind this first principle is to project the observable state of a Web-based MAS into a uniform, distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). This promotes <i>Scalability</i> by enabling the seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
 
@@ -553,13 +553,17 @@
               <p>The <i>uniform resource space</i> serves as a hypermedia-based design space that can be exploited to provide agents with various levels of support — for example, to mediate access to their deployment context, discover and interact with other agents, or shape their environment to better suit their design goals, including <i>Embodiment</i> and <i>Transparency</i>.</p>
           </aside>
 
-          <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents should be able to discover the rest of the system and the means to participate in it by following hyperlinks.</p>
+          <!-- <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents should be able to discover the rest of the system and the means to participate in it by following hyperlinks.</p> -->
+
+          <p class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS must expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
 
           <p>The core idea behind this second principle is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i>. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
 
           <!-- <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents should be observable using Web standards, enabling agents to selectively monitor and perceive relevant changes in their environment.</p> -->
 
-          <p class="def"><strong>Principle 3 (Observability)</strong>: Agents should be able to selectively perceive relevant changes in their environment by monitoring resources of potential interest using Web standards.</p>
+          <!-- <p class="def"><strong>Principle 3 (Observability)</strong>: Agents should be able to selectively perceive relevant changes in their environment by monitoring resources of potential interest using Web standards.</p> -->
+
+          <p class="def"><strong>Principle 3 (Observability)</strong>: A Hypermedia MAS must enable agents to selectively monitor and receive updates about relevant resources and events in their virtual environments using Web standards.</p>
 
           This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
 
