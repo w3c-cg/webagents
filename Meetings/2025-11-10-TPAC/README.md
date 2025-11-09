@@ -14,12 +14,16 @@ See the [calendar entry](https://www.w3.org/events/meetings/cf8f76b2-8756-44f5-9
 | JST         | Agenda                                       |
 |-------------|----------------------------------------------|
 | 15:30-15:45 | Welcome to the WebAgents CG                  |
-| 15:45-16:20 | Hypermedia Multi-Agent Systems               |
-| 16:20-16:45 | Open Discussion & Next Steps                 |
+| 15:45-16:25 | Hypermedia Multi-Agent Systems               |
+| 16:25-16:45 | Open Discussion & Next Steps                 |
 
 The meeting will begin with an overview of the WebAgents CG — including its history, goals, and scope.
 
 We will then continue with a discussion of Hypermedia Multi-Agent Systems, starting from early visions of agents on the Web, a brief history of Web-based agents and multi-agent systems (MAS), and focusing on the CG's current work on defining architectural patterns for Web-based MAS.
+
+## Meeting Notes
+
+[Link to Meeting Notes](https://annuel.framapad.org/p/7nnauao3xe-aht6)
 
 ## Registration
 
