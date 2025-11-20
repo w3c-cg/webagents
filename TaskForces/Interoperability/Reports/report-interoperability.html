@@ -774,27 +774,133 @@
         </aside>
       </section>
     </section>
+
     <section>
       <h2>Profiles</h2>
+
       
       <aside class="issue">
-          <p>We need to describe non-information resources that we interact with in a Web-based MAS: agents, tools, etc.</p>
+          <p> Profiles describe non-information resources in a Web-based MAS, such as tools and agents, 
+            so as to allow agents to interact with described resources in ways that support system-level design goals.
+          </p>
         </aside>
 
-      <section data-dfn-for="Foo">
+      <section data-dfn-for="#profiles-initiatives">
         <h3>Relevant Standards and Initiatives</h3>
+        <aside class="issue">
+          <p>This section discusses existing for describing non-information resources that agents interact with in a Web-based MAS. 
+            Section <a href="#agent-profiles">5.1.1</a> reviews approaches to agent profiles, and Section <a href="#tool-profiles">5.1.2</a> reviews approaches to tool profiles.
+          </p>
+        </aside>
 
-        <section data-dfn-for="Foo">
+        <section id="#agent-profiles">
           <h3>Agent Profiles</h3>
-      
+
+        <aside class="issue">
+          <p>An agent profile is structured data describing an agent.</p>
+        </aside>
+
+          </aside>
+        <aside class="issue">
+          <p>What follows is a first draft of a comparison table for existing works that support agent profiles, or common aspects of them. This table with evolve with the report. This first draft did not receive any feedback yet, it is only meant to start the discussion — and is bound to be incomplete and inaccurate:</p>
+        </aside>
+        <table class="index">
+          <tr>
+            <td></td>
+            <th>Interaction</th>
+            <th>Capabilities</th>
+            <th>Locality</th>
+            <th>Monitoring</th>
+            <th>Coordination</th>
+          </tr>
+          <tr>
+            <td>FOAF Personal Profile Document</td>
+            <td>(Mbox)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Project (?)</td>
+            <td>Groups, Member</td>
+          </tr>
+          <tr>
+            <td>A2A AgentCard</td>
+            <td>A2A Skills</td>
+            <td>A2A Capabilities (e.g., streaming, pushNotifications)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>LMOS Agent Description</td>
+            <td>—</td>
+            <td>W3C WoT Interaction Affordances</td>
+            <td>—</td>
+            <td>W3C WoT Event Affordances (?)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>ANP Agent Description</td>
+            <td>ANP Potential Action</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MCP Client Capabilities Description</td>
+            <td>—</td>
+            <td>MCP Capabilities (e.g., elicitation, sampling) </td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>FIPA Agent Identifier Description</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>(Interaction Protocols, Ontologies, Languages)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Interaction Protocols</td>
+          </tr>
+          <tr>
+            <td>hMAS Resource Profiles</td>
+            <td>hMAS Signifier, Behavior Execution, Action Execution</td>
+            <td>Abilities (?)</td>
+            <td>hMAS Workspace, JaCaMo Bodies</td>
+            <td>JaCaMo Bodies</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MAMS Agent Bodies</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+          </tr>
+        </table>
+
+        <aside class="issue">
+          <p>Across relevant standards and initiatives for agents on the Web, profiles a set of key processes, which can be summarized as follows:</p>
+          <ul>
+            <li>Interaction: [Process definition]. This process can be supported by data elements regarding [...]. For example, [...]. Such information helps with interoperability, extensibility, [...]</li>
+            <li>Capability advertisement: The process of conveying information about the [capabilities] of an agent can 
+              be supported by data elements regarding the agent's ability to use specific artifacts or tools, 
+              to operate based on specific organisational roles, or to participate in certain interaction patterns.
+              For example, [elicitation of user information [[MCP]], pushing notifications [[A2A]], participating in auctions [[FIPA]], ...].
+              [Such information helps with extensibility, evolvability, ...]
+            <li>...
+            </li> 
+        </ul>
+        </aside>
+
         </section>
 
-        <section data-dfn-for="Foo">
+        <section id="#tool-profiles">
           <h3>Tool Profiles</h3>
         
         </section>
       </section>
-      <section data-dfn-for="Foo">
+      <section data-dfn-for="profiles-discussion">
         <h3>Discussion</h3>
 
         <aside class="issue">
@@ -802,6 +908,7 @@
         </aside>
       </section>
     </section>
+    
     <section>
       <h2>Verifiable Credentials</h2>
 
