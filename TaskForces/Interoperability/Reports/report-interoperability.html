@@ -554,9 +554,11 @@
 
           <p>The principles are adapted from — and discussed in detail in — [[CIORTEA19]]. Their theoretical underpinning is the REST architectural style [[FIELDING00]], but they extend beyond REST to address requirements specific to agents, such as <i>Resource Monitoring</i> (see also [[KHARE04]][[FIELDING17]]).</p>
 
-          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+          <p id="#principle1" class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
 
-          <p>The core idea behind this first principle is to project the observable state of a Web-based MAS into a uniform, distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). This promotes <i>Scalability</i> by enabling the seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
+          <p>The core idea behind this first principle is to project the state of a Web-based MAS into a uniform, resource-oriented, and distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). Resources in this environment may include not only documents (or <a href="https://www.w3.org/TR/webarch/#def-information-resource">information resources</a>) — such as agent cards, FOAF profiles, or WoT Thing Description Documents — but also processes (e.g., agents, tools, services), real-world objects (e.g., devices), or abstract concepts (e.g., ontological terms). We refer to this broader category of entities as non-information resources [[COOLURIS]].</p>
+
+          <p>Having a uniform, resource-oriented representation provides consistent access to all these entities and enables linking and reuse across systems. This principle promotes <i>Scalability</i> by enabling seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
 
           <p>The trade-off is decreased efficiency: components must translate between their internal data representations and the uniform representations exposed via their interfaces, which are necessarily less optimized for the specific needs of individual components.</p>
 
@@ -568,7 +570,7 @@
 
           <p class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
 
-          <p>The core idea behind this second principle is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i>. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
+          <p>The core idea is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i> — allowing agents to join and navigate the system dynamically with minimal prior configuration. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
 
           <!-- <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents should be observable using Web standards, enabling agents to selectively monitor and perceive relevant changes in their environment.</p> -->
 
@@ -576,7 +578,7 @@
 
           <p class="def"><strong>Principle 3 (Observability)</strong>: A Hypermedia MAS should enable agents to selectively monitor and receive updates about relevant resources and events in their virtual environments using Web standards.</p>
 
-          This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
+          <p>This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
 
           <aside class="issue">
             <p>Two design goals from Section&nbsp;<a href="#design-goals">3.3.1</a> are not directly addressed by the above design principles: <i>Value Alignment</i> and <i>Security</i>. To be discussed.</p>
@@ -742,9 +744,25 @@
     <section data-dfn-for="Foo">
       <h2>Identification</h2>
 
-        <aside class="issue">
+        <!-- <aside class="issue">
           <p>We need to identify agents, tools, protocols, and other entities in a Web-based MAS in a uniform way and independent of context. Additional requirements may be relevant depending on the degree of openness, e.g. see the <a href="https://www.w3.org/TR/did-1.0/#design-goals">requirements identified by the DID WG</a>.</p>
+        </aside> -->
+
+        <p><a href="principle1">Principle 1 (Uniform resource space)</a> states that all entities in a Web-based MAS should be represented in a uniform, resource-oriented manner consistent with the Web architecture. The W3C Recommendation for the architecture of the World Wide Web provides several constraints and good practices for identifying resources [[WEBARCH]]. We highlight below the ones most relevant in this context.</p>
+
+        <p>A recommended practice is to identify resources using IRIs (see <a href="https://www.w3.org/TR/webarch/#uri-benefits">Section 2.1. Benefits of URIs</a>), which have global scope and can be referenced independent of context — thereby promoting <i>Interoperability</i>. IRIs can identify both information and non-information resources [[COOLURIS]] (see also <a href="principle1">Principle 1</a>).</p>
+
+        <aside class="note" title="Decentralization">
+          <p>IRIs are not inherently centralized: a subclass of IRIs are Decentralized Identifiers [[DID-1.1]].</p>
         </aside>
+
+        <p>An IRI identifies a single resource (see <a href="https://www.w3.org/TR/webarch/#pr-uri-collision">Constraint: URIs Identify a Single Resource</a>), and the IRI owner is responsible for maintaining the semantic validity of that identifier over time [[FIELDING00]]. These constraints help prevent identifier collisions and semantic drift in long-lived systems, which is essential for <i>Extensibility</i> and <i>Evolvability</i>.</p>
+
+        <aside class="issue">
+          <p>Perhaps worth noting: the meaning of resources might change over time, e.g. ontological definitions can evolve. This requires versioning, which is a common practice for ontologies.</p>
+        </aside>
+
+        <p>Another good practice is that deferenecing an IRI should return a representation of the identified resource (see <a href="https://www.w3.org/TR/webarch/#pr-describe-resource">Good Practice: Available representation</a>). If the identified resource is a non-information resource, such as a person or an autonomous agent, the IRI should return an information resource that describes the targeted resource [[COOLURIS]]. This practice is common when representing knowledge on the Web, and promoted by specifications such as WebID [[SOLID-PROTOCOL]] and Decentralized Identifiers [[DID-1.1]].</p>
 
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
