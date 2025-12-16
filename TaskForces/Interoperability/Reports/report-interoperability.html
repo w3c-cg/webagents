@@ -76,6 +76,60 @@
             href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
             publisher: "IFAAMAS",
           },
+          SEMWEB01: {
+            authors: [
+              "Tim Berners-Lee",
+              "James Hendler",
+              "Ora Lassila",
+            ],
+            title: "The Semantic Web",
+            date: "2001",
+            publisher: "Scientific American",
+          },
+
+          CLOUDSTORAGE: {
+          authors: ["Tim Berners-Lee"],
+          title: "Socially Aware Cloud Storage",
+          date: "2009",
+          href: "https://www.w3.org/DesignIssues/CloudStorage.html"
+          },
+          LINKEDDATA: {
+          authors: ["Tim Berners-Lee"],
+          title: "Linked Data",
+          date: "2006",
+          href: "https://www.w3.org/DesignIssues/LinkedData.html"
+          },
+          SOLID: {
+          authors: ["Andrei Vlad Sambra", "Essam Mansour", "Sandro Hawke", "Maged Zereba", "Nicola Greco", "Abdurrahman Ghanem", "Dmitri Zagidulin", "Ashraf Aboulnaga", "Tim Berners-Lee"],
+          title: "Solid: A Platform for Decentralized Social Applications Based on Linked Data",
+          date: "2016",
+          href: "http://emansour.com/research/meccano/solid_protocols.pdf"
+          },
+          LDP: {
+          authors: ["Steve Speicher", "John Arwe", "Ashok Malhotra"],
+          title: "Linked Data Platform",
+          date: "2015",
+          href: "https://www.w3.org/TR/ldp/"
+          },
+          DECENTRALIZEDWEB: {
+          authors: ["Ruben Verborgh"],
+          title: "Paradigm shifts for the decentralized Web",
+          date: "2017",
+          href: "https://ruben.verborgh.org/blog/2017/12/20/paradigm-shifts-for-the-decentralized-web/"
+          },
+          CHARLIE24: {
+          authors: ["Jessie Wright"],
+          title: "Here's Charlie! Realising the Semantic Web vision of Agents in the age of LLMs",
+          date: "2024",
+          href: "https://ceur-ws.org/Vol-3828/paper38.pdf",
+          publisher: "ISWC 2024"
+          },
+          CHARLIEWORKS: {
+          authors: ["Tim Berners-Lee"],
+          title: "Charlie Works",
+          date: "2025",
+          href: "https://www.w3.org/DesignIssues/Works.html"
+          }
         }
       };
     </script>
@@ -280,6 +334,7 @@
           <aside class="issue">
             <p>This section discusses agents in the context of the decentralized Social Web — and especially the Solid ecosystem.</p>
           </aside>
+	  The decentralized Social Web emerged as an alternative to centralized Web social media. In particular, as early as 2009, Sir Tim Berners-Lee, founder of the World Wide Web, expressed a criticism of centralized cloud services that create closed silos of data, that are themselves tightly coupled to the applications that can use the data. These silos remain in control of cloud storage providers and prevent users from being in control of their own data. He proposed instead that applications should be decoupled from data [[CLOUDSTORAGE]]. To do so, he proposed to use the Web architecture combined with Linked Data Principles [[LINKEDDATA]].  In 2016, this proposal was realized by the Solid project [[SOLID]]. Solid is a protocol that enables each user to own one or more pods that contain their data. Each pod is structured as a Linked Data Platform [[LDP]]. The data provided by each data can be accessed by different applications depending on the authorizations they are given to read or write data in a given pod. It therefore satisfies the principles developed by Tim Berners-Lee in [[CLOUDSTORAGE]] and it also satisfies the principles for the decentralized Web developed in [[DECENTRALIZEDWEB]]. Solid is built using Semantic Web technologies, which were themselves developed to enable machines, such as software agents, to interact meaningfully with Web resources [[SEMWEB01]]. Software agents have been integrated as part of the Solid applications. In particular, LLM agents combined with Solid have been described as enabling the original vision of the Semantic Web [[CHARLIE24]]. Tim Berners-Lee asserts that the development of LLMs, combined with data wallets (such as Solid data pods) storing personal information, enables the development of personal assistants able to access data shared with the consent of the user, in order to provide better results [[CHARLIEWORKS]]. Another contribution to decentralized social media that also relies on Semantic Web technologies is the Fediverse. The Fediverse is a set of platforms that implement the <a href="https://activitypub.rocks/">ActivityPub</a> protocol. This protocol enables different social media platforms to be interoperable with one another. It relies on the ActivityStreams format, compatible with Semantic  Web technologies like JSON-LD, to exchange information across platforms. While ActivityPub has different objectives than Solid (interoperable social media vs decentralized data storage), their grounding in Semantic Web technologies and emphasis on decentralization make them complementary, as seen with project like <a href="https://activitypods.org/">ActivityPods</a>, which enables the creation of social media apps, integrated within the Fediverse, over Solid. Another approach to create decentralized social media are approaches that rely on cryptographic technologies, such as blockchains. These technologies form together what has been called "Web3", which includes decentralized applications constructed over blockchains, such as Ethereum; the <a href="https://docs.ipfs.tech/">Interplanetary File System (IPFS)</a> to enable distributed storage of information, making censorship of information more difficult as it requires blocking or shutting down each server that contains the information. While such initiatives often evolve in a different ecosystems than Solid and ActivityPub, some connections exist. One example is the W3C standard for <a href="https://www.w3.org/TR/did-1.1/"> Decentralized Identifiers (DID)</a>, which are URIs that can be resolved to a JSON-LD document that provides information to identify users (including humans and software agents). While DIDs have an explicit connection to the Semantic Web, through the use of JSON-LD, they also have a connection to blockchains, as a potential storage for DID documents.
         </section>
 
         <section data-dfn-for="Foo">
