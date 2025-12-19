@@ -756,37 +756,92 @@
 
         <p><a href="principle1">Principle 1 (Uniform resource space)</a> states that all entities in a Web-based MAS should be represented in a uniform, resource-oriented manner consistent with the Web architecture. The W3C Recommendation for the architecture of the World Wide Web provides several constraints and good practices for identifying resources [[WEBARCH]]. We highlight below the ones most relevant in this context.</p>
 
-        <p>A recommended practice is to identify resources using IRIs (see <a href="https://www.w3.org/TR/webarch/#uri-benefits">Section 2.1. Benefits of URIs</a>), which have global scope and can be referenced independent of context — thereby promoting <i>Interoperability</i>. IRIs can identify both information and non-information resources [[COOLURIS]] (see also <a href="principle1">Principle 1</a>).</p>
+        <aside class="issue" title="Identifier vs. Identity">
+          TODO: add note on identifier vs. identity. We can reference [[RFC4949]] for terminology.
+        </aside>
+
+        <p>A recommended practice is to identify resources using IRIs (see <a href="https://www.w3.org/TR/webarch/#uri-benefits">Section 2.1. Benefits of URIs</a>), which have global scope and can be referenced independent of context — thereby promoting <i>Interoperability</i>. IRIs can identify both information resources (documents, agent cards, etc.) and non-information resources (agents, devices, etc.) [[COOLURIS]].</p>
 
         <aside class="note" title="Decentralization">
           <p>IRIs are not inherently centralized: a subclass of IRIs are Decentralized Identifiers [[DID-1.1]].</p>
         </aside>
 
-        <p>An IRI identifies a single resource (see <a href="https://www.w3.org/TR/webarch/#pr-uri-collision">Constraint: URIs Identify a Single Resource</a>), and the IRI owner is responsible for maintaining the semantic validity of that identifier over time [[FIELDING00]]. These constraints help prevent identifier collisions and semantic drift in long-lived systems, which is essential for <i>Extensibility</i> and <i>Evolvability</i>.</p>
+        <p>An IRI identifies a single resource (see <a href="https://www.w3.org/TR/webarch/#pr-uri-collision">Constraint: URIs Identify a Single Resource</a>), and the IRI owner is responsible for maintaining the semantic validity of that identifier over time [[FIELDING00]]. These two constraints help prevent identifier collisions and semantic drift in long-lived systems, which is essential for <i>Extensibility</i> and <i>Evolvability</i>.</p>
 
-        <aside class="issue">
-          <p>Perhaps worth noting: the meaning of resources might change over time, e.g. ontological definitions can evolve. This requires versioning, which is a common practice for ontologies.</p>
+        <aside class="note" title="Evolving Resources">
+          <p>The meaning of resources can change over time. For example, definitions of ontological concepts often evolve. In such cases, IRIs can be versioned to maintain their semantic validity, which is a common practice in ontology engineering (see <a href="https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI">Section 3.1 Ontology IRI and Version IRI</a> in [[owl2-syntax]]).</p>
         </aside>
 
-        <p>Another good practice is that deferenecing an IRI should return a representation of the identified resource (see <a href="https://www.w3.org/TR/webarch/#pr-describe-resource">Good Practice: Available representation</a>). If the identified resource is a non-information resource, such as a person or an autonomous agent, the IRI should return an information resource that describes the targeted resource [[COOLURIS]]. This practice is common when representing knowledge on the Web, and promoted by specifications such as WebID [[SOLID-PROTOCOL]] and Decentralized Identifiers [[DID-1.1]].</p>
+        <p>IRIs should be opaque (see <a href="https://www.w3.org/TR/webarch/#pr-uri-opacity">Good practice: URI Opacity</a>), meaning that agents should not attempt to infer properties of referenced resources from the IRIs themselves. Similarly, while it is common to follow best practices for IRI design when developing APIs (e.g., using containers to group similar resources), such design decisions cannot be assumed to be understood outside the scope of a specific service.</p>
+
+        <p>Another good practice is that deferenecing an IRI should return a representation of the identified resource (see <a href="https://www.w3.org/TR/webarch/#pr-describe-resource">Good Practice: Available representation</a>). If the identified resource is a non-information resource, such as a person or a software agent, the IRI should return an information resource that describes the targeted resource [[COOLURIS]]. This practice is common when representing knowledge on the Web, and promoted by specifications such as WebID [[SOLID-PROTOCOL]] and Decentralized Identifiers [[DID-1.1]].</p>
+
+        <p>We discuss additional constraints and best practices in <a href="#verifiable-credentials">Section 6. Verifiable Credentials</a>.</p>
 
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
 
+        <p>A number of standards and initiatives exist that address — either explicitly or implicitly — the identification of <a href="#dfn-agent">agents</a> and other entities of interest. In the following, we focus on agents and <a href="#dfn-tool">tools</a>.</p>
+
         <section data-dfn-for="Foo">
         <h3>Agent Identification</h3>
 
-        <aside class="issue">
-          <p>E.g., FIPA, SemWeb/FOAF, hMAS, LMOS, A2A</a>.</p>
-        </aside>
+          <section>
+            <h4>FIPA</h4>
+
+            <p>The <a href="http://www.fipa.org/repository/standardspecs.html">standardization work of the Foundation for Intelligent Physical Agents (FIPA)</a> is one of the earliest and most influential initiatives aimed at designing open and interoperable networks of agents. FIPA introduces <i>agent names</i> as immutable, unique identifiers that remain valid throughout an agent's lifetime [[FIPA-ARCH]]. Agent names are independent of the issuing party, yet still verifiable for authenticity. Importantly, they do not encode any properties of the agent. In these respects, FIPA agent names are aligned with the constraints and best practices outlined previously for identifying resources.</p>
+
+            <p>Where FIPA agent names differ from IRI-based identification approaches is in their use of a specific syntax: they are constructed from an agent's local identifier and the address of its home platform (i.e., the platform on which the agent was created). For example, the agent name `bob@example.org` identifies the agent `bob` hosted on the platform `example.org`. Using such custom identifiers for agents therefore requires the development and deployment of an Internet-scale agent name resolution service — an effort that can be avoided by using IRIs instead.</p>
+
+            <aside class="issue" title="FIPA website is down">
+              <p>The FIPA website is now unavailable. We should reach out for archiving purposes. Meanwhile, the Internet Archive could be a solution.</p>
+            </aside>
+
+          </section>
+
+          <section>
+            <h4>Solid</h4>
+
+            Solid [[SOLID-PROTOCOL]] is a Web decentralization initiative that aims to enable users to retain full control over their data. In Solid, an <a href="https://solidproject.org/TR/protocol#agent">agent</a> is a "person, social entity, or software identified by a URI", such as a WebID [[WEBID]]. Solid builds on the architectural principles of the World Wide Web [[WEBARCH]] and is therefore directly aligned with the IRI-based identification approach described in this report.
+            
+          </section>
+
+          <section>
+            <h4>The Agent2Agent (A2A) Protocol</h4>
+
+            <p>The Agent2Agent (A2A) Protocol [[A2A-PROTOCOL]] is an open standard designed to facilitate communication and interoperability between heterogeneous agent implementations. In the current specification, an <a href="https://a2a-protocol.org/latest/topics/agent-discovery/">agent's identity</a> is defined by its <i>name</i>, <i>description</i>, and <i>provider</i> information. The agent's <i>name</i> is a human-readable identifier (e.g., "Example Agent"), while the description is a human-readable string characterizing the agent (e.g., "An agent that can generate random example quotes"). <a href="https://a2a-protocol.org/latest/specification/#AgentProvider">Provider information</a> includes a URL for the provider's website or relevant documentation, and a human-readable name of the provier's organization (e.g., "ACME Inc.").</p>
+
+            <p>This design is consistent with earlier FIPA-style agent identification approaches, in which agent identity is represented by local identifiers contextualized by a provider or hosting platform rather than by globally scoped identifiers. While the inclusion of provider information supports discovery and interaction across organizational boundaries, defining agent identity in terms of human-readable names and descriptions limits the ability to reference agents as first-class entities in a global context. This approach simplifies implementation and configuration in closed or curated environments but constrains interoperability in open settings. Extending the agent information with a canonical agent IRI would address this limitation by enabling globally unique and uniform identification.</p>
+            
+          </section>
+
+          <section>
+            <h4>The Agent network Protocol (ANP)</h4>
+
+            
+          </section>
         
         </section>
         <section data-dfn-for="Foo">
           <h3>Tool Identification</h3>
-          
-        <aside class="issue">
-          <p>E.g., MCP, hMAS, MAMS, LMOS</a>.</p>
-        </aside>
+
+          <section>
+            <h4>MCP</h4>
+
+            
+          </section>
+
+          <section>
+            <h4>UTCP</h4>
+
+            
+          </section>
+
+          <section>
+            <h4>Yggdrasil</h4>
+
+            
+          </section>
 
         </section>
       </section>
@@ -826,7 +881,7 @@
         </aside>
       </section>
     </section>
-    <section>
+    <section id="verifiable-credentials">
       <h2>Verifiable Credentials</h2>
 
       <aside class="issue">
