@@ -756,8 +756,13 @@
 
         <p><a href="principle1">Principle 1 (Uniform resource space)</a> states that all entities in a Web-based MAS should be represented in a uniform, resource-oriented manner consistent with the Web architecture. The W3C Recommendation for the architecture of the World Wide Web provides several constraints and good practices for identifying resources [[WEBARCH]]. We highlight below the ones most relevant in this context.</p>
 
-        <aside class="issue" title="Identifier vs. Identity">
-          TODO: add note on identifier vs. identity. We can reference [[RFC4949]] for terminology.
+        <aside class="note" title="Identifier vs. Identity">
+          <p>It is important to distringuish between an <i>identifier</i> and an <i>identity</i> [[RFC4949]]:
+            <ul>
+              <li>an <i>identifier</i> is "a data object that definitively represents a specific identity of a system entity, distinguishing that identity from all others";</li>
+              <li>an <i>identity</i> is "the collective aspect of a set of attribute values (i.e., a set of characteristics) by which a system user or other system entity is recognizable or known".</li>
+            </ul>
+          </p>
         </aside>
 
         <p>A recommended practice is to identify resources using IRIs (see <a href="https://www.w3.org/TR/webarch/#uri-benefits">Section 2.1. Benefits of URIs</a>), which have global scope and can be referenced independent of context — thereby promoting <i>Interoperability</i>. IRIs can identify both information resources (documents, agent cards, etc.) and non-information resources (agents, devices, etc.) [[COOLURIS]].</p>
@@ -794,7 +799,7 @@
             <p>Where FIPA agent names differ from IRI-based identification approaches is in their use of a specific syntax: they are constructed from an agent's local identifier and the address of its home platform (i.e., the platform on which the agent was created). For example, the agent name `bob@example.org` identifies the agent `bob` hosted on the platform `example.org`. Using such custom identifiers for agents therefore requires the development and deployment of an Internet-scale agent name resolution service — an effort that can be avoided by using IRIs instead.</p>
 
             <aside class="issue" title="FIPA website is down">
-              <p>The FIPA website is now unavailable. We should reach out for archiving purposes. Meanwhile, the Internet Archive could be a solution.</p>
+              <p>The FIPA website is now unavailable. We should reach out for archiving purposes. Meanwhile, the Internet Archive has an <a href="https://web.archive.org/web/20250826233645/http://fipa.org/">archived version</a>.</p>
             </aside>
 
           </section>
@@ -802,7 +807,7 @@
           <section>
             <h4>Solid</h4>
 
-            Solid [[SOLID-PROTOCOL]] is a Web decentralization initiative that aims to enable users to retain full control over their data. In Solid, an <a href="https://solidproject.org/TR/protocol#agent">agent</a> is a "person, social entity, or software identified by a URI", such as a WebID [[WEBID]]. Solid builds on the architectural principles of the World Wide Web [[WEBARCH]] and is therefore directly aligned with the IRI-based identification approach described in this report.
+            Solid [[SOLID-PROTOCOL]] is a Web decentralization initiative that aims to enable users to retain full control over their data. In Solid, an <a href="https://solidproject.org/TR/protocol#agent">agent</a> is a "person, social entity, or software identified by a URI", such as a WebID [[WEBID]]. Dereferencing the WebID of an agent retrieves a representation of its WebID Profile, an RDF document describing the agent [[SOLID-PROTOCOL]] (cf. best practices discussed above). Solid thus builds on the architectural principles of the World Wide Web [[WEBARCH]] and is directly aligned with the IRI-based identification approach described in this report. We discuss further the Solid approach in the following sections.
             
           </section>
 
@@ -811,20 +816,20 @@
 
             <p>The Agent2Agent (A2A) Protocol [[A2A-PROTOCOL]] is an open standard designed to facilitate communication and interoperability between heterogeneous agent implementations. In the current specification, an <a href="https://a2a-protocol.org/latest/topics/agent-discovery/">agent's identity</a> is defined by its <i>name</i>, <i>description</i>, and <i>provider</i> information. The agent's <i>name</i> is a human-readable identifier (e.g., "Example Agent"), while the description is a human-readable string characterizing the agent (e.g., "An agent that can generate random example quotes"). <a href="https://a2a-protocol.org/latest/specification/#AgentProvider">Provider information</a> includes a URL for the provider's website or relevant documentation, and a human-readable name of the provier's organization (e.g., "ACME Inc.").</p>
 
-            <p>This design is consistent with earlier FIPA-style agent identification approaches, in which agent identity is represented by local identifiers contextualized by a provider or hosting platform rather than by globally scoped identifiers. While the inclusion of provider information supports discovery and interaction across organizational boundaries, defining agent identity in terms of human-readable names and descriptions limits the ability to reference agents as first-class entities in a global context. This approach simplifies implementation and configuration in closed or curated environments but constrains interoperability in open settings. Extending the agent information with a canonical agent IRI would address this limitation by enabling globally unique and uniform identification.</p>
+            <p>This design is consistent with earlier FIPA-style agent identification approaches, in which agent identity is represented by local identifiers contextualized by a provider or hosting platform rather than by globally scoped identifiers. While the inclusion of provider information supports discovery and interaction across organizational boundaries, defining agent identity in terms of human-readable names and descriptions limits the ability to reference agents as first-class entities in a global context. This approach simplifies implementation and configuration in closed settings but constrains interoperability in open settings. Extending the agent information with an agent IRI would address this limitation by enabling globally unique and uniform identification.</p>
             
           </section>
 
           <section>
-            <h4>The Agent network Protocol (ANP)</h4>
+            <h4>The Agent Network Protocol (ANP)</h4>
 
-            
+            <p>The Agent Network Protocol (ANP) [[ANP]] is an open-source communication protocol that enables agents to discover and interact with one another on the Internet. ANP is designed for interoperability in decentralized settings and identifies agents using W3C Decentralized Identifiers (DIDs) [[DID-1.1]]. ANP defines its own DID method for identifying Web-based agents, named `did:wba`, which extends the `did:web` method specification [[did-web]] with additional constraints on DID documents and cross-platform authentication processes. By adopting DIDs, ANP is therefore directly aligned with the IRI-based identification approach described in this report and addresses cross-platform identification and authentication in a decentralized manner, with the associated requirement to support DIDs and the `did:wba` DID method.</p>
           </section>
 
           <section>
             <h4>Eclipse LMOS</h4>
 
-            
+            <p>The Eclipse Language Model Operating System (LMOS) [[LMOS-PROTOCOL]] is an open protocol that enables agents to discover, interact, and collaborate on the Internet. LMOS builds on W3C standards and specifically the Web of Things architecture [[wot-architecture11]]. Similar to ANP, LMOS uses Decentralized Identifiers [[DID-1.1]] to identify not only agents but also tools. Unlike ANP, LMOS uses the `did:web` method specification as is [[did-web]], deferring authentication processes to declarative security definitions via the WoT Thing Description [[wot-thing-description11]]. We discuss security mechanisms in Section&nbsp;[[[#security-and-privacy]]].</p>
           </section>
         
         </section>
@@ -834,19 +839,14 @@
           <section>
             <h4>MCP</h4>
 
+            <p>The Model Context Protocol (MCP) is an open-source standard for connecting LLM-based applications to external systems. In MCP, tools are "executable functions that AI applications can invoke to perform actions (e.g., file operations, API calls, database queries)". In the current specification (`version 2025-11-25`), a tool is identified by a <i>name</i>, which is a string identifier that is unique within an MCP server. In addition, some systems use string labels for MCP servers that further qualify tool references (e.g., <a href="https://platform.openai.com/docs/api-reference/responses/create">OpenAI Response API v1</a>), similar to the provider information in A2A (see Section&nbsp;[[[#the-agent2agent-a2a-protocol]]]). MCP thus follows a design rationale similar to A2A that prioritizes simplicity in closed settings but constrains interoperability in open settings. Extending tool definitions with tool IRIs would address this limitation by enabling globally unique and uniform identification.</p>
             
           </section>
 
           <section>
             <h4>UTCP</h4>
 
-            
-          </section>
-
-          <section>
-            <h4>Yggdrasil</h4>
-
-            
+            <p>The Universal Tool Calling Protocol (UTCP) is an open standard that enables agents to discover and call tools directly. UTCP extends the OpenAPI specification [[OPENAPIS-3.1.0]] with agent-focused enhancements, including bindings to different protocols used for transport (e.g., HTTP, CLI, gRPC, GraphQL, MCP). We discuss in more detail the UTCP approach to tool use in Section&nbsp;[[[#agent-environment-interaction]]]. Similar to MCP, a UTCP tool is identified by a <i>name</i>, which is a string identifier. The responsibility of managing tool repositories is left to the UTCP client. UTCP thus follows a design trade-off similar to MCP, simplifying tool referencing in closed settings rather than supporting globally unique and uniform identification.</p>
           </section>
 
         </section>
@@ -854,9 +854,7 @@
       <section data-dfn-for="Foo">
         <h3>Discussion</h3>
 
-        <aside class="issue">
-          <p>Identify commonalities among the different initiatives and pontential gaps</a>.</p>
-        </aside>
+        <p>The initiatives surveyed in this section span a spectrum from closed to open settings. At one end, protocols like MCP and UTCP use string identifiers scoped to individual servers — a design that prioritizes simplicity and developer convenience in closed settings. At the other end, ANP and Eclipse LMOS use DIDs to enable globally unique, decentralized identification suited to open settings. Solid uses HTTP IRIs for centralized identification in a decentralized Web, and A2A occupies a middle ground with provider-qualified names. This diversity reflects legitimate differences in system requirements rather than a gap in standardization. However, a clear pattern emerges: as systems move toward openness and decentralization, alignment with Web standards and practices for identification becomes increasingly important. For systems that anticipate evolution towards open and decentralized participation, adopting IRI-based identification from the outset may reduce future integration costs.</p>
       </section>
     </section>
     <section>
