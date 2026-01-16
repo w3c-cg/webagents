@@ -745,7 +745,7 @@
 
       </section>
     </section>
-    <section data-dfn-for="Foo">
+    <section id="identification">
       <h2>Identification</h2>
 
         <aside class="issue">
@@ -783,13 +783,39 @@
 
     <section>
       <h2>Profiles</h2>
+    
+      <p> Profiles are information resources (i.e., documents) that describe non-information resources in a Web-based MAS, such as agents and tools.</p>
+            
+      <p> The need for profiles arises from the good practices defined in the W3C Recommendation Architecture of the World Wide Web: 
+        When a non-information resource is identified by an IRI, dereferencing that IRI should return a representation of an information resource that describes the identified resource ([COOLURIS]; see <a href="identification">Section 4. Identification</a>). 
+        Profiles support this practice, by acting as the information sources through which identifiable agents, tools, and other (non-informational) MAS entities are described and accessed on the Web.
+        In line with <a href="principle1">Principle 1 (Uniform resource space)</a>, this access is consistent and enables linking and reuse of MAS entities accross the system. 
+      </p>  
 
+      <aside class="issue" title="Resource Profiles vs.Profiles in Content Negotiation">
+        This document’s use of the term Profile should not be confused with profiles of specifications for information resources used for content negotiation by profile. [...]
+      </aside>
+
+      <aside class="issue" title="Parallelism between profiles and homepages of people and organizations as an example.">
+        In practice, profiles are similar to [...]
+      </aside>
+
+      <aside class="issue" title="Good practices about linking">
+       Comment on identification of links and their roles within the representation, Web-wide and hypertext linking (not just internal), and the use of URI references (relative links) to enhance the usability of the data format.
+      </aside>
       
-      <aside class="issue">
-          <p> Profiles describe non-information resources in a Web-based MAS, such as tools and agents, 
-            so as to allow agents to interact with described resources in ways that support system-level design goals.
-          </p>
-        </aside>
+      <aside class="issue" title="Good practices about data formats">
+        Comment on support of data format, that also allow for extensibility that retains conformance with the original specification
+      </aside>
+
+      <aside class="issue" title="Good practices about interaction">
+        Comment on the separation of content, representation, and interaction
+      </aside>
+
+      <aside class="issue" title="Good practices about versioning">
+        To comment on versioning
+      </aside>
+
 
       <section data-dfn-for="#profiles-initiatives">
         <h3>Relevant Standards and Initiatives</h3>
@@ -899,10 +925,46 @@
         </ul>
         </aside>
 
+         <h4>FOAF Personal Profile Document</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="http://ldodds.com/foaf/foaf-a-matic.html">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>Solid WebID Profile</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://solid.github.io/webid-profile/#terminology">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>FIPA Agent Identifier Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://jade.tilab.com/papers/JADETutorialIEEE/JADETutorial_FIPA.pdf">Temporary example for discussion</a> (slide 12)
+          </aside>
+
+         <h4>MCP Client Capabilities Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://modelcontextprotocol.io/docs/learn/client-concepts#core-client-features">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>A2A AgentCard</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://a2a-protocol.org/latest/tutorials/python/3-agent-skills-and-card/#agent-card">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>ANP Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://agent-network-protocol.com/specs/agent-description.html">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>LMOS Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://eclipse.dev/lmos/docs/lmos_protocol/agent_description/">Temporary example for discussion</a> 
+          </aside>
+
         </section>
 
         <section id="tool-profiles">
           <h3>Tool Profiles</h3>
+
         
         </section>
       </section>
