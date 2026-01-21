@@ -572,7 +572,7 @@
 
           <!-- <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents should be able to discover the rest of the system and the means to participate in it by following hyperlinks.</p> -->
 
-          <p class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
+          <p id="principle2" class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
 
           <p>The core idea behind this second principle is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i>. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
 
@@ -781,7 +781,7 @@
       </section>
     </section>
     <section>
-      <h2>Profiles</h2>
+      <h2 id="profiles">Profiles</id=h2>
       
       <aside class="issue">
           <p>We need to describe non-information resources that we interact with in a Web-based MAS: agents, tools, etc.</p>
@@ -829,7 +829,16 @@
     </section>
     <section>
       <h2>Discovery</h2>
-
+      <p>
+        <a href="#principle2">Principle 2 (Single entry point)</a> states that a Hypermedia MAS should expose one or more entry URLs
+        from which the rest of the system and the means to participate in it can be discovered through hyperlinks. Discovery may occur
+        either through ad-hoc exploration of the the Hypermedia Space by link following or through the provision of dedicated resources
+        hosted at well known IRIs. On a local network mDNS based discovery mechanisms may also be used.
+      </p>
+      <p>
+        Discovery mechanisms use a shared representation to advertise the existence of a resource, typically in the form of a 
+        <a href="#profiles">Profile</a>.
+      </p>
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
 
