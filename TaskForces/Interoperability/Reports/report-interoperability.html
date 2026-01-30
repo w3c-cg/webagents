@@ -788,7 +788,7 @@
 
       </section>
     </section>
-    <section data-dfn-for="Foo">
+    <section id="identification">
       <h2>Identification</h2>
 
         <!-- <aside class="issue">
@@ -898,27 +898,195 @@
         <p>The initiatives surveyed in this section span a spectrum of design choices, from closed to open settings. At one end, protocols like MCP and UTCP use string identifiers scoped to individual servers — a design that prioritizes simplicity and developer convenience in closed settings. At the other end, ANP and Eclipse LMOS use DIDs [[DID-1.1]] to enable globally unique, decentralized identification suited to open settings. Solid uses HTTP IRIs for centralized identification in a decentralized Web, and A2A occupies a middle ground with provider-qualified names. This diversity reflects legitimate differences in system requirements rather than a gap in standardization. However, a clear pattern emerges: as systems move toward openness and decentralization, alignment with Web standards and practices for identification becomes increasingly relevant. For systems that anticipate evolution towards open and decentralized participation, adopting IRI-based identification from the outset may reduce future integration costs.</p>
       </section>
     </section>
+
     <section>
       <h2>Profiles</h2>
+    
+      <p> Profiles are information resources (i.e., documents) that describe non-information resources in a Web-based MAS, such as agents and tools.</p>
+            
+      <p> The need for profiles arises from the good practices defined in the W3C Recommendation Architecture of the World Wide Web: 
+        When a non-information resource is identified by an IRI, dereferencing that IRI should return a representation of an information resource that describes the identified resource ([COOLURIS]; see <a href="identification">Section 4. Identification</a>). 
+        Profiles support this practice, by acting as the information sources through which identifiable agents, tools, and other (non-informational) MAS entities are described and accessed on the Web.
+        In line with <a href="principle1">Principle 1 (Uniform resource space)</a>, this access is consistent and enables linking and reuse of MAS entities accross the system. 
+      </p>  
+
+      <aside class="issue" title="Resource Profiles vs.Profiles in Content Negotiation">
+        This document’s use of the term Profile should not be confused with profiles of specifications for information resources used for content negotiation by profile. [...]
+      </aside>
+
+      <aside class="issue" title="Parallelism between profiles and homepages of people and organizations as an example.">
+        In practice, profiles are similar to [...]
+      </aside>
+
+      <aside class="issue" title="Good practices about linking">
+       Comment on identification of links and their roles within the representation, Web-wide and hypertext linking (not just internal), and the use of URI references (relative links) to enhance the usability of the data format.
+      </aside>
       
-      <aside class="issue">
-          <p>We need to describe non-information resources that we interact with in a Web-based MAS: agents, tools, etc.</p>
+      <aside class="issue" title="Good practices about data formats">
+        Comment on support of data format, that also allow for extensibility that retains conformance with the original specification
+      </aside>
+
+      <aside class="issue" title="Good practices about interaction">
+        Comment on the separation of content, representation, and interaction
+      </aside>
+
+      <aside class="issue" title="Good practices about versioning">
+        To comment on versioning
+      </aside>
+
+
+      <section data-dfn-for="#profiles-initiatives">
+        <h3>Relevant Standards and Initiatives</h3>
+        <aside class="issue">
+          <p>This section discusses existing for describing non-information resources that agents interact with in a Web-based MAS. 
+            Section <a href="#agent-profiles">5.1.1</a> reviews approaches to agent profiles, and Section <a href="#tool-profiles">5.1.2</a> reviews approaches to tool profiles.
+          </p>
         </aside>
 
-      <section data-dfn-for="Foo">
-        <h3>Relevant Standards and Initiatives</h3>
-
-        <section data-dfn-for="Foo">
+        <section id="agent-profiles">
           <h3>Agent Profiles</h3>
-      
+
+        <aside class="issue">
+          <p>An agent profile is structured data describing an agent.</p>
+        </aside>
+
+          </aside>
+        <aside class="issue">
+          <p>What follows is a first draft of a comparison table for existing works that support agent profiles, or common aspects of them. This table with evolve with the report. This first draft did not receive any feedback yet, it is only meant to start the discussion — and is bound to be incomplete and inaccurate:</p>
+        </aside>
+        <table class="index">
+          <tr>
+            <td></td>
+            <th>Interaction</th>
+            <th>Capabilities</th>
+            <th>Locality</th>
+            <th>Monitoring</th>
+            <th>Coordination</th>
+          </tr>
+          <tr>
+            <td>FOAF Personal Profile Document</td>
+            <td>(Mbox)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Project (?)</td>
+            <td>Groups, Member</td>
+          </tr>
+          <tr>
+            <td>A2A AgentCard</td>
+            <td>A2A Skills</td>
+            <td>A2A Capabilities (e.g., streaming, pushNotifications)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>LMOS Agent Description</td>
+            <td>—</td>
+            <td>W3C WoT Interaction Affordances</td>
+            <td>—</td>
+            <td>W3C WoT Event Affordances (?)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>ANP Agent Description</td>
+            <td>ANP Potential Action</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MCP Client Capabilities Description</td>
+            <td>—</td>
+            <td>MCP Capabilities (e.g., elicitation, sampling) </td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>FIPA Agent Identifier Description</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>(Interaction Protocols, Ontologies, Languages)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Interaction Protocols</td>
+          </tr>
+          <tr>
+            <td>hMAS Resource Profiles</td>
+            <td>hMAS Signifier, Behavior Execution, Action Execution</td>
+            <td>Abilities (?)</td>
+            <td>hMAS Workspace, JaCaMo Bodies</td>
+            <td>JaCaMo Bodies</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MAMS Agent Bodies</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+          </tr>
+        </table>
+
+        <aside class="issue">
+          <p>Across relevant standards and initiatives for agents on the Web, profiles a set of key processes, which can be summarized as follows:</p>
+          <ul>
+            <li>Interaction: [Process definition]. This process can be supported by data elements regarding [...]. For example, [...]. Such information helps with interoperability, extensibility, [...]</li>
+            <li>Capability advertisement: The process of conveying information about the [capabilities] of an agent can 
+              be supported by data elements regarding the agent's ability to use specific artifacts or tools, 
+              to operate based on specific organisational roles, or to participate in certain interaction patterns.
+              For example, [elicitation of user information [[MCP]], pushing notifications [[A2A]], participating in auctions [[FIPA]], ...].
+              [Such information helps with extensibility, evolvability, ...]
+            <li>...
+            </li> 
+        </ul>
+        </aside>
+
+         <h4>FOAF Personal Profile Document</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="http://ldodds.com/foaf/foaf-a-matic.html">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>Solid WebID Profile</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://solid.github.io/webid-profile/#terminology">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>FIPA Agent Identifier Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://jade.tilab.com/papers/JADETutorialIEEE/JADETutorial_FIPA.pdf">Temporary example for discussion</a> (slide 12)
+          </aside>
+
+         <h4>MCP Client Capabilities Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://modelcontextprotocol.io/docs/learn/client-concepts#core-client-features">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>A2A AgentCard</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://a2a-protocol.org/latest/tutorials/python/3-agent-skills-and-card/#agent-card">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>ANP Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://agent-network-protocol.com/specs/agent-description.html">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>LMOS Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://eclipse.dev/lmos/docs/lmos_protocol/agent_description/">Temporary example for discussion</a> 
+          </aside>
+
         </section>
 
-        <section data-dfn-for="Foo">
+        <section id="tool-profiles">
           <h3>Tool Profiles</h3>
+
         
         </section>
       </section>
-      <section data-dfn-for="Foo">
+      <section id="profiles-discussion">
         <h3>Discussion</h3>
 
         <aside class="issue">
@@ -926,6 +1094,7 @@
         </aside>
       </section>
     </section>
+
     <section id="verifiable-credentials">
       <h2>Verifiable Credentials</h2>
 
