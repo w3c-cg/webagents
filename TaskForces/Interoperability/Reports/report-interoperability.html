@@ -138,6 +138,22 @@
             date: "1995",
             publisher: "1st European Conference on Cognitive Science"
           },
+          DIDWEB: {
+            authors: [
+              "Michael Prorock",
+              "Oliver Terbu"
+            ],
+            title: "did:web Method Specification",
+            date: "31 July 2024",
+            status: "Unofficial Draft",
+            producedBy: [
+              {
+                shortName: "W3C Credentials Community Group",
+                url: "https://www.w3.org/groups/cg/credentials/"
+              }
+            ],
+            publisher: "W3C"
+          },
           FIELDING00: {
             authors: [
               "Roy T. Fielding"
@@ -154,6 +170,14 @@
             title: "Reflections on the REST architectural style and &quot;principled design of the modern web architecture&quot; (impact paper award)",
             date: "2017",
             publisher: "ACM",
+          },
+          FIPAARCH: {
+            authors: [
+              "Foundation for Intelligent Physical Agents (FIPA)"
+            ],
+            title: "FIPA Abstract Architecture Specification",
+            date: "2002",
+            href: "https://web.archive.org/web/20250814070600/http://www.fipa.org/specs/fipa00001/SC00001L.html#_Toc26668645",
           },
           FRANKLIN96: {
             authors: [
@@ -276,6 +300,23 @@
             title: "What are tools anyway? a survey from the language model perspective",
             date: "2024",
             href: "https://arxiv.org/abs/2403.15452",
+          },
+          WEBID: {
+            authors : [
+              "Andrei Sambra",
+              "Stéphane Corlosquet"
+            ],
+            title: "WebID 1.0",
+            date: "5 March 2014",
+            deliveredBy: [
+              {
+                shortname: "W3C WebID Community Group",
+                url: "https://www.w3.org/groups/cg/webid/",
+              },
+            ],
+            href: "https://www.w3.org/2005/Incubator/webid/spec/identity/",
+            publisher: "W3C",
+            status: "W3C Editor’s Draft",
           },
           WEF24: {
             authors: [ "World Economic Forum" ],
@@ -438,7 +479,7 @@
               </tr>
               <tr>
                 <td>Value Alignment</td>
-                <td>The <a href="#dfn-agent">agent</a> acts in ways that are consistent with the goals, preferences, and interests of its end-user, and that respect human values and norms.</td>
+                <td>The <a href="#dfn-agent">agent</a> acts in ways that are consistent with the goals, preferences, and interests of its end-user, and that respect stakeholder values and norms.</td>
               </tr>
             </tbody>
           </table>
@@ -560,9 +601,11 @@
 
           <p>The principles are adapted from — and discussed in detail in — [[CIORTEA19]]. Their theoretical underpinning is the REST architectural style [[FIELDING00]], but they extend beyond REST to address requirements specific to agents, such as <i>Resource Monitoring</i> (see also [[KHARE04]][[FIELDING17]]).</p>
 
-          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+          <p id="#principle1" class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
 
-          <p>The core idea behind this first principle is to project the observable state of a Web-based MAS into a uniform, distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). This promotes <i>Scalability</i> by enabling the seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
+          <p>The core idea behind this first principle is to project the state of a Web-based MAS into a uniform, resource-oriented, and distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). Resources in this environment may include not only documents (or <a href="https://www.w3.org/TR/webarch/#def-information-resource">information resources</a>) — such as agent cards, FOAF profiles, or WoT Thing Description Documents — but also processes (e.g., agents, tools, services), real-world objects (e.g., devices), or abstract concepts (e.g., ontological terms). We refer to this broader category of entities as non-information resources [[COOLURIS]].</p>
+
+          <p>Having a uniform, resource-oriented representation provides consistent access to all these entities and enables linking and reuse across systems. This principle promotes <i>Scalability</i> by enabling seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
 
           <p>The trade-off is decreased efficiency: components must translate between their internal data representations and the uniform representations exposed via their interfaces, which are necessarily less optimized for the specific needs of individual components.</p>
 
@@ -574,7 +617,7 @@
 
           <p class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
 
-          <p>The core idea behind this second principle is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i>. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
+          <p>The core idea is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i> — allowing agents to join and navigate the system dynamically with minimal prior configuration. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
 
           <!-- <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents should be observable using Web standards, enabling agents to selectively monitor and perceive relevant changes in their environment.</p> -->
 
@@ -582,7 +625,7 @@
 
           <p class="def"><strong>Principle 3 (Observability)</strong>: A Hypermedia MAS should enable agents to selectively monitor and receive updates about relevant resources and events in their virtual environments using Web standards.</p>
 
-          This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
+          <p>This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
 
           <aside class="issue">
             <p>Two design goals from Section&nbsp;<a href="#design-goals">3.3.1</a> are not directly addressed by the above design principles: <i>Value Alignment</i> and <i>Security</i>. To be discussed.</p>
@@ -748,36 +791,111 @@
     <section id="identification">
       <h2>Identification</h2>
 
-        <aside class="issue">
+        <!-- <aside class="issue">
           <p>We need to identify agents, tools, protocols, and other entities in a Web-based MAS in a uniform way and independent of context. Additional requirements may be relevant depending on the degree of openness, e.g. see the <a href="https://www.w3.org/TR/did-1.0/#design-goals">requirements identified by the DID WG</a>.</p>
+        </aside> -->
+
+        <p><a href="principle1">Principle 1 (Uniform resource space)</a> states that all entities in a Web-based MAS should be represented in a uniform, resource-oriented manner consistent with the Web architecture. The W3C Recommendation for the architecture of the World Wide Web provides several constraints and good practices for identifying resources [[WEBARCH]]. We highlight below the ones most relevant in this context.</p>
+
+        <aside class="note" title="Identifier vs. Identity">
+          <p>It is important to distringuish between an <i>identifier</i> and an <i>identity</i> [[RFC4949]]:
+            <ul>
+              <li>an <i>identifier</i> is "a data object that definitively represents a specific identity of a system entity, distinguishing that identity from all others";</li>
+              <li>an <i>identity</i> is "the collective aspect of a set of attribute values (i.e., a set of characteristics) by which a system user or other system entity is recognizable or known".</li>
+            </ul>
+          </p>
         </aside>
+
+        <p>A recommended practice is to identify resources using IRIs (see <a href="https://www.w3.org/TR/webarch/#uri-benefits">Section 2.1. Benefits of URIs</a>), which have global scope and can be referenced independent of context — thereby promoting <i>Interoperability</i>. IRIs can identify both information resources (documents, agent cards, etc.) and non-information resources (agents, devices, etc.) [[COOLURIS]].</p>
+
+        <aside class="note" title="Decentralization">
+          <p>IRIs are not inherently centralized: a subclass of IRIs are Decentralized Identifiers [[DID-1.1]].</p>
+        </aside>
+
+        <p>An IRI identifies a single resource (see <a href="https://www.w3.org/TR/webarch/#pr-uri-collision">Constraint: URIs Identify a Single Resource</a>), and the IRI owner is responsible for maintaining the semantic validity of that identifier over time [[FIELDING00]]. These two constraints help prevent identifier collisions and semantic drift in long-lived systems, which is essential for <i>Extensibility</i> and <i>Evolvability</i>.</p>
+
+        <aside class="note" title="Evolving Resources">
+          <p>The meaning of resources can change over time. For example, definitions of ontological concepts often evolve. In such cases, IRIs can be versioned to maintain their semantic validity, which is a common practice in ontology engineering (see <a href="https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI">Section 3.1 Ontology IRI and Version IRI</a> in [[owl2-syntax]]).</p>
+        </aside>
+
+        <p>IRIs should be opaque (see <a href="https://www.w3.org/TR/webarch/#pr-uri-opacity">Good practice: URI Opacity</a>), meaning that agents should not attempt to infer properties of referenced resources from the IRIs themselves. Similarly, while it is common to follow best practices for IRI design when developing APIs (e.g., using containers to group similar resources), such design decisions cannot be assumed to be understood outside the scope of a specific service.</p>
+
+        <p>Another good practice is that deferenecing an IRI should return a representation of the identified resource (see <a href="https://www.w3.org/TR/webarch/#pr-describe-resource">Good Practice: Available representation</a>). If the identified resource is a non-information resource, such as a person or a software agent, the IRI should return a representation of an information resource that describes the targeted resource [[COOLURIS]]. This practice is common when representing knowledge on the Web, and promoted by specifications such as WebID [[SOLID-PROTOCOL]] and Decentralized Identifiers [[DID-1.1]].</p>
+
+        <p>We discuss additional constraints and best practices in <a href="#verifiable-credentials">Section 6. Verifiable Credentials</a>.</p>
 
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
 
+        <p>A number of standards and initiatives exist that address — either explicitly or implicitly — the identification of <a href="#dfn-agent">agents</a> and other entities of interest. In the following, we focus on agents and <a href="#dfn-tool">tools</a>.</p>
+
         <section data-dfn-for="Foo">
         <h3>Agent Identification</h3>
 
-        <aside class="issue">
-          <p>E.g., FIPA, SemWeb/FOAF, hMAS, LMOS, A2A</a>.</p>
-        </aside>
+          <section>
+            <h4>FIPA</h4>
+
+            <p>The <a href="http://www.fipa.org/repository/standardspecs.html">standardization work of the Foundation for Intelligent Physical Agents (FIPA)</a> is one of the earliest and most influential initiatives aimed at designing open and interoperable networks of agents. FIPA introduces <i>agent names</i> as immutable, unique identifiers that remain valid throughout an agent's lifetime [[FIPAARCH]]. Agent names are independent of the issuing party, yet still verifiable for authenticity. Importantly, they do not encode any properties of the agent. In these respects, FIPA agent names are aligned with the constraints and best practices outlined previously for identifying resources.</p>
+
+            <p>Where FIPA agent names differ from IRI-based identification approaches is in their use of a specific syntax: they are constructed from an agent's local identifier and the address of its home platform (i.e., the platform on which the agent was created). For example, the agent name `bob@example.org` identifies the agent `bob` hosted on the platform `example.org`. Using such custom identifiers for agents therefore requires the development and deployment of an Internet-scale agent name resolution service — an effort that can be avoided by using IRIs instead.</p>
+
+            <aside class="issue" title="FIPA website is down">
+              <p>The FIPA website is now unavailable. We should reach out for archiving purposes. Meanwhile, the Internet Archive has an <a href="https://web.archive.org/web/20250826233645/http://fipa.org/">archived version</a>.</p>
+            </aside>
+
+          </section>
+
+          <section>
+            <h4>Solid</h4>
+
+            Solid [[SOLID-PROTOCOL]] is a Web decentralization initiative that aims to enable users to retain full control over their data. In Solid, an <a href="https://solidproject.org/TR/protocol#agent">agent</a> is a "person, social entity, or software identified by a URI", such as a WebID [[WEBID]]. Dereferencing the WebID of an agent retrieves a representation of its WebID Profile, an RDF document describing the agent [[SOLID-PROTOCOL]] (cf. best practices discussed above). Solid thus builds on the architectural principles of the World Wide Web [[WEBARCH]] and is directly aligned with the IRI-based identification approach described in this report. We discuss further the Solid approach in the following sections.
+            
+          </section>
+
+          <section>
+            <h4>The Agent2Agent (A2A) Protocol</h4>
+
+            <p>The <a href="https://a2a-protocol.org/latest/specification/">Agent2Agent (A2A) Protocol</a> is an open standard designed to facilitate communication and interoperability between heterogeneous agent implementations. In the current specification, an <a href="https://a2a-protocol.org/latest/topics/agent-discovery/">agent's identity</a> is defined by its <i>name</i>, <i>description</i>, and <i>provider</i> information. The agent's <i>name</i> is a human-readable identifier (e.g., "Example Agent"), while the description is a human-readable string characterizing the agent (e.g., "An agent that can generate random example quotes"). <a href="https://a2a-protocol.org/latest/specification/#AgentProvider">Provider information</a> includes a URL for the provider's website or relevant documentation, and a human-readable name of the provier's organization (e.g., "ACME Inc.").</p>
+
+            <p>This design is consistent with earlier FIPA-style agent identification approaches, in which agent identity is represented by local identifiers contextualized by a provider or hosting platform rather than by globally scoped identifiers. While the inclusion of provider information supports discovery and interaction across organizational boundaries, defining agent identity in terms of human-readable names and descriptions limits the ability to reference agents as first-class entities in a global context. This approach simplifies implementation and configuration in closed settings but constrains interoperability in open settings. Extending the agent information with an agent IRI would enable globally unique and uniform identification.</p>
+            
+          </section>
+
+          <section>
+            <h4>The Agent Network Protocol (ANP)</h4>
+
+            <p>The <a href="https://www.agent-network-protocol.com/specs/white-paper">Agent Network Protocol (ANP)</a> is an open-source communication protocol that enables agents to discover and interact with one another on the Internet. ANP is designed for interoperability in decentralized settings and identifies agents using W3C Decentralized Identifiers (DIDs) [[DID-1.1]]. ANP defines its own DID method for identifying Web-based agents, named `did:wba`, which extends the `did:web` method specification [[DIDWEB]] with additional constraints on DID documents and cross-platform authentication processes (see <a href="https://github.com/chgaowei/AgentNetworkProtocol/blob/main/03-did%3Awba%20Method%20Design%20Specification.md">did:wba method specification</a>). By adopting DIDs, ANP is therefore directly aligned with the IRI-based identification approach described in this report and addresses cross-platform identification and authentication in a decentralized manner, with the associated requirement to support DIDs and the `did:wba` DID method.</p>
+          </section>
+
+          <section>
+            <h4>Eclipse LMOS</h4>
+
+            <p>The <a href="https://eclipse.dev/lmos/docs/lmos_protocol/introduction/">Eclipse Language Model Operating System (LMOS)</a> is an open protocol that enables agents to discover, interact, and collaborate on the Internet. LMOS builds on W3C standards and specifically the Web of Things architecture [[wot-architecture11]]. Similar to ANP, LMOS uses Decentralized Identifiers [[DID-1.1]] to identify not only agents but also tools. Unlike ANP, LMOS uses the `did:web` method specification as is [[DIDWEB]], deferring authentication processes to declarative security definitions via the WoT Thing Description [[wot-thing-description11]]. We discuss security mechanisms in Section&nbsp;[[[#security-and-privacy]]].</p>
+          </section>
         
         </section>
         <section data-dfn-for="Foo">
           <h3>Tool Identification</h3>
-          
-        <aside class="issue">
-          <p>E.g., MCP, hMAS, MAMS, LMOS</a>.</p>
-        </aside>
+
+          <section>
+            <h4>MCP</h4>
+
+            <p>The <a href="https://modelcontextprotocol.io/specification/2025-11-25">Model Context Protocol (MCP)</a> is an open-source standard for connecting LLM-based applications to external systems. In MCP, tools are "executable functions that AI applications can invoke to perform actions (e.g., file operations, API calls, database queries)". In the current specification (`version 2025-11-25`), a tool is identified by a <i>name</i>, which is a string identifier that is unique within an MCP server. In addition, some systems use string labels for MCP servers that further qualify tool references (e.g., <a href="https://platform.openai.com/docs/api-reference/responses/create">OpenAI Response API v1</a>), similar to the provider information in A2A (see Section&nbsp;[[[#the-agent2agent-a2a-protocol]]]). MCP thus follows a design rationale similar to A2A that prioritizes simplicity in closed settings but constrains interoperability in open settings. Extending tool definitions with tool IRIs would enable globally unique and uniform identification.</p>
+            
+          </section>
+
+          <section>
+            <h4>UTCP</h4>
+
+            <p>The <a href="https://www.utcp.io/about/RFC">Universal Tool Calling Protocol (UTCP)</a> is an open standard that enables agents to discover and call tools directly. UTCP extends the OpenAPI specification [[OPENAPIS-3.1.0]] with agent-focused enhancements, including bindings to different protocols used for transport (e.g., HTTP, CLI, gRPC, GraphQL, MCP). We discuss in more detail the UTCP approach to tool use in Section&nbsp;[[[#agent-environment-interaction]]]. Similar to MCP, a UTCP tool is identified by a <i>name</i>, which is a string identifier. The responsibility of managing tool repositories is <a href="https://www.utcp.io/about/RFC#client-side-tool-management-and-scalability">left to the UTCP client</a>. For tool identification, UTCP thus follows a design trade-off similar to MCP — simplifying tool referencing in closed settings rather than supporting globally unique and uniform identification.</p>
+          </section>
 
         </section>
       </section>
       <section data-dfn-for="Foo">
         <h3>Discussion</h3>
 
-        <aside class="issue">
-          <p>Identify commonalities among the different initiatives and pontential gaps</a>.</p>
-        </aside>
+        <p>The initiatives surveyed in this section span a spectrum of design choices, from closed to open settings. At one end, protocols like MCP and UTCP use string identifiers scoped to individual servers — a design that prioritizes simplicity and developer convenience in closed settings. At the other end, ANP and Eclipse LMOS use DIDs [[DID-1.1]] to enable globally unique, decentralized identification suited to open settings. Solid uses HTTP IRIs for centralized identification in a decentralized Web, and A2A occupies a middle ground with provider-qualified names. This diversity reflects legitimate differences in system requirements rather than a gap in standardization. However, a clear pattern emerges: as systems move toward openness and decentralization, alignment with Web standards and practices for identification becomes increasingly relevant. For systems that anticipate evolution towards open and decentralized participation, adopting IRI-based identification from the outset may reduce future integration costs.</p>
       </section>
     </section>
 
@@ -976,8 +1094,8 @@
         </aside>
       </section>
     </section>
-    
-    <section>
+
+    <section id="verifiable-credentials">
       <h2>Verifiable Credentials</h2>
 
       <aside class="issue">
