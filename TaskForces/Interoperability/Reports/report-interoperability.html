@@ -36,6 +36,12 @@
             orcid: "0000-0003-0828-1188"
           },
           {
+            name: "Danai Vachtsevanou",
+            company: "University of St.Gallen",
+            url: "https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/7a1760ec-4cfc-46c8-a1c1-0bd5db0a0641/",
+            orcid: "0000-0002-6697-0427"
+          },
+          {
             name: "Your Name",
             url: "https://your-site.com"
           }
@@ -342,6 +348,127 @@
         }
       };
     </script>
+    <style>
+      .hl-bold { font-weight: bold; color: #0a3; }
+      .comment { color: #999; }
+      table, thead, tr, td { padding: 5px; border-width: 1px; border-spacing: 0px; border-style: solid; border-collapse: collapse; }
+      table.example {width: 100%;}
+      .example > pre.context:before {
+        content: "Context";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.frame:before {
+        content: "Frame";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.input:before {
+        content: "Input";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.result:before {
+        content: "Result";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.turtle:before {
+        content: "Turtle";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .highlight.changed, .show-changes {
+        background-color: lime;
+      }
+      .show-changes.selected:before {
+        content: "de-highlight";
+      }
+      .show-changes:before {
+        content: "highlight";
+      }
+      aside.example {
+        overflow-y: hidden;
+      }
+      /* example tab selection */
+      .ds-selector-tabs {
+        padding-bottom: 2em;
+      }
+      .ds-selector-tabs .selectors {
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+        height: 28px;
+      }
+      .ds-selector-tabs .selectors button {
+        display: inline-block;
+        min-width: 54px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: bold;
+        height: 27px;
+        padding: 0 8px;
+        line-height: 27px;
+        transition: all,0.218s;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+        color: #666;
+        border: 1px solid transparent;
+      }
+      .ds-selector-tabs .selectors button:first-child {
+        margin-left: 2px;
+      }
+      .ds-selector-tabs .selectors button.selected {
+        color: #202020 !important;
+        border: 1px solid #ccc;
+        border-bottom: 1px solid #fff !important;
+      }
+      .ds-selector-tabs .selectors button:hover {
+        background-color: transparent;
+        color: #202020;
+        cursor: pointer;
+      }
+      .ds-selector-tabs pre:not(.preserve), .ds-selector-tabs table:not(.preserve) {
+        display: none;
+      }
+      .ds-selector-tabs pre.selected, .ds-selector-tabs table.selected {
+        display: block;
+      }
+      .ds-selector-tabs pre.json-ld.selected, .ds-selector-tabs pre.expanded.selected {
+        display: block;
+      }
+      a.playground {
+        display: inline-block;
+        width: 150px;
+        border: 1px solid transparent;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+        background-color: rgb(192, 192, 192);
+        text-decoration: none;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+      a[href].playground {
+        padding: 4px 0 3px 8px;
+        border-bottom: none;
+        text-decoration: none;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
     <section id="abstract">
@@ -788,7 +915,7 @@
 
       </section>
     </section>
-    <section data-dfn-for="Foo">
+    <section id="identification">
       <h2>Identification</h2>
 
         <!-- <aside class="issue">
@@ -898,27 +1025,441 @@
         <p>The initiatives surveyed in this section span a spectrum of design choices, from closed to open settings. At one end, protocols like MCP and UTCP use string identifiers scoped to individual servers — a design that prioritizes simplicity and developer convenience in closed settings. At the other end, ANP and Eclipse LMOS use DIDs [[DID-1.1]] to enable globally unique, decentralized identification suited to open settings. Solid uses HTTP IRIs for centralized identification in a decentralized Web, and A2A occupies a middle ground with provider-qualified names. This diversity reflects legitimate differences in system requirements rather than a gap in standardization. However, a clear pattern emerges: as systems move toward openness and decentralization, alignment with Web standards and practices for identification becomes increasingly relevant. For systems that anticipate evolution towards open and decentralized participation, adopting IRI-based identification from the outset may reduce future integration costs.</p>
       </section>
     </section>
+
     <section>
       <h2>Profiles</h2>
+    
+      <p> Profiles are information resources (i.e., documents) that describe non-information resources in a Web-based MAS, such as agents and tools.</p>
+            
+      <p> The need for profiles arises from the good practices defined in the W3C Recommendation Architecture of the World Wide Web: 
+        When a non-information resource is identified by an IRI, dereferencing that IRI should return a representation of an information resource that describes the identified resource ([COOLURIS]; see <a href="identification">Section 4. Identification</a>). 
+        Profiles support this practice, by acting as the information sources through which identifiable agents, tools, and other (non-informational) MAS entities are described and accessed on the Web.
+        In line with <a href="principle1">Principle 1 (Uniform resource space)</a>, this access is consistent and enables linking and reuse of MAS entities accross the system. 
+      </p>  
+
+      <aside class="issue" title="Resource Profiles vs.Profiles in Content Negotiation">
+        This document’s use of the term Profile should not be confused with profiles of specifications for information resources used for content negotiation by profile. [...]
+      </aside>
+
+      <aside class="issue" title="Parallelism between profiles and homepages of people and organizations as an example.">
+        In practice, profiles are similar to [...]
+      </aside>
+
+      <aside class="issue" title="Good practices about linking">
+       Comment on identification of links and their roles within the representation, Web-wide and hypertext linking (not just internal), and the use of URI references (relative links) to enhance the usability of the data format.
+      </aside>
       
-      <aside class="issue">
-          <p>We need to describe non-information resources that we interact with in a Web-based MAS: agents, tools, etc.</p>
+      <aside class="issue" title="Good practices about data formats">
+        Comment on support of data format, that also allow for extensibility that retains conformance with the original specification
+      </aside>
+
+      <aside class="issue" title="Good practices about interaction">
+        Comment on the separation of content, representation, and interaction
+      </aside>
+
+      <aside class="issue" title="Good practices about versioning">
+        To comment on versioning
+      </aside>
+
+
+      <section data-dfn-for="#profiles-initiatives">
+        <h3>Relevant Standards and Initiatives</h3>
+        <aside class="issue">
+          <p>This section discusses existing for describing non-information resources that agents interact with in a Web-based MAS. 
+            Section <a href="#agent-profiles">5.1.1</a> reviews approaches to agent profiles, and Section <a href="#tool-profiles">5.1.2</a> reviews approaches to tool profiles.
+          </p>
         </aside>
 
-      <section data-dfn-for="Foo">
-        <h3>Relevant Standards and Initiatives</h3>
-
-        <section data-dfn-for="Foo">
+        <section id="agent-profiles">
           <h3>Agent Profiles</h3>
-      
+
+        <aside class="issue">
+          <p>An agent profile is structured data describing an agent.</p>
+        </aside>
+
+          </aside>
+        <aside class="issue">
+          <p>What follows is a first draft of a comparison table for existing works that support agent profiles, or common aspects of them. This table with evolve with the report. This first draft did not receive any feedback yet, it is only meant to start the discussion — and is bound to be incomplete and inaccurate:</p>
+        </aside>
+        <table class="index">
+          <tr>
+            <td></td>
+            <th>Interaction</th>
+            <th>Capabilities</th>
+            <th>Locality</th>
+            <th>Monitoring</th>
+            <th>Coordination</th>
+          </tr>
+          <tr>
+            <td>FOAF Personal Profile Document</td>
+            <td>(Mbox)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Project (?)</td>
+            <td>Groups, Member</td>
+          </tr>
+          <tr>
+            <td>A2A AgentCard</td>
+            <td>A2A Skills</td>
+            <td>A2A Capabilities (e.g., streaming, pushNotifications)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>LMOS Agent Description</td>
+            <td>—</td>
+            <td>W3C WoT Interaction Affordances</td>
+            <td>—</td>
+            <td>W3C WoT Event Affordances (?)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>ANP Agent Description</td>
+            <td>ANP Potential Action</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MCP Client Capabilities Description</td>
+            <td>—</td>
+            <td>MCP Capabilities (e.g., elicitation, sampling) </td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>FIPA Agent Identifier Description</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>(Interaction Protocols, Ontologies, Languages)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Interaction Protocols</td>
+          </tr>
+          <tr>
+            <td>hMAS Resource Profiles</td>
+            <td>hMAS Signifier, Behavior Execution, Action Execution</td>
+            <td>Abilities (?)</td>
+            <td>hMAS Workspace, JaCaMo Bodies</td>
+            <td>JaCaMo Bodies</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MAMS Agent Bodies</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+          </tr>
+        </table>
+
+        <aside class="issue">
+          <p>Across relevant standards and initiatives for agents on the Web, profiles a set of key processes, which can be summarized as follows:</p>
+          <ul>
+            <li>Interaction: [Process definition]. This process can be supported by data elements regarding [...]. For example, [...]. Such information helps with interoperability, extensibility, [...]</li>
+            <li>Capability advertisement: The process of conveying information about the [capabilities] of an agent can 
+              be supported by data elements regarding the agent's ability to use specific artifacts or tools, 
+              to operate based on specific organisational roles, or to participate in certain interaction patterns.
+              For example, [elicitation of user information [[MCP]], pushing notifications [[A2A]], participating in auctions [[FIPA]], ...].
+              [Such information helps with extensibility, evolvability, ...]
+            <li>...
+            </li> 
+        </ul>
+        </aside>
+
+         <h4>Friend Of A Friend (FOAF)  Personal Profile Document</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="http://ldodds.com/foaf/foaf-a-matic.html">Temporary example for discussion</a> 
+          </aside>
+
+          <aside class="example ds-selector-tabs" id="example-foaf"><div> Sample FOAF personal profile document</span></div>
+          <div class="selectors">
+            <button class="selected" data-selects="json-ld">JSON-LD</button>
+            <button data-selects="turtle">Turtle</button>
+            <a class="playground" target="_blank" aria-label="playground link" href="https://json-ld.org/playground/#startTab=tab-nquads&json-ld=%7B%22%40context%22%3A%7B%22%40vocab%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%2C%22mbox%22%3A%7B%22%40type%22%3A%22%40id%22%7D%2C%22homepage%22%3A%7B%22%40type%22%3A%22%40id%22%7D%2C%22interest%22%3A%7B%22%40type%22%3A%22%40id%22%7D%2C%22knows%22%3A%7B%22%40type%22%3A%22%40id%22%7D%7D%2C%22%40type%22%3A%22PersonalProfileDocument%22%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fagents%2F1%22%2C%22primaryTopic%22%3A%7B%22%40type%22%3A%22Person%22%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fagents%2F1%23me%22%2C%22name%22%3A%22Alice%22%2C%22mbox%22%3A%22mailto%3Aalice.smith%40example.org%22%2C%22homepage%22%3A%22http%3A%2F%2Fexample.org%2Falice%22%2C%22interest%22%3A%22http%3A%2F%2Fdbpedia.org%2Fresource%2FMulti-agent_systems%22%2C%22knows%22%3A%5B%22http%3A%2F%2Fexample.org%2Fagents%2F2%23me%22%2C%22http%3A%2F%2Fexample.org%2Fagents%2F3%23me%22%5D%7D%7D&frame=%7B%22foaf%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%7D&context=%7B%7D">Open in playground</a>
+          </div>
+          <pre class="json-ld selected">
+            {
+              "@context": {
+              "@vocab": "http://xmlns.com/foaf/0.1/",
+              "mbox": {
+                "@type": "@id"
+              },
+              "homepage": {
+                "@type": "@id"
+              },
+              "interest": {
+                "@type": "@id"
+              },
+              "knows": {
+                "@type": "@id"
+              }
+            },
+            "@type": "PersonalProfileDocument",
+             "@id": "http://example.org/agents/1",
+            "primaryTopic":{
+              "@type": "Person",
+              "@id": "http://example.org/agents/1#me",
+              "name": "Alice",
+              "mbox": "mailto:alice.smith@example.org" ,
+              "homepage": "http://example.org/alice" ,
+              "interest": "http://dbpedia.org/resource/Multi-agent_systems",
+              "knows": ["http://example.org/agents/2#me", "http://example.org/agents/3#me"]
+            }
+          }</pre>
+          <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample JSON-LD document using full IRIs instead of terms-expanded" data-to-rdf="" aria-busy="false"><code class="hljs">
+ @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+  &lt;http://example.org/agents/1&gt;
+  a foaf:PersonalProfileDocument ;
+  foaf:primaryTopic &lt;http://example.org/agents/1#me&gt; .
+
+  &lt;http://example.org/agents/1#me&gt;
+     a foaf:Person ;
+     foaf:name "Alice";
+     foaf:mbox &lt;mailto:alice.smith@example.org&gt; ;
+     foaf:homepage &lt;http://example.org/alice&gt; ;
+     foaf:interest &lt;http://dbpedia.org/resource/Multi-agent_systems&gt; ;
+     foaf:knows &lt;http://example.org/agents/2#me>, &lt;http://example.org/agents/3#me&gt; .
+           </code></pre>
+          </aside>
+
+         <h4>Solid WebID Profile</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://solid.github.io/webid-profile/#terminology">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>FIPA Agent Identifier Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://jade.tilab.com/papers/JADETutorialIEEE/JADETutorial_FIPA.pdf">Temporary example for discussion</a> (slide 12)
+          </aside>
+
+         <h4>A2A AgentCard</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://a2a-protocol.org/latest/tutorials/python/3-agent-skills-and-card/#agent-card">Temporary example for discussion</a> 
+          </aside>
+
+          <aside class="example ds-selector-tabs" id="example-a2a"><div> Sample A2A agent card</span></div>
+          <pre class="json-ld selected">
+            {
+              "name": "Alice",
+              "description": "An agent that echoes",
+              "url": "http://localhost:9999/",
+              "version": "1.0.0",
+              "default_input_modes": ["text"],
+              "default_output_modes": ["text"],
+              "capabilities": {
+                "streaming": true
+              },
+              "skills": [
+                {
+                  "id": "echo-skill",
+                  "name": "Echo Tool",
+                  "description": "Echos the input given",
+                  "tags": ["echo", "repeater"],
+                  "examples": ["I will see this echoed back to me"],
+                  "inputModes": ["text"],
+                  "outputModes": ["text"]
+                }
+              ]
+            }
+          </pre>
+          </aside>
+
+         <h4>ANP Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://agent-network-protocol.com/specs/agent-description.html">Temporary example for discussion</a> 
+          </aside>
+
+          <aside class="example ds-selector-tabs" id="example-a2a"><div> Sample ANP agent description</span></div>
+          <pre class="json-ld selected">
+{
+  "protocolType": "ANP",
+  "protocolVersion": "1.0.0",
+  "type": "AgentDescription",
+  "url": "https://example.com/agents/1",
+  "name": "Alice",
+  "did": "did:wba:example.com:service:echo-agent",
+  "owner": {
+    "type": "Organization",
+    "name": "Example Systems",
+    "url": "https://systems.example.org"
+  },
+  "description": "An agent that echoes",
+  "created": "2024-12-31T12:00:00Z",
+  "securityDefinitions": {
+    "didwba_sc": {
+      "scheme": "didwba",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "security": "didwba_sc",
+  "Infomations": [
+    {
+      "type": "Information",
+      "description": "Usage examples for using the Echo Assistant in agent-to-agent communication tests.",
+      "url": "https://example.com/info/echo-agent-usage.json"
+    }
+  ],
+  "interfaces": [
+    {
+      "type": "NaturalLanguageInterface",
+      "protocol": "JSON-RPC 2.0",
+      "url": "https://example.com/api/nl-interface.yaml",
+      "description": "Natural language interface allowing users to send text and receive the same text back."
+    },
+    {
+      "type": "StructuredInterface",
+      "protocol": "JSON-RPC 2.0",
+      "url": "https://example.com/api/echo-interface.json",
+      "description": "JSON-RPC 2.0 interface for programmatically sending input and receiving the identical echoed response."
+    }
+  ],
+  "proof": {
+    "type": "EcdsaSecp256r1Signature2019",
+    "created": "2024-12-31T15:00:00Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:wba:example.com:service:echo-assistant#keys-1",
+    "challenge": "1235abcd6789",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpic7ndSayn1PzZs6ZjWp1CktyGesjuTSwRdoWhAfGFCF5bppETSTojQCrfFPP2oumHKtz"
+  }
+}
+
+          </pre>
+          </aside>
+
+         <h4>LMOS Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://eclipse.dev/lmos/docs/lmos_protocol/agent_description/">Temporary example for discussion</a> 
+          </aside>
+
+                    <aside class="example ds-selector-tabs" id="example-a2a"><div> Sample LMOS agent description</span></div>
+          <pre class="json-ld selected">
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lmos": "https://eclipse.dev/lmos/protocol/v1"
+    }
+  ],
+  "id": "urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77",
+  "title": "EchoAgent",
+  "@type": "lmos:Agent",
+  "links": [
+    {
+      "rel": "service-doc",
+      "href": "https://example.com/docs/echo-agent-manual.pdf",
+      "type": "application/pdf",
+      "hreflang": "en"
+    }
+  ],
+  "lmos:metadata": {
+    "lmos:vendor": {
+      "lmos:name": "Example Systems",
+      "lmos:url": "https://systems.example.com"
+    }
+  },
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    }
+  },
+  "security": "basic_sc",
+  "properties": {
+    "modelConfiguration": {
+      "description": "Current configuration of the underlying LLM, including version, and maximum tokens.",
+      "type": "object",
+      "properties": {
+        "modelName": {
+          "type": "string",
+          "description": "Name of the model in use."
+        },
+        "maxTokens": {
+          "type": "integer",
+          "description": "Maximum number of tokens the model is allowed to generate."
+        }
+      },
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "https://example.com/things/urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77/properties/modelConfiguration",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "echo": {
+      "description": "Returns exactly the same input text that is provided by the user.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The text to be echoed back."
+          },
+          "interactionMode": {
+            "type": "string",
+            "enum": ["text"]
+          }
+        },
+        "required": ["message", "interactionMode"]
+      },
+      "output": {
+        "type": "string",
+        "description": "The exact same text that was provided in the input."
+      },
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "https://example.com/things/urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77/actions/echo",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ]
+    }
+  },
+  "events": {
+    "userFeedbackReceived": {
+      "description": "Emitted when a user provides feedback on the echo service.",
+      "data": {
+        "type": "integer",
+          "description": "User rating, where 1 is the lowest and 5 is the highest.",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "forms": [
+        {
+          "op": "subscribeevent",
+          "href": "https://example.com/things/urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77/events/userFeedbackReceived",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  }
+          </pre>
+          </aside>
+
+        <h4>MCP Client Capabilities Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://modelcontextprotocol.io/docs/learn/client-concepts#core-client-features">Temporary example for discussion</a> 
+          </aside>
+
         </section>
 
-        <section data-dfn-for="Foo">
+        <section id="tool-profiles">
           <h3>Tool Profiles</h3>
+
         
         </section>
       </section>
-      <section data-dfn-for="Foo">
+      <section id="profiles-discussion">
         <h3>Discussion</h3>
 
         <aside class="issue">
@@ -926,6 +1467,7 @@
         </aside>
       </section>
     </section>
+
     <section id="verifiable-credentials">
       <h2>Verifiable Credentials</h2>
 
@@ -1068,4 +1610,37 @@
       </p>
     </section> -->
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Add example button selection logic
+      for (const button of document.querySelectorAll(".ds-selector-tabs .selectors button")) {
+        button.onclick = () => {
+          const ex = button.closest(".ds-selector-tabs");
+          ex.querySelector("button.selected").classList.remove("selected");
+          ex.querySelector(".selected").classList.remove("selected");
+          button.classList.add('selected');
+          ex.querySelector("." + button.dataset.selects).classList.add("selected");
+        }
+      }
+
+      // Toggle show/hide changes
+      for (const elem of document.querySelectorAll(".show-changes")) {
+        elem.onclick = () => {
+          if (elem.classList.contains("selected")) {
+            // Remove highlight class from elements having "changed" class
+            elem.classList.remove("selected");
+            for (const changed of document.querySelectorAll(".changed")) {
+              changed.classList.remove("highlight");
+            }
+          } else {
+            // Add highlight class to elements having "changed" class
+            elem.classList.add("selected");
+            for (const changed of document.querySelectorAll(".changed")) {
+              changed.classList.add("highlight");
+            }
+          }
+        }
+      }
+    });
+  </script>
 </html>
