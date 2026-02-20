@@ -746,7 +746,7 @@
       </section>
     </section>
     <section data-dfn-for="Foo">
-      <h2>Identification</h2>
+      <h2 id="identity">Identification</h2>
 
         <aside class="issue">
           <p>We need to identify agents, tools, protocols, and other entities in a Web-based MAS in a uniform way and independent of context. Additional requirements may be relevant depending on the degree of openness, e.g. see the <a href="https://www.w3.org/TR/did-1.0/#design-goals">requirements identified by the DID WG</a>.</p>
@@ -781,7 +781,7 @@
       </section>
     </section>
     <section>
-      <h2 id="profiles">Profiles</id=h2>
+      <h2 id="profiles">Profiles</h2>
       
       <aside class="issue">
           <p>We need to describe non-information resources that we interact with in a Web-based MAS: agents, tools, etc.</p>
@@ -830,18 +830,33 @@
     <section>
       <h2>Discovery</h2>
       <p>
-        <a href="#principle2">Principle 2 (Single entry point)</a> states that a Hypermedia MAS should expose one or more entry URLs
-        from which the rest of the system and the means to participate in it can be discovered through hyperlinks. Discovery may occur
-        either through ad-hoc exploration of the the Hypermedia Space by link following or through the provision of dedicated resources
-        hosted at well known IRIs. On a local network mDNS based discovery mechanisms may also be used.
+        The role of discovery is to enable Web agents to provide mechanisms to support the retrieval of other Web Agent or Tool 
+        <a href="#identify">identities</a> at runtime either directly or indirectly through intermediary <a href="#profiles">profiles</a>
+        that include the identity of the Web Agent or Tool.
       </p>
+      <aside class="issue">
+        <p><A href="https://www.w3.org/TR/wot-discovery">WoT Discovery Standard</A> specifies two phases for Discovery: Introduction and Exploration.
+          Introduction is the discovery of a URL that describes an Agent/Tool. Exploration is the consumption of the resource associated with that
+          URL which may be an identity or profile. My concern is that Exploration is really use of the identifier/profile which is described in
+          the relevant section.
+        </p>
+      </aside>
       <p>
-        Discovery mechanisms use a shared representation to advertise the existence of a resource, typically in the form of a 
-        <a href="#profiles">Profile</a>.
+        The need for discovery is based on <a href="#principle2">Principle 2 (Single entry point)</a> which states that a Hypermedia MAS
+        should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through
+        hyperlinks. Discovery may occur either through ad-hoc exploration of the the Hypermedia Space by link following or through the
+        provision of dedicated resources hosted at well known IRIs. On a local network mDNS based discovery mechanisms may also be used.
       </p>
+      <aside class="issue">
+        <p>Possibly the above paragraph should focus on the Introduction problem. 
+          specifies two phases for Discovery: Introduction and Exploration.
+          Introduction is the discovery of a URL that describes an Agent/Tool. Exploration is the consumption of the resource associated with that
+          URL which may be an identity or profile.
+        </p>
+      </aside>
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
-
+        A number of standards and initiatives exist that address Web Agent or Tool discovery. The following sections focus on agents and tools.
         <section data-dfn-for="Foo">
           <h3>Agent Discovery</h3>
       
