@@ -848,10 +848,8 @@
         provision of dedicated resources hosted at well known IRIs. On a local network mDNS based discovery mechanisms may also be used.
       </p>
       <aside class="issue">
-        <p>Possibly the above paragraph should focus on the Introduction problem. 
-          specifies two phases for Discovery: Introduction and Exploration.
-          Introduction is the discovery of a URL that describes an Agent/Tool. Exploration is the consumption of the resource associated with that
-          URL which may be an identity or profile.
+        <p>
+          Approaches considered in WoT Discovery: Direct, Well-Known Uniform Resource Identifier [RFC8615], DNS-based Service Discovery, DIDs?
         </p>
       </aside>
       <section data-dfn-for="Foo">
@@ -859,6 +857,20 @@
         A number of standards and initiatives exist that address Web Agent or Tool discovery. The following sections focus on agents and tools.
         <section data-dfn-for="Foo">
           <h3>Agent Discovery</h3>
+            <h3>FIPA</h3>
+            <p>
+              The section on <a href="#identify">Identification</a> includes a brief introduction to the
+              <a hef="https://web.archive.org/web/20250321030044/http://www.fipa.org/repository/index.html">FIPA Standards</a>. The 
+              topic of  agent discovery is mentioned in two of the standards: the <a href="https://web.archive.org/web/20250814070600/http://www.fipa.org/specs/fipa00001/SC00001L.html">FIPA Abstract Architecture Specification (FIPA00001)</a>
+              and the <a href="https://web.archive.org/web/20230528171843/http://fipa.org/specs/fipa00023/SC00023K.html">FIPA Agent Management Specification (FIPA00023)</a>.
+              The first of these standards defines an abstract architecture for agent platforms (the runtime infrastructure on which
+              agents are deployed) based on: agents and services. Services are intended to provide the infrastructure supports necessary 
+              to deploy agents. This includes the Agent Directory Service, a support service that agents can register with and which 
+              they can use to find other agents they wish to interact with. The second standard introduces the mandatory Agent Management
+              Service (AMS) that is the authority for the creation of FIPA Agent Identifiers and is also an implementation of the Agent
+              Directory Service.
+            </p>
+          </section>
       
         </section>
         <section data-dfn-for="Foo">
