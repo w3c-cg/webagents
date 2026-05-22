@@ -36,6 +36,18 @@
             orcid: "0000-0003-0828-1188"
           },
           {
+            name: "Danai Vachtsevanou",
+            company: "University of St.Gallen",
+            url: "https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/7a1760ec-4cfc-46c8-a1c1-0bd5db0a0641/",
+            orcid: "0000-0002-6697-0427"
+          },
+          {
+            name: "Arthur Casals",
+            company: "Independent Researcher",
+            url: "https://casals.io/?echo=4471",
+            orcid: "0000-0002-0799-164X"
+          },
+          {
             name: "Your Name",
             url: "https://your-site.com"
           }
@@ -45,6 +57,12 @@
         xref: "web-platform",
         group: "webagents",
         localBiblio: {
+          A2A: {
+            title: "Agent2Agent (A2A) Protocol Specification",
+            date: "2025",
+            href: "https://a2a-protocol.org/latest/",
+            publisher: "Google / Linux Foundation Agentic AI Foundation",
+          },
           ANTHROPIC24: {
             title: "Building Effective Agents",
             date: "2024",
@@ -79,6 +97,14 @@
             date: "2011",
             href: "https://dl.acm.org/doi/abs/10.5555/2031678.2031687",
             publisher: "IFAAMAS",
+          },
+          CARTAGO: {
+            title: "CArtAgO: A Framework for Prototyping Artifact-Based Environments in MAS",
+            authors: ["Alessandro Ricci", "Mirko Viroli", "Andrea Omicini"],
+            date: "2007",
+            href: "https://link.springer.com/chapter/10.1007/978-3-540-71103-2_4",
+            publisher: "Springer",
+            status: "In: Environments for Multi-Agent Systems III. LNCS vol. 4389, pp. 67-86",
           },
           CIORTEA19: {
             authors: [
@@ -138,6 +164,22 @@
             date: "1995",
             publisher: "1st European Conference on Cognitive Science"
           },
+          DIDWEB: {
+            authors: [
+              "Michael Prorock",
+              "Oliver Terbu"
+            ],
+            title: "did:web Method Specification",
+            date: "31 July 2024",
+            status: "Unofficial Draft",
+            producedBy: [
+              {
+                shortName: "W3C Credentials Community Group",
+                url: "https://www.w3.org/groups/cg/credentials/"
+              }
+            ],
+            publisher: "W3C"
+          },
           FIELDING00: {
             authors: [
               "Roy T. Fielding"
@@ -154,6 +196,21 @@
             title: "Reflections on the REST architectural style and &quot;principled design of the modern web architecture&quot; (impact paper award)",
             date: "2017",
             publisher: "ACM",
+          },
+          FIPAARCH: {
+            authors: [
+              "Foundation for Intelligent Physical Agents (FIPA)"
+            ],
+            title: "FIPA Abstract Architecture Specification",
+            date: "2002",
+            href: "https://web.archive.org/web/20250814070600/http://www.fipa.org/specs/fipa00001/SC00001L.html#_Toc26668645",
+          },
+          FIPAINT: {
+            title: "FIPA Interaction Protocol Library Specification",
+            date: "2002",
+            href: "http://www.fipa.org/specs/fipa00025/",
+            publisher: "Foundation for Intelligent Physical Agents",
+            status: "FIPA Standard, Document SC00025H",
           },
           FRANKLIN96: {
             authors: [
@@ -224,6 +281,26 @@
             href: "https://dl.acm.org/doi/abs/10.5555/3545946.3598758",
             publisher: "IFAAMAS",
           },
+          LMOS: {
+            title: "Eclipse LMOS: Language Model Operating System",
+            date: "2024",
+            href: "https://eclipse.dev/lmos/",
+            publisher: "Eclipse Foundation",
+          },
+          MCP: {
+            title: "Model Context Protocol Specification",
+            date: "2025",
+            href: "https://modelcontextprotocol.io/specification/2025-03-26",
+            publisher: "Anthropic / Agentic AI Foundation",
+          },
+          ODRL22: {
+            title: "ODRL Information Model 2.2",
+            authors: ["Renato Iannella", "Serena Villata"],
+            date: "15 February 2018",
+            href: "https://www.w3.org/TR/odrl-model/",
+            publisher: "W3C",
+            status: "W3C Recommendation",
+          },
           RUSSELL19: {
             authors: [ 
               "Stuart Russell"
@@ -277,6 +354,29 @@
             date: "2024",
             href: "https://arxiv.org/abs/2403.15452",
           },
+          UTCP: {
+            title: "Universal Tool Calling Protocol (UTCP)",
+            date: "2024",
+            href: "https://www.utcp.io/",
+            publisher: "Universal Tool Calling Protocol Community",
+          },
+          WEBID: {
+            authors : [
+              "Andrei Sambra",
+              "Stéphane Corlosquet"
+            ],
+            title: "WebID 1.0",
+            date: "5 March 2014",
+            deliveredBy: [
+              {
+                shortname: "W3C WebID Community Group",
+                url: "https://www.w3.org/groups/cg/webid/",
+              },
+            ],
+            href: "https://www.w3.org/2005/Incubator/webid/spec/identity/",
+            publisher: "W3C",
+            status: "W3C Editor’s Draft",
+          },
           WEF24: {
             authors: [ "World Economic Forum" ],
             title: "AI Value Alignment: Guiding Artificial Intelligence Towards Shared Human Goals",
@@ -298,9 +398,151 @@
             href: "https://infoscience.epfl.ch/record/52462",
             publisher: "EPFL Technical Report",
           },
+          "wot-binding-http": {
+            title: "Web of Things (WoT) HTTP Binding Template",
+            date: "2026",
+            href: "https://w3c.github.io/wot-binding-templates/bindings/protocols/http/",
+            publisher: "W3C",
+            status: "W3C Editor's Draft",
+          },
+          "wot-binding-coap": {
+            title: "Web of Things (WoT) CoAP Binding Template",
+            date: "2026",
+            href: "https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/",
+            publisher: "W3C",
+            status: "W3C Editor's Draft",
+          },
+          "wot-binding-mqtt": {
+            title: "Web of Things (WoT) MQTT Binding Template",
+            date: "2026",
+            href: "https://w3c.github.io/wot-binding-templates/bindings/protocols/mqtt/",
+            publisher: "W3C",
+            status: "W3C Editor's Draft",
+          },
         }
       };
     </script>
+    <style>
+      .hl-bold { font-weight: bold; color: #0a3; }
+      .comment { color: #999; }
+      table, thead, tr, td { padding: 5px; border-width: 1px; border-spacing: 0px; border-style: solid; border-collapse: collapse; }
+      table.example {width: 100%;}
+      .example > pre.context:before {
+        content: "Context";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.frame:before {
+        content: "Frame";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.input:before {
+        content: "Input";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.result:before {
+        content: "Result";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .example > pre.turtle:before {
+        content: "Turtle";
+        float: right;
+        font: x-large Arial, sans-serif;
+        color: gray;
+        border: solid thin black;
+        padding: 0.2em;
+      }
+      .highlight.changed, .show-changes {
+        background-color: lime;
+      }
+      .show-changes.selected:before {
+        content: "de-highlight";
+      }
+      .show-changes:before {
+        content: "highlight";
+      }
+      aside.example {
+        overflow-y: hidden;
+      }
+      /* example tab selection */
+      .ds-selector-tabs {
+        padding-bottom: 2em;
+      }
+      .ds-selector-tabs .selectors {
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+        height: 28px;
+      }
+      .ds-selector-tabs .selectors button {
+        display: inline-block;
+        min-width: 54px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: bold;
+        height: 27px;
+        padding: 0 8px;
+        line-height: 27px;
+        transition: all,0.218s;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+        color: #666;
+        border: 1px solid transparent;
+      }
+      .ds-selector-tabs .selectors button:first-child {
+        margin-left: 2px;
+      }
+      .ds-selector-tabs .selectors button.selected {
+        color: #202020 !important;
+        border: 1px solid #ccc;
+        border-bottom: 1px solid #fff !important;
+      }
+      .ds-selector-tabs .selectors button:hover {
+        background-color: transparent;
+        color: #202020;
+        cursor: pointer;
+      }
+      .ds-selector-tabs pre:not(.preserve), .ds-selector-tabs table:not(.preserve) {
+        display: none;
+      }
+      .ds-selector-tabs pre.selected, .ds-selector-tabs table.selected {
+        display: block;
+      }
+      .ds-selector-tabs pre.json-ld.selected, .ds-selector-tabs pre.expanded.selected {
+        display: block;
+      }
+      a.playground {
+        display: inline-block;
+        width: 150px;
+        border: 1px solid transparent;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+        background-color: rgb(192, 192, 192);
+        text-decoration: none;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+      a[href].playground {
+        padding: 4px 0 3px 8px;
+        border-bottom: none;
+        text-decoration: none;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
     <section id="abstract">
@@ -438,7 +680,7 @@
               </tr>
               <tr>
                 <td>Value Alignment</td>
-                <td>The <a href="#dfn-agent">agent</a> acts in ways that are consistent with the goals, preferences, and interests of its end-user, and that respect human values and norms.</td>
+                <td>The <a href="#dfn-agent">agent</a> acts in ways that are consistent with the goals, preferences, and interests of its end-user, and that respect stakeholder values and norms.</td>
               </tr>
             </tbody>
           </table>
@@ -560,9 +802,11 @@
 
           <p>The principles are adapted from — and discussed in detail in — [[CIORTEA19]]. Their theoretical underpinning is the REST architectural style [[FIELDING00]], but they extend beyond REST to address requirements specific to agents, such as <i>Resource Monitoring</i> (see also [[KHARE04]][[FIELDING17]]).</p>
 
-          <p class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
+          <p id="#principle1" class="def"><strong>Principle 1 (Uniform resource space)</strong>: All entities in a Hypermedia MAS, and the relations among them, should be represented in a uniform, resource-oriented manner consistent with the Web architecture.</p>
 
-          <p>The core idea behind this first principle is to project the observable state of a Web-based MAS into a uniform, distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). This promotes <i>Scalability</i> by enabling the seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
+          <p>The core idea behind this first principle is to project the state of a Web-based MAS into a uniform, resource-oriented, and distributed hypermedia environment (cf. [[[#mas-web-application-layer]]]). Resources in this environment may include not only documents (or <a href="https://www.w3.org/TR/webarch/#def-information-resource">information resources</a>) — such as agent cards, FOAF profiles, or WoT Thing Description Documents — but also processes (e.g., agents, tools, services), real-world objects (e.g., devices), or abstract concepts (e.g., ontological terms). We refer to this broader category of entities as non-information resources [[COOLURIS]].</p>
+
+          <p>Having a uniform, resource-oriented representation provides consistent access to all these entities and enables linking and reuse across systems. This principle promotes <i>Scalability</i> by enabling seamless distribution across the Web: agents can use hyperlinks to discover and interact with other entities within and across Hypermedia MAS. It also supports <i>Interoperability</i>, <i>Extensibility</i>, and <i>Evolvability</i> through uniform hypermedia views of heterogeneous components.</p>
 
           <p>The trade-off is decreased efficiency: components must translate between their internal data representations and the uniform representations exposed via their interfaces, which are necessarily less optimized for the specific needs of individual components.</p>
 
@@ -574,7 +818,7 @@
 
           <p id="principle2" class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
 
-          <p>The core idea behind this second principle is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i>. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
+          <p>The core idea is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i> — allowing agents to join and navigate the system dynamically with minimal prior configuration. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
 
           <!-- <p class="def"><strong>Principle 3 (Observability)</strong>: Resources of potential interest to agents should be observable using Web standards, enabling agents to selectively monitor and perceive relevant changes in their environment.</p> -->
 
@@ -582,7 +826,7 @@
 
           <p class="def"><strong>Principle 3 (Observability)</strong>: A Hypermedia MAS should enable agents to selectively monitor and receive updates about relevant resources and events in their virtual environments using Web standards.</p>
 
-          This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
+          <p>This principle enables <i>Situatedness</i> and <i>Resource Monitoring</i>, and improves the <i>Scalability</i> of the overall Hypemedia MAS: selective perception allows agents to focus only on those parts of the distributed hypermedia environment that are relevant to their current tasks, enabling them to handle larger environments while reducing the load on the underlying hypermedia infrastructure.</p>
 
           <aside class="issue">
             <p>Two design goals from Section&nbsp;<a href="#design-goals">3.3.1</a> are not directly addressed by the above design principles: <i>Value Alignment</i> and <i>Security</i>. To be discussed.</p>
@@ -745,62 +989,551 @@
 
       </section>
     </section>
-    <section data-dfn-for="Foo">
-      <h2 id="identity">Identification</h2>
+    <section id="identification">
+      <h2>Identification</h2>
 
-        <aside class="issue">
+        <!-- <aside class="issue">
           <p>We need to identify agents, tools, protocols, and other entities in a Web-based MAS in a uniform way and independent of context. Additional requirements may be relevant depending on the degree of openness, e.g. see the <a href="https://www.w3.org/TR/did-1.0/#design-goals">requirements identified by the DID WG</a>.</p>
+        </aside> -->
+
+        <p><a href="principle1">Principle 1 (Uniform resource space)</a> states that all entities in a Web-based MAS should be represented in a uniform, resource-oriented manner consistent with the Web architecture. The W3C Recommendation for the architecture of the World Wide Web provides several constraints and good practices for identifying resources [[WEBARCH]]. We highlight below the ones most relevant in this context.</p>
+
+        <aside class="note" title="Identifier vs. Identity">
+          <p>It is important to distringuish between an <i>identifier</i> and an <i>identity</i> [[RFC4949]]:
+            <ul>
+              <li>an <i>identifier</i> is "a data object that definitively represents a specific identity of a system entity, distinguishing that identity from all others";</li>
+              <li>an <i>identity</i> is "the collective aspect of a set of attribute values (i.e., a set of characteristics) by which a system user or other system entity is recognizable or known".</li>
+            </ul>
+          </p>
         </aside>
+
+        <p>A recommended practice is to identify resources using IRIs (see <a href="https://www.w3.org/TR/webarch/#uri-benefits">Section 2.1. Benefits of URIs</a>), which have global scope and can be referenced independent of context — thereby promoting <i>Interoperability</i>. IRIs can identify both information resources (documents, agent cards, etc.) and non-information resources (agents, devices, etc.) [[COOLURIS]].</p>
+
+        <aside class="note" title="Decentralization">
+          <p>IRIs are not inherently centralized: a subclass of IRIs are Decentralized Identifiers [[DID-1.1]].</p>
+        </aside>
+
+        <p>An IRI identifies a single resource (see <a href="https://www.w3.org/TR/webarch/#pr-uri-collision">Constraint: URIs Identify a Single Resource</a>), and the IRI owner is responsible for maintaining the semantic validity of that identifier over time [[FIELDING00]]. These two constraints help prevent identifier collisions and semantic drift in long-lived systems, which is essential for <i>Extensibility</i> and <i>Evolvability</i>.</p>
+
+        <aside class="note" title="Evolving Resources">
+          <p>The meaning of resources can change over time. For example, definitions of ontological concepts often evolve. In such cases, IRIs can be versioned to maintain their semantic validity, which is a common practice in ontology engineering (see <a href="https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI">Section 3.1 Ontology IRI and Version IRI</a> in [[owl2-syntax]]).</p>
+        </aside>
+
+        <p>IRIs should be opaque (see <a href="https://www.w3.org/TR/webarch/#pr-uri-opacity">Good practice: URI Opacity</a>), meaning that agents should not attempt to infer properties of referenced resources from the IRIs themselves. Similarly, while it is common to follow best practices for IRI design when developing APIs (e.g., using containers to group similar resources), such design decisions cannot be assumed to be understood outside the scope of a specific service.</p>
+
+        <p>Another good practice is that deferenecing an IRI should return a representation of the identified resource (see <a href="https://www.w3.org/TR/webarch/#pr-describe-resource">Good Practice: Available representation</a>). If the identified resource is a non-information resource, such as a person or a software agent, the IRI should return a representation of an information resource that describes the targeted resource [[COOLURIS]]. This practice is common when representing knowledge on the Web, and promoted by specifications such as WebID [[SOLID-PROTOCOL]] and Decentralized Identifiers [[DID-1.1]].</p>
+
+        <p>We discuss additional constraints and best practices in <a href="#verifiable-credentials">Section 6. Verifiable Credentials</a>.</p>
 
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
+
+        <p>A number of standards and initiatives exist that address — either explicitly or implicitly — the identification of <a href="#dfn-agent">agents</a> and other entities of interest. In the following, we focus on agents and <a href="#dfn-tool">tools</a>.</p>
 
         <section data-dfn-for="Foo">
         <h3>Agent Identification</h3>
 
-        <aside class="issue">
-          <p>E.g., FIPA, SemWeb/FOAF, hMAS, LMOS, A2A</a>.</p>
-        </aside>
+          <section>
+            <h4>FIPA</h4>
+
+            <p>The <a href="http://www.fipa.org/repository/standardspecs.html">standardization work of the Foundation for Intelligent Physical Agents (FIPA)</a> is one of the earliest and most influential initiatives aimed at designing open and interoperable networks of agents. FIPA introduces <i>agent names</i> as immutable, unique identifiers that remain valid throughout an agent's lifetime [[FIPAARCH]]. Agent names are independent of the issuing party, yet still verifiable for authenticity. Importantly, they do not encode any properties of the agent. In these respects, FIPA agent names are aligned with the constraints and best practices outlined previously for identifying resources.</p>
+
+            <p>Where FIPA agent names differ from IRI-based identification approaches is in their use of a specific syntax: they are constructed from an agent's local identifier and the address of its home platform (i.e., the platform on which the agent was created). For example, the agent name `bob@example.org` identifies the agent `bob` hosted on the platform `example.org`. Using such custom identifiers for agents therefore requires the development and deployment of an Internet-scale agent name resolution service — an effort that can be avoided by using IRIs instead.</p>
+
+            <aside class="issue" title="FIPA website is down">
+              <p>The FIPA website is now unavailable. We should reach out for archiving purposes. Meanwhile, the Internet Archive has an <a href="https://web.archive.org/web/20250826233645/http://fipa.org/">archived version</a>.</p>
+            </aside>
+
+          </section>
+
+          <section>
+            <h4>Solid</h4>
+
+            Solid [[SOLID-PROTOCOL]] is a Web decentralization initiative that aims to enable users to retain full control over their data. In Solid, an <a href="https://solidproject.org/TR/protocol#agent">agent</a> is a "person, social entity, or software identified by a URI", such as a WebID [[WEBID]]. Dereferencing the WebID of an agent retrieves a representation of its WebID Profile, an RDF document describing the agent [[SOLID-PROTOCOL]] (cf. best practices discussed above). Solid thus builds on the architectural principles of the World Wide Web [[WEBARCH]] and is directly aligned with the IRI-based identification approach described in this report. We discuss further the Solid approach in the following sections.
+            
+          </section>
+
+          <section>
+            <h4>The Agent2Agent (A2A) Protocol</h4>
+
+            <p>The <a href="https://a2a-protocol.org/latest/specification/">Agent2Agent (A2A) Protocol</a> is an open standard designed to facilitate communication and interoperability between heterogeneous agent implementations. In the current specification, an <a href="https://a2a-protocol.org/latest/topics/agent-discovery/">agent's identity</a> is defined by its <i>name</i>, <i>description</i>, and <i>provider</i> information. The agent's <i>name</i> is a human-readable identifier (e.g., "Example Agent"), while the description is a human-readable string characterizing the agent (e.g., "An agent that can generate random example quotes"). <a href="https://a2a-protocol.org/latest/specification/#AgentProvider">Provider information</a> includes a URL for the provider's website or relevant documentation, and a human-readable name of the provier's organization (e.g., "ACME Inc.").</p>
+
+            <p>This design is consistent with earlier FIPA-style agent identification approaches, in which agent identity is represented by local identifiers contextualized by a provider or hosting platform rather than by globally scoped identifiers. While the inclusion of provider information supports discovery and interaction across organizational boundaries, defining agent identity in terms of human-readable names and descriptions limits the ability to reference agents as first-class entities in a global context. This approach simplifies implementation and configuration in closed settings but constrains interoperability in open settings. Extending the agent information with an agent IRI would enable globally unique and uniform identification.</p>
+            
+          </section>
+
+          <section>
+            <h4>The Agent Network Protocol (ANP)</h4>
+
+            <p>The <a href="https://www.agent-network-protocol.com/specs/white-paper">Agent Network Protocol (ANP)</a> is an open-source communication protocol that enables agents to discover and interact with one another on the Internet. ANP is designed for interoperability in decentralized settings and identifies agents using W3C Decentralized Identifiers (DIDs) [[DID-1.1]]. ANP defines its own DID method for identifying Web-based agents, named `did:wba`, which extends the `did:web` method specification [[DIDWEB]] with additional constraints on DID documents and cross-platform authentication processes (see <a href="https://github.com/chgaowei/AgentNetworkProtocol/blob/main/03-did%3Awba%20Method%20Design%20Specification.md">did:wba method specification</a>). By adopting DIDs, ANP is therefore directly aligned with the IRI-based identification approach described in this report and addresses cross-platform identification and authentication in a decentralized manner, with the associated requirement to support DIDs and the `did:wba` DID method.</p>
+          </section>
+
+          <section>
+            <h4>Eclipse LMOS</h4>
+
+            <p>The <a href="https://eclipse.dev/lmos/docs/lmos_protocol/introduction/">Eclipse Language Model Operating System (LMOS)</a> is an open protocol that enables agents to discover, interact, and collaborate on the Internet. LMOS builds on W3C standards and specifically the Web of Things architecture [[wot-architecture11]]. Similar to ANP, LMOS uses Decentralized Identifiers [[DID-1.1]] to identify not only agents but also tools. Unlike ANP, LMOS uses the `did:web` method specification as is [[DIDWEB]], deferring authentication processes to declarative security definitions via the WoT Thing Description [[wot-thing-description11]]. We discuss security mechanisms in Section&nbsp;[[[#security-and-privacy]]].</p>
+          </section>
         
         </section>
         <section data-dfn-for="Foo">
           <h3>Tool Identification</h3>
-          
-        <aside class="issue">
-          <p>E.g., MCP, hMAS, MAMS, LMOS</a>.</p>
-        </aside>
+
+          <section>
+            <h4>MCP</h4>
+
+            <p>The <a href="https://modelcontextprotocol.io/specification/2025-11-25">Model Context Protocol (MCP)</a> is an open-source standard for connecting LLM-based applications to external systems. In MCP, tools are "executable functions that AI applications can invoke to perform actions (e.g., file operations, API calls, database queries)". In the current specification (`version 2025-11-25`), a tool is identified by a <i>name</i>, which is a string identifier that is unique within an MCP server. In addition, some systems use string labels for MCP servers that further qualify tool references (e.g., <a href="https://platform.openai.com/docs/api-reference/responses/create">OpenAI Response API v1</a>), similar to the provider information in A2A (see Section&nbsp;[[[#the-agent2agent-a2a-protocol]]]). MCP thus follows a design rationale similar to A2A that prioritizes simplicity in closed settings but constrains interoperability in open settings. Extending tool definitions with tool IRIs would enable globally unique and uniform identification.</p>
+            
+          </section>
+
+          <section>
+            <h4>UTCP</h4>
+
+            <p>The <a href="https://www.utcp.io/about/RFC">Universal Tool Calling Protocol (UTCP)</a> is an open standard that enables agents to discover and call tools directly. UTCP extends the OpenAPI specification [[OPENAPIS-3.1.0]] with agent-focused enhancements, including bindings to different protocols used for transport (e.g., HTTP, CLI, gRPC, GraphQL, MCP). We discuss in more detail the UTCP approach to tool use in Section&nbsp;[[[#agent-environment-interaction]]]. Similar to MCP, a UTCP tool is identified by a <i>name</i>, which is a string identifier. The responsibility of managing tool repositories is <a href="https://www.utcp.io/about/RFC#client-side-tool-management-and-scalability">left to the UTCP client</a>. For tool identification, UTCP thus follows a design trade-off similar to MCP — simplifying tool referencing in closed settings rather than supporting globally unique and uniform identification.</p>
+          </section>
 
         </section>
       </section>
       <section data-dfn-for="Foo">
         <h3>Discussion</h3>
 
-        <aside class="issue">
-          <p>Identify commonalities among the different initiatives and pontential gaps</a>.</p>
-        </aside>
+        <p>The initiatives surveyed in this section span a spectrum of design choices, from closed to open settings. At one end, protocols like MCP and UTCP use string identifiers scoped to individual servers — a design that prioritizes simplicity and developer convenience in closed settings. At the other end, ANP and Eclipse LMOS use DIDs [[DID-1.1]] to enable globally unique, decentralized identification suited to open settings. Solid uses HTTP IRIs for centralized identification in a decentralized Web, and A2A occupies a middle ground with provider-qualified names. This diversity reflects legitimate differences in system requirements rather than a gap in standardization. However, a clear pattern emerges: as systems move toward openness and decentralization, alignment with Web standards and practices for identification becomes increasingly relevant. For systems that anticipate evolution towards open and decentralized participation, adopting IRI-based identification from the outset may reduce future integration costs.</p>
       </section>
     </section>
-    <section>
-      <h2 id="profiles">Profiles</h2>
+
+    <section id="profiles">
+      <h2>Profiles</h2>
+    
+      <p> Profiles are information resources (i.e., documents) that describe non-information resources in a Web-based MAS, such as agents and tools.</p>
+            
+      <p> The need for profiles arises from the good practices defined in the W3C Recommendation Architecture of the World Wide Web: 
+        When a non-information resource is identified by an IRI, dereferencing that IRI should return a representation of an information resource that describes the identified resource ([COOLURIS]; see <a href="identification">Section 4. Identification</a>). 
+        Profiles support this practice, by acting as the information sources through which identifiable agents, tools, and other (non-informational) MAS entities are described and accessed on the Web.
+        In line with <a href="principle1">Principle 1 (Uniform resource space)</a>, this access is consistent and enables linking and reuse of MAS entities accross the system. 
+      </p>  
+
+      <aside class="issue" title="Resource Profiles vs.Profiles in Content Negotiation">
+        This document’s use of the term Profile should not be confused with profiles of specifications for information resources used for content negotiation by profile. [...]
+      </aside>
+
+      <aside class="issue" title="Parallelism between profiles and homepages of people and organizations as an example.">
+        In practice, profiles are similar to [...]
+      </aside>
+
+      <aside class="issue" title="Good practices about linking">
+       Comment on identification of links and their roles within the representation, Web-wide and hypertext linking (not just internal), and the use of URI references (relative links) to enhance the usability of the data format.
+      </aside>
       
-      <aside class="issue">
-          <p>We need to describe non-information resources that we interact with in a Web-based MAS: agents, tools, etc.</p>
+      <aside class="issue" title="Good practices about data formats">
+        Comment on support of data format, that also allow for extensibility that retains conformance with the original specification
+      </aside>
+
+      <aside class="issue" title="Good practices about interaction">
+        Comment on the separation of content, representation, and interaction
+      </aside>
+
+      <aside class="issue" title="Good practices about versioning">
+        To comment on versioning
+      </aside>
+
+
+      <section data-dfn-for="#profiles-initiatives">
+        <h3>Relevant Standards and Initiatives</h3>
+        <aside class="issue">
+          <p>This section discusses existing for describing non-information resources that agents interact with in a Web-based MAS. 
+            Section <a href="#agent-profiles">5.1.1</a> reviews approaches to agent profiles, and Section <a href="#tool-profiles">5.1.2</a> reviews approaches to tool profiles.
+          </p>
         </aside>
 
-      <section data-dfn-for="Foo">
-        <h3>Relevant Standards and Initiatives</h3>
-
-        <section data-dfn-for="Foo">
+        <section id="agent-profiles">
           <h3>Agent Profiles</h3>
-      
+
+        <aside class="issue">
+          <p>An agent profile is structured data describing an agent.</p>
+        </aside>
+
+          </aside>
+        <aside class="issue">
+          <p>What follows is a first draft of a comparison table for existing works that support agent profiles, or common aspects of them. This table with evolve with the report. This first draft did not receive any feedback yet, it is only meant to start the discussion — and is bound to be incomplete and inaccurate:</p>
+        </aside>
+        <table class="index">
+          <tr>
+            <td></td>
+            <th>Interaction</th>
+            <th>Capabilities</th>
+            <th>Locality</th>
+            <th>Monitoring</th>
+            <th>Coordination</th>
+          </tr>
+          <tr>
+            <td>FOAF Personal Profile Document</td>
+            <td>(Mbox)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Project (?)</td>
+            <td>Groups, Member</td>
+          </tr>
+          <tr>
+            <td>A2A AgentCard</td>
+            <td>A2A Skills</td>
+            <td>A2A Capabilities (e.g., streaming, pushNotifications)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>LMOS Agent Description</td>
+            <td>—</td>
+            <td>W3C WoT Interaction Affordances</td>
+            <td>—</td>
+            <td>W3C WoT Event Affordances (?)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>ANP Agent Description</td>
+            <td>ANP Potential Action</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MCP Client Capabilities Description</td>
+            <td>—</td>
+            <td>MCP Capabilities (e.g., elicitation, sampling) </td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>FIPA Agent Identifier Description</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>(Interaction Protocols, Ontologies, Languages)</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Interaction Protocols</td>
+          </tr>
+          <tr>
+            <td>hMAS Resource Profiles</td>
+            <td>hMAS Signifier, Behavior Execution, Action Execution</td>
+            <td>Abilities (?)</td>
+            <td>hMAS Workspace, JaCaMo Bodies</td>
+            <td>JaCaMo Bodies</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>MAMS Agent Bodies</td>
+            <td>FIPA ACL Message Structure, Communicative Acts</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+            <td>[TBA]</td>
+          </tr>
+        </table>
+
+        <aside class="issue">
+          <p>Across relevant standards and initiatives for agents on the Web, profiles a set of key processes, which can be summarized as follows:</p>
+          <ul>
+            <li>Interaction: [Process definition]. This process can be supported by data elements regarding [...]. For example, [...]. Such information helps with interoperability, extensibility, [...]</li>
+            <li>Capability advertisement: The process of conveying information about the [capabilities] of an agent can 
+              be supported by data elements regarding the agent's ability to use specific artifacts or tools, 
+              to operate based on specific organisational roles, or to participate in certain interaction patterns.
+              For example, [elicitation of user information [[MCP]], pushing notifications [[A2A]], participating in auctions [[FIPA]], ...].
+              [Such information helps with extensibility, evolvability, ...]
+            <li>...
+            </li> 
+        </ul>
+        </aside>
+
+         <h4>Friend Of A Friend (FOAF)  Personal Profile Document</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="http://ldodds.com/foaf/foaf-a-matic.html">Temporary example for discussion</a> 
+          </aside>
+
+          <aside class="example ds-selector-tabs" id="example-foaf"><div> Sample FOAF personal profile document</span></div>
+          <div class="selectors">
+            <button class="selected" data-selects="json-ld">JSON-LD</button>
+            <button data-selects="turtle">Turtle</button>
+            <a class="playground" target="_blank" aria-label="playground link" href="https://json-ld.org/playground/#startTab=tab-nquads&json-ld=%7B%22%40context%22%3A%7B%22%40vocab%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%2C%22mbox%22%3A%7B%22%40type%22%3A%22%40id%22%7D%2C%22homepage%22%3A%7B%22%40type%22%3A%22%40id%22%7D%2C%22interest%22%3A%7B%22%40type%22%3A%22%40id%22%7D%2C%22knows%22%3A%7B%22%40type%22%3A%22%40id%22%7D%7D%2C%22%40type%22%3A%22PersonalProfileDocument%22%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fagents%2F1%22%2C%22primaryTopic%22%3A%7B%22%40type%22%3A%22Person%22%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fagents%2F1%23me%22%2C%22name%22%3A%22Alice%22%2C%22mbox%22%3A%22mailto%3Aalice.smith%40example.org%22%2C%22homepage%22%3A%22http%3A%2F%2Fexample.org%2Falice%22%2C%22interest%22%3A%22http%3A%2F%2Fdbpedia.org%2Fresource%2FMulti-agent_systems%22%2C%22knows%22%3A%5B%22http%3A%2F%2Fexample.org%2Fagents%2F2%23me%22%2C%22http%3A%2F%2Fexample.org%2Fagents%2F3%23me%22%5D%7D%7D&frame=%7B%22foaf%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%7D&context=%7B%7D">Open in playground</a>
+          </div>
+          <pre class="json-ld selected">
+            {
+              "@context": {
+              "@vocab": "http://xmlns.com/foaf/0.1/",
+              "mbox": {
+                "@type": "@id"
+              },
+              "homepage": {
+                "@type": "@id"
+              },
+              "interest": {
+                "@type": "@id"
+              },
+              "knows": {
+                "@type": "@id"
+              }
+            },
+            "@type": "PersonalProfileDocument",
+             "@id": "http://example.org/agents/1",
+            "primaryTopic":{
+              "@type": "Person",
+              "@id": "http://example.org/agents/1#me",
+              "name": "Alice",
+              "mbox": "mailto:alice.smith@example.org" ,
+              "homepage": "http://example.org/alice" ,
+              "interest": "http://dbpedia.org/resource/Multi-agent_systems",
+              "knows": ["http://example.org/agents/2#me", "http://example.org/agents/3#me"]
+            }
+          }</pre>
+          <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample JSON-LD document using full IRIs instead of terms-expanded" data-to-rdf="" aria-busy="false"><code class="hljs">
+ @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+  &lt;http://example.org/agents/1&gt;
+  a foaf:PersonalProfileDocument ;
+  foaf:primaryTopic &lt;http://example.org/agents/1#me&gt; .
+
+  &lt;http://example.org/agents/1#me&gt;
+     a foaf:Person ;
+     foaf:name "Alice";
+     foaf:mbox &lt;mailto:alice.smith@example.org&gt; ;
+     foaf:homepage &lt;http://example.org/alice&gt; ;
+     foaf:interest &lt;http://dbpedia.org/resource/Multi-agent_systems&gt; ;
+     foaf:knows &lt;http://example.org/agents/2#me>, &lt;http://example.org/agents/3#me&gt; .
+           </code></pre>
+          </aside>
+
+         <h4>Solid WebID Profile</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://solid.github.io/webid-profile/#terminology">Temporary example for discussion</a> 
+          </aside>
+
+         <h4>FIPA Agent Identifier Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://jade.tilab.com/papers/JADETutorialIEEE/JADETutorial_FIPA.pdf">Temporary example for discussion</a> (slide 12)
+          </aside>
+
+         <h4>A2A AgentCard</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://a2a-protocol.org/latest/tutorials/python/3-agent-skills-and-card/#agent-card">Temporary example for discussion</a> 
+          </aside>
+
+          <aside class="example ds-selector-tabs" id="example-a2a"><div> Sample A2A agent card</span></div>
+          <pre class="json-ld selected">
+            {
+              "name": "Alice",
+              "description": "An agent that echoes",
+              "url": "http://localhost:9999/",
+              "version": "1.0.0",
+              "default_input_modes": ["text"],
+              "default_output_modes": ["text"],
+              "capabilities": {
+                "streaming": true
+              },
+              "skills": [
+                {
+                  "id": "echo-skill",
+                  "name": "Echo Tool",
+                  "description": "Echos the input given",
+                  "tags": ["echo", "repeater"],
+                  "examples": ["I will see this echoed back to me"],
+                  "inputModes": ["text"],
+                  "outputModes": ["text"]
+                }
+              ]
+            }
+          </pre>
+          </aside>
+
+         <h4>ANP Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://agent-network-protocol.com/specs/agent-description.html">Temporary example for discussion</a> 
+          </aside>
+
+          <aside class="example ds-selector-tabs" id="example-a2a"><div> Sample ANP agent description</span></div>
+          <pre class="json-ld selected">
+{
+  "protocolType": "ANP",
+  "protocolVersion": "1.0.0",
+  "type": "AgentDescription",
+  "url": "https://example.com/agents/1",
+  "name": "Alice",
+  "did": "did:wba:example.com:service:echo-agent",
+  "owner": {
+    "type": "Organization",
+    "name": "Example Systems",
+    "url": "https://systems.example.org"
+  },
+  "description": "An agent that echoes",
+  "created": "2024-12-31T12:00:00Z",
+  "securityDefinitions": {
+    "didwba_sc": {
+      "scheme": "didwba",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "security": "didwba_sc",
+  "Infomations": [
+    {
+      "type": "Information",
+      "description": "Usage examples for using the Echo Assistant in agent-to-agent communication tests.",
+      "url": "https://example.com/info/echo-agent-usage.json"
+    }
+  ],
+  "interfaces": [
+    {
+      "type": "NaturalLanguageInterface",
+      "protocol": "JSON-RPC 2.0",
+      "url": "https://example.com/api/nl-interface.yaml",
+      "description": "Natural language interface allowing users to send text and receive the same text back."
+    },
+    {
+      "type": "StructuredInterface",
+      "protocol": "JSON-RPC 2.0",
+      "url": "https://example.com/api/echo-interface.json",
+      "description": "JSON-RPC 2.0 interface for programmatically sending input and receiving the identical echoed response."
+    }
+  ],
+  "proof": {
+    "type": "EcdsaSecp256r1Signature2019",
+    "created": "2024-12-31T15:00:00Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:wba:example.com:service:echo-assistant#keys-1",
+    "challenge": "1235abcd6789",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQpic7ndSayn1PzZs6ZjWp1CktyGesjuTSwRdoWhAfGFCF5bppETSTojQCrfFPP2oumHKtz"
+  }
+}
+
+          </pre>
+          </aside>
+
+         <h4>LMOS Agent Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://eclipse.dev/lmos/docs/lmos_protocol/agent_description/">Temporary example for discussion</a> 
+          </aside>
+
+                    <aside class="example ds-selector-tabs" id="example-a2a"><div> Sample LMOS agent description</span></div>
+          <pre class="json-ld selected">
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lmos": "https://eclipse.dev/lmos/protocol/v1"
+    }
+  ],
+  "id": "urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77",
+  "title": "EchoAgent",
+  "@type": "lmos:Agent",
+  "links": [
+    {
+      "rel": "service-doc",
+      "href": "https://example.com/docs/echo-agent-manual.pdf",
+      "type": "application/pdf",
+      "hreflang": "en"
+    }
+  ],
+  "lmos:metadata": {
+    "lmos:vendor": {
+      "lmos:name": "Example Systems",
+      "lmos:url": "https://systems.example.com"
+    }
+  },
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    }
+  },
+  "security": "basic_sc",
+  "properties": {
+    "modelConfiguration": {
+      "description": "Current configuration of the underlying LLM, including version, and maximum tokens.",
+      "type": "object",
+      "properties": {
+        "modelName": {
+          "type": "string",
+          "description": "Name of the model in use."
+        },
+        "maxTokens": {
+          "type": "integer",
+          "description": "Maximum number of tokens the model is allowed to generate."
+        }
+      },
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "https://example.com/things/urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77/properties/modelConfiguration",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "echo": {
+      "description": "Returns exactly the same input text that is provided by the user.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The text to be echoed back."
+          },
+          "interactionMode": {
+            "type": "string",
+            "enum": ["text"]
+          }
+        },
+        "required": ["message", "interactionMode"]
+      },
+      "output": {
+        "type": "string",
+        "description": "The exact same text that was provided in the input."
+      },
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "https://example.com/things/urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77/actions/echo",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ]
+    }
+  },
+  "events": {
+    "userFeedbackReceived": {
+      "description": "Emitted when a user provides feedback on the echo service.",
+      "data": {
+        "type": "integer",
+          "description": "User rating, where 1 is the lowest and 5 is the highest.",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "forms": [
+        {
+          "op": "subscribeevent",
+          "href": "https://example.com/things/urn:uuid:6f1d3a7a-1f97-4e6b-b45f-f3c2e1c84c77/events/userFeedbackReceived",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  }
+          </pre>
+          </aside>
+
+        <h4>MCP Client Capabilities Description</h4>
+          <aside class="note" title="Notes for discussion">
+            <a href="https://modelcontextprotocol.io/docs/learn/client-concepts#core-client-features">Temporary example for discussion</a> 
+          </aside>
+
         </section>
 
-        <section data-dfn-for="Foo">
+        <section id="tool-profiles">
           <h3>Tool Profiles</h3>
+
         
         </section>
       </section>
-      <section data-dfn-for="Foo">
+      <section id="profiles-discussion">
         <h3>Discussion</h3>
 
         <aside class="issue">
@@ -808,7 +1541,8 @@
         </aside>
       </section>
     </section>
-    <section>
+
+    <section id="verifiable-credentials">
       <h2>Verifiable Credentials</h2>
 
       <aside class="issue">
@@ -840,7 +1574,7 @@
       <p>
         Discovery services typically combine: a registry; a registration mechanism and some form of lookup/query mechanism. The 
         registry will normally hold information about the agents, tools or resources; including as a minimum some form of
-        <a href="#identity">identifier</a>. Typically, the registry will also hold or link to meta-data about the agent, tool or 
+        <a href="#identification">identifier</a>. Typically, the registry will also hold or link to meta-data about the agent, tool or 
         resource such as the type of information typically held in a <a href="#profiles">profile</a>.
       </p>
       <p>
@@ -864,7 +1598,7 @@
           includes and extensive discussion of the discovery process, identifying two phases for Discovery: Introduction and 
           Exploration. Introduction is the discovery of a URL that describes an Agent/Tool. Exploration is the consumption of 
           the resource associated with that URL which may be an identity or profile. In the context of this report, Exploration 
-          is closely linked to the notions of <a href="#identity">Identity</a> and <a href="#profile">Profile</a>.
+          is closely linked to the notions of <a href="#identification">Identity</a> and <a href="#profile">Profile</a>.
         </p>
       </aside>
       <section data-dfn-for="Foo">
@@ -948,7 +1682,7 @@
             </p>
             <h3>Foundation for Intelligent Physical Agents (FIPA)</h3>
             <p>
-              The section on <a href="#identity">Identification</a> includes a brief introduction to the
+              The section on <a href="#identification">Identification</a> includes a brief introduction to the
               <a href="https://web.archive.org/web/20250321030044/http://www.fipa.org/repository/index.html">FIPA Standards</a>. The 
               topic of  agent discovery is mentioned in two of the standards: the <a href="https://web.archive.org/web/20250814070600/http://www.fipa.org/specs/fipa00001/SC00001L.html">FIPA Abstract Architecture Specification (FIPA00001)</a>
               and the <a href="https://web.archive.org/web/20230528171843/http://fipa.org/specs/fipa00023/SC00023K.html">FIPA Agent Management Specification (FIPA00023)</a>.
@@ -968,9 +1702,9 @@
             <h3>Model Context Protocol</h3>
             <p>
             </p>
-            <h3>Universal Tool Calling Protocol (UTCP)</h3>
+            <h3>Universal Tool Calling Protocol (uTCP)</h3>
             <p>
-              <a href="https://www.utcp.io/">UTCP</a> is an alternativer protocol for interacting with tools.
+              <a href="https://www.utcp.io/">uTCP</a> is an alternativer protocol for interacting with tools.
             </p>
         
         </section>
@@ -1003,23 +1737,381 @@
         </aside>
       </section>
     </section>
-    <section>
+    <section id="agent-environment-interaction">
       <h2>Agent-Environment Interaction</h2>
+
+      <p>Where <a href="#agent-to-agent-interaction">Section 8</a> examines how agents communicate with one another, this section examines how agents perceive and act in a shared, Web-accessible environment. This corresponds to the <i>environment dimension</i> of the four-dimension MAS model introduced in <a href="#conceptual-dimensions">Section 3.2</a> and grounds the <i>virtual environment</i> pattern from <a href="#architectural-patterns">Section 3.3.2</a> in concrete standards and protocols. The section also connects to three agent-level design goals from <a href="#design-goals">Section 3.3.1</a>: <i>Situatedness</i>, which requires that agents interact with their environments directly through perception and action; <i>Embodiment</i>, which requires that agents be represented as resources in the environment, discoverable and interactable by others; and <i>Value Alignment</i>, since the affordances an environment exposes govern what actions are possible and may encode normative constraints.</p>
+
+      <p>Three foundational concepts organize the discussion. An <i>affordance</i> is a relation between an agent's capabilities and the capabilities that the environment exposes: it specifies what the agent can do and how. The term is used here in the sense established by ecological psychology and design theory, but formalized as a machine-readable, discoverable description of an available interaction. A <i>signifier</i> is an observable cue embedded in the environment that indicates the availability of an affordance and the conditions under which it can be exercised. <i>Perception</i> and <i>action</i> are the two complementary channels through which a situated agent interacts with its environment: perception is the process of sensing the current state of the environment, while action is the process of modifying it. The situated agent pattern (see <a href="#architectural-patterns">Section 3.3.2</a>) treats these two channels as structurally independent, allowing agents to react to environmental changes without initiating an action.</p>
+
+      <p>Three paradigms of agent-environment interaction can be identified in the current landscape. In <i>hypermedia-driven</i> interaction, agents navigate and discover affordances at runtime by following hypermedia controls embedded in resource representations, requiring no prior knowledge of the environment's structure. In <i>description-driven</i> interaction, agents consume machine-readable interface specifications before invoking affordances, relying on out-of-band or pre-fetched descriptions. In <i>protocol-driven</i> interaction, agents use a standardized invocation protocol that manages tool enumeration and invocation through a dedicated server. These paradigms are not mutually exclusive; several of the initiatives surveyed below combine elements of more than one.</p>
+
+      <aside class="issue" title="Identification of environment entities">
+        <p><a href="#identification">Section 4</a> addresses the identification of agents and tools but does not yet address the identification of environment entities more broadly, including workspaces, artifacts, observable properties, and events as named, dereferenceable resources. Under <a href="#principle1">Principle 1 (Uniform resource space)</a>, every entity an agent can interact with should be identifiable by an IRI. Section 4 should be extended with treatment of environment resource identification, covering how WoT Thing Description IRIs, hMAS workspace IRIs, and artifact names relate to the IRI-based identification model, and how relative IRI references within protocol forms should be handled.</p>
+      </aside>
+
+      <aside class="issue" title="Collapse of the perception-action distinction in LLM-centric protocols">
+        <p>Current LLM-centric protocols, including MCP, UTCP, and provider-level function calling APIs, return environment state exclusively as a side-effect of action invocations: an agent perceives the environment only through the return value of a tool call. This design collapses the structural distinction between perception and action that is central to the situated agent pattern (see <a href="#architectural-patterns">Section 3.3.2</a>) and to <a href="#principle3">Principle 3 (Observability)</a>. An agent that cannot perceive the environment independently of its action cycle cannot react to environmental changes without polling, a limitation with direct consequences for the <i>Situatedness</i> and <i>Scalability</i> design goals. The W3C Web of Things and the CArtAgO framework (discussed in this section) demonstrate that an independent push-based perception channel is implementable on the Web. Whether current tool-use protocols should be extended with equivalent mechanisms, or whether a complementary observability layer should be defined alongside them, requires further investigation.</p>
+      </aside>
 
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
 
-        <section>
-          <h3>Tool Use</h3>
-      
+        <p>Agent-environment interaction in a Web-based MAS requires, at minimum, three things to be addressed simultaneously: a description of what interactions are available and under what conditions, a protocol for invoking those interactions, and a mechanism for perceiving changes in environmental state independently of invocation. The initiatives surveyed in this section address one or more of these concerns, and are organized accordingly. Subsection <a href="#affordance-description-standards">9.1.1</a> covers <i>affordance description</i>: the standards and models that represent what interactions an environment exposes and how they are semantically characterized. Subsections <a href="#agent-tool-protocols">9.1.2</a> through <a href="#agent-orchestration-frameworks">9.1.4</a> cover <i>invocation</i>: the protocols and frameworks through which agents call tools and services, from standardized open protocols to widely deployed software frameworks. Subsection <a href="#perception-and-observability">9.1.5</a> covers <i>observability</i>: the mechanisms through which agents receive updates about environmental state without initiating an action. Subsection <a href="#classical-mas-environments">9.1.6</a> provides foundational context from classical MAS environments that predate the Web-native protocol stack but establish the conceptual baseline against which current approaches can be evaluated.</p>
+
+        <p>The initiatives surveyed vary significantly in standardization status and scope. Some, such as the W3C Web of Things Thing Description and WebSub, are W3C Recommendations. Others, such as MCP, UTCP, and the Agent Network Protocol, are open but not W3C-standardized protocols with varying degrees of deployment. A further group consists of software frameworks, such as LangChain or Microsoft Semantic Kernel, which are not standards at all but represent de facto conventions that shape how protocols are consumed in practice. Classical MAS frameworks such as CArtAgO and JADE predate the Web-native stack and are included for their architectural and historical relevance. The organization of the subsections follows this layer-based decomposition of the interaction stack and does not imply a ranking by importance, maturity, or degree of recommendation.</p>
+
+        <section id="affordance-description-standards" data-dfn-for="Foo">
+          <h3>Affordance Description Standards</h3>
+
+          <section>
+            <h4>W3C Web of Things Interaction Affordances</h4>
+
+            <p>The W3C Web of Things (WoT) Thing Description specification [[wot-thing-description11]] defines a machine-readable vocabulary for describing the interaction affordances of a Thing, a term used broadly for any physical or virtual entity whose state can be observed or whose behavior can be invoked. The WoT architecture [[wot-architecture11]] defines three affordance types, each corresponding to a distinct mode of agent-environment interaction. The WoT affordance model is adopted by Eclipse LMOS for both agent and tool descriptions and informs the hMAS ontology's treatment of artifact descriptions.</p>
+
+            <p>A <i>Property Affordance</i> describes a readable, and optionally writable and observable, attribute of a Thing. Reading a property retrieves a representation of the current state of the corresponding resource; writing a property modifies that state; observing a property establishes a subscription to state changes delivered via the underlying protocol binding. Each property carries a JSON Schema description of its value and may be annotated with JSON-LD type references to external vocabularies, enabling semantic interpretation. The <code>observable</code> flag on a property connects it directly to <a href="#principle3">Principle 3 (Observability)</a> and to the push-based perception mechanisms surveyed in <a href="#perception-and-observability">Section 9.1.3</a>. Property affordances represent the primary formalized mechanism for proactive environment monitoring in the landscape covered by this report.</p>
+
+            <aside class="issue" title="Stateful vs. stateless tools in profiles">
+              <p><a href="#tool-profiles">Section 5</a> discusses tool profiles but does not yet address how Property Affordances, which expose persistent, observable state, distinguish stateful tools from stateless functions. This distinction is architecturally significant: an agent that can observe a tool's state can implement reactive, event-driven behavior rather than relying on polling. Section 5 should address how this distinction is represented in tool profiles and what its implications are for agent reasoning about tool selection and composition.</p>
+            </aside>
+
+            <p>An <i>Action Affordance</i> describes an invocable behavior of a Thing that may have side effects on the environment or on the physical world. Semantically, an action is distinct from a property write in that it models a process that takes time, may be asynchronous, may produce errors, and whose lifecycle can be tracked. The specification provides optional <code>safe</code>, <code>idempotent</code>, and <code>synchronous</code> flags that characterize the behavior, and defines <code>queryaction</code> and <code>cancelaction</code> operations for status querying and cancellation of ongoing invocations. This execution model has direct relevance to agentic scenarios involving long-running tool invocations, such as code execution, robotic control, or database operations.</p>
+
+            <aside class="issue" title="Action lifecycle in tool-use protocols">
+              <p>MCP and provider-level function calling APIs model all tool invocations as synchronous, blocking, atomic remote procedure calls. No standard mechanism for status querying, output streaming, or cancellation exists in these protocols. The WoT action lifecycle model demonstrates that such mechanisms are definable within a Web-native affordance description. Whether current tool-use protocols should adopt a minimal asynchronous action model, analogous to the HTTP 202 Accepted pattern or the WoT <code>queryaction</code> and <code>cancelaction</code> operations, requires further investigation.</p>
+            </aside>
+
+            <p>An <i>Event Affordance</i> describes an asynchronous notification that a Thing can emit: a state change, an alert, or any occurrence of interest to agents monitoring the environment. Event affordances formalize the push-based perception channel: an agent subscribes and receives notifications without polling. Each event affordance carries a schema for the notification payload and forms specifying how to subscribe and unsubscribe over the chosen protocol binding. This is the standards-based realization of <a href="#principle3">Principle 3 (Observability)</a> in the WoT architecture.</p>
+
+            <p>The <code>forms</code> element within each affordance is the mechanism by which WoT Thing Descriptions abstract over transport heterogeneity. A form specifies the target URL, the protocol operation type (such as <code>readproperty</code>, <code>invokeaction</code>, or <code>subscribeevent</code>), the HTTP method or protocol-equivalent, and the content type. A single affordance may carry multiple forms for different protocols, enabling runtime binding selection. Binding templates are defined for HTTP [[wot-binding-http]], CoAP [[wot-binding-coap]], and MQTT [[wot-binding-mqtt]], with community-maintained extensions for WebSocket, Modbus, and other protocols. This architecture directly supports the <i>Interoperability</i> design goal across heterogeneous deployment contexts. In addition, WoT Thing Descriptions carry a <code>links</code> element for connecting a description to related resources and vocabularies, and the WoT Discovery mechanism enables agents to locate Thing Descriptions from a directory URL, realizing <a href="#principle2">Principle 2 (Single Entry Point)</a> within the WoT architecture.</p>
+
+            <aside class="issue" title="Connector diagram in Section 3">
+              <p>The <code>forms</code> element in WoT Thing Descriptions is a concrete instantiation of the connector abstraction discussed in <a href="#architectural-patterns">Section 3.3.2</a>, where a connector mediates interaction between a situated agent and a virtual environment using a network-based protocol. The outstanding note in that section requesting a diagram illustrating examples of connectors could use a WoT Thing Description form as the primary example, showing how the same interaction affordance is realized over multiple protocol bindings.</p>
+            </aside>
+
+            <p>Eclipse LMOS [[LMOS]] builds directly on the WoT architecture and uses WoT Thing Descriptions as the native format for both agent and tool descriptions. From the agent-environment interaction perspective, LMOS exposes tool affordances through the full WoT interaction affordance model: Property Affordances, Action Affordances, and Event Affordances, with protocol bindings for HTTP and WebSocket. LMOS thus represents the current initiative most closely aligned with the WoT affordance model as an agent-tool interaction standard.</p>
+          </section>
+
+          <section>
+            <h4>Hypermedia MAS and Signifiers</h4>
+
+            <p>The <i>hMAS ontology</i> extends the WoT affordance model with an agent-oriented layer centered on the concept of the <i>Signifier</i> [[CIORTEA19]][[HMAS19]]. Where a WoT Thing Description describes what a Thing can expose, an hMAS Signifier describes what a specific agent can and is permitted to do in a specific context. A Signifier links three elements: an affordance, typically a WoT interaction affordance; a set of <i>ability conditions</i> specifying the capabilities an agent must possess in order to use the affordance; and a set of <i>context conditions</i> specifying when the affordance is available given the agent's role, organizational membership, or workspace state. This structure makes the affordance model normatively aware: an agent reading an hMAS Signifier learns not only how to invoke an affordance but also whether it is appropriate to do so given its current context.</p>
+
+            <p>Signifiers are embedded in Resource Profiles of artifacts and workspaces (see <a href="#tool-profiles">Section 5</a>), which agents traverse hypermedia-style from a workspace entry point. This traversal is the primary mechanism by which the hMAS architecture realizes <a href="#principle2">Principle 2 (Single Entry Point)</a> and <a href="#principle3">Principle 3 (Observability)</a>: starting from a single entry URL, an agent can navigate the workspace hypermedia graph and discover all actionable affordances, their ability conditions, and their context conditions, without prior configuration. Signifiers are expressed in RDF using the hMAS and WoT ontologies, enabling integration with Linked Data ecosystems and, in principle, machine-readable reasoning over affordance availability.</p>
+
+            <p>Yggdrasil is a server-side implementation of this model in which artifacts are Web resources described by WoT Thing Descriptions, workspaces are navigable hypermedia collections, and artifact operations are bound to HTTP endpoints. Yggdrasil demonstrates that the programming model established by CArtAgO (discussed in <a href="#classical-mas-environments">Section 9.1.4</a>) can be realized in a Web-native manner, bridging classical MAS environment programming and Hypermedia MAS architecture.</p>
+
+            <aside class="issue" title="Normative constraints at the affordance level">
+              <p>The hMAS Signifier model provides a concrete mechanism for encoding normative constraints at the level of individual affordances, connecting the environment dimension to the organization dimension of the MAS model. <a href="#policies-norms-accountability">Section 10</a> should examine how signifier ability and context conditions relate to ODRL policy expressions [[ODRL22]], and whether a unified normative profile for affordances, combining WoT Thing Descriptions, hMAS Signifiers, and ODRL policies, is feasible and would contribute to interoperability.</p>
+            </aside>
+          </section>
+
+          <p>The two approaches described above address affordance description, invocation, and observability within a single integrated model, grounded in W3C standards and the REST architectural style. The following two approaches address affordance description and invocation as their primary concern, without a native observability model or semantic annotation layer, and are widely deployed in production Web development and agentic AI systems respectively.</p>
+
+          <section>
+            <h4>OpenAPI Specification</h4>
+
+            <p>The OpenAPI Specification [[OPENAPIS-3.1.0]] is the industry-standard format for describing HTTP APIs, defining endpoints, HTTP methods, parameters, request and response schemas, and security mechanisms. It is the most widely adopted API description format in production Web development and serves as a practical baseline for tool descriptions in agentic systems: most tool generation pipelines begin from an OpenAPI specification and convert or wrap it into an agent-callable form. The UTCP specification (discussed below) explicitly extends OpenAPI as its starting point.</p>
+
+            <p>From an agent-environment interaction standpoint, OpenAPI describes the interface of a Web service but not its affordance semantics. An OpenAPI operation is a typed request-response pair; the specification provides no native concept of observable state, event subscription, or action lifecycle. Semantic annotations are possible through extension fields but are not standardized. This representational scope limits the degree to which agents can reason about OpenAPI-described tools without relying on natural language interpretation of documentation fields. Discovery is also not address natively: unlike WoT Thing Descriptions, which carry hypermedia links enabling navigation from a single entry point, OpenAPI specifications describe a fixed set of endpoints and provide no mechanism for runtime affordance discovery or environment traversal.</p>
+
+            <p>Practical evidence illustrates both the utility and the limitations of OpenAPI as a tool description baseline. Automated conversion of OpenAPI specifications to MCP tool definitions has been reported to succeed without manual intervention in the majority of cases, while a significant proportion require correcting specification errors before reliable invocation is possible. Separately, bidirectional conversion between OpenAPI specifications and WoT Thing Descriptions has been demonstrated, showing that the two formats are partially compatible but that richer affordance concepts such as event subscriptions and action lifecycle are not representable in OpenAPI without extensions.</p>
+
+            <aside class="issue" title="OpenAPI-to-WoT convergence and information loss in conversion">
+              <p>The existence of bidirectional converters between OpenAPI and WoT Thing Descriptions, and between OpenAPI and MCP tool definitions, demonstrates partial interoperability among description formats. However, conversion is lossy: affordance concepts present in WoT Thing Descriptions, including event subscriptions, action lifecycle operations, and semantic annotations, have no equivalent in OpenAPI and are lost in conversion. A standardized mapping with formal documentation of information loss in each conversion direction would support incremental migration paths from existing OpenAPI and MCP deployments toward richer affordance models. <a href="#profiles">Section 5</a> should also address whether a minimal WoT Thing Description profile compatible with OpenAPI-to-WoT conversion constitutes a viable convergence point for tool profiles.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h4>Universal Tool Calling Protocol (UTCP)</h4>
+
+            <p>The Universal Tool Calling Protocol (UTCP) [[UTCP]] extends OpenAPI 3.1 with agent-focused enhancements targeting multi-protocol tool deployment. A UTCP <i>Tool Manifest</i> lists available tools, their JSON Schema input and output descriptions, and their <i>protocol bindings</i>, which specify how each tool is concretely invoked over the designated transport. Supported bindings include HTTP, CLI, gRPC, GraphQL, and MCP. This binding model is analogous in purpose to WoT Thing Description forms but is scoped to tool-style invocations rather than to the full property, action, and event affordance model.</p>
+
+            <p>UTCP's primary design differentiators relative to MCP are explicit multi-protocol support without a proprietary server requirement, and client-side tool repository management. A UTCP tool may be any existing HTTP API, CLI program, or gRPC service, without the need to deploy a dedicated intermediary. UTCP does not currently define mechanisms equivalent to MCP Resources, Prompts, subscriptions, or server-initiated capabilities, and is narrowly focused on the tool invocation use case. Like MCP, UTCP uses string names as tool identifiers and does not provide semantic annotations.</p>
+          </section>
+
+          <aside class="issue" title="Hypermedia discovery in LLM-centric protocols">
+            <p>The divergence between hypermedia-based discovery, as realized in WoT and hMAS, and flat list-based discovery, as realized in MCP and UTCP, is a fundamental architectural difference with direct implications for <a href="#principle2">Principle 2 (Single Entry Point)</a> and <i>Evolvability</i>. MCP and UTCP require clients to be preconfigured with server locations, replacing runtime discovery with out-of-band configuration. <a href="#discovery">Section 7</a> should analyze this divergence systematically. An open question is whether current LLM-centric protocols could be extended with HATEOAS-compatible discovery incrementally, for example by adding typed link relations to tool listings, without requiring a full protocol redesign.</p>
+          </aside>
+
+          <aside class="issue" title="Tool discovery and selection at scale">
+            <p>As the number of available tools and services grows, agents face compounding discovery and selection challenges that extend beyond architectural discoverability. Token limits constrain the number of tool definitions that can be provided to a language model in a single context; cross-server deduplication and versioning are unresolved; and semantic search over tool descriptions requires shared vocabularies that do not currently exist. These challenges require complementary solutions at the level of registries, indexing strategies, and selection mechanisms, and connect to the broader treatment of tool discovery in <a href="#discovery">Section 7</a>.</p>
+          </aside>
+
+          <aside class="issue" title="Coverage depth heterogeneity among affordance description formats">
+            <p>The four formats surveyed in this section differ substantially in the breadth of the agent-environment interaction stack they address. WoT Thing Descriptions and hMAS Signifiers address affordance description, protocol-agnostic invocation, push-based observability, semantic annotation, and hypermedia navigation within a single integrated model grounded in W3C standards. OpenAPI addresses description and HTTP-based invocation, with no native observability model, no semantic annotation layer, and no hypermedia navigation mechanism. UTCP extends OpenAPI with multi-protocol invocation bindings but does not add observability or semantic capabilities. This heterogeneity raises an open question for the group: should a Web-agent interoperability standard designate a preferred affordance description format, define a minimal common profile across formats, or treat format selection as an implementation choice and focus standardization effort on mappings between formats? The answer has direct implications for the scope and ambition of the recommendations this report will make.</p>
+          </aside>
         </section>
+
+        <section id="agent-tool-protocols" data-dfn-for="Foo">
+          <h3>Agent-Tool Protocols</h3>
+
+          <section>
+            <h4>Model Context Protocol (MCP)</h4>
+
+            <p>The Model Context Protocol (MCP) [[MCP]] is an open standard for connecting LLM-based applications to external environments and has achieved significant adoption since its introduction, with a rapidly growing ecosystem of server implementations. MCP structures the environment into three primitive types: <i>Tools</i>, which are executable functions that agents can invoke; <i>Resources</i>, which are URI-addressed data accessible to agents; and <i>Prompts</i>, which are reusable, server-defined templates. The protocol uses a client-server architecture over JSON-RPC 2.0, with Streamable HTTP as the default transport since the <code>2025-03-26</code> specification revision, and stdio for local processes.</p>
+
+            <p>The core interaction operations are <code>tools/list</code> and <code>tools/call</code> for tool discovery and invocation; <code>resources/list</code> and <code>resources/read</code> for resource enumeration and access; and the optional <code>resources/subscribe</code> and <code>notifications/resources/updated</code> pair for resource change notification, which requires explicit capability negotiation and is not uniformly supported. All tool invocations are synchronous blocking remote procedure calls; no action lifecycle mechanism exists for status querying or cancellation. Two server-initiated capabilities invert the typical client-server flow: <i>Sampling</i> allows a server to request an LLM completion from the client, and <i>Elicitation</i>, introduced in the <code>2025-03-26</code> revision, allows a server to request structured input from the end user at runtime.</p>
+
+            <p>MCP deliberately omits semantic typing, representing tool descriptions as free-text strings processed by the language model rather than as machine-interpretable semantic annotations. This design prioritizes language model compatibility and developer convenience but limits the degree to which tool selection, composition, and verification can be automated without natural language interpretation. Empirical assessments of MCP tool descriptions in production servers have identified widespread quality issues, including ambiguous parameter descriptions, missing examples, and inconsistent naming, which measurably reduce invocation reliability in benchmarked tasks.</p>
+
+            <aside class="issue" title="Tool description quality and validation">
+              <p>Evidence from audits of MCP server deployments and from automated conversion studies indicates that tool descriptions in production systems frequently contain errors and ambiguities that cause invocation failures. Standardized quality assurance mechanisms, including machine-readable conformance profiles for tool descriptions and automated validation tooling, are an open area requiring further investigation. A normative profile for MCP tool descriptions, analogous in intent to the SHACL constraint language for RDF data, is a potential standardization target.</p>
+            </aside>
+
+            <aside class="issue" title="Security model for server-initiated capabilities">
+              <p>MCP's Sampling and Elicitation capabilities, in which a server requests an LLM completion or structured user input from the client, introduce trust and authorization questions that are not addressed by the current MCP specification. When a server initiates such a request, the client must decide whether to comply without a standardized authorization model. <a href="#security-and-privacy">Section 11</a> should address the security model for server-initiated capability invocations in MCP and related protocols.</p>
+            </aside>
+
+            <aside class="issue" title="Observability gap in tool-use protocols">
+              <p>Neither MCP nor UTCP define a standardized, semantically typed push-based observation mechanism equivalent to WoT Event Affordances. MCP's optional resource subscription provides only a URI-level change signal, without payload schema, subscription semantics, or uniform server support. UTCP provides no observability mechanism. This gap prevents agents using these protocols from implementing reactive, event-driven behavior without polling, directly limiting the <i>Situatedness</i> and <i>Scalability</i> design goals. Whether a complementary observability extension for current tool-use protocols is technically feasible and would receive adoption warrants further investigation.</p>
+            </aside>
+          </section>
+        </section>
+
+        <section data-dfn-for="Foo">
+          <h3>Function Calling and Tool Management</h3>
+
+          <section>
+            <h4>LLM Provider Function Calling</h4>
+
+            <p>Major LLM providers have each defined a function calling or tool use API at the model inference level. These specifications determine the format of tool definitions provided to the model, the structure of model-generated invocation requests, and the format of results returned. Because MCP client libraries and most orchestration frameworks implement their tool-use logic over these APIs, understanding provider-level function calling is necessary context for evaluating the tool-use protocol stack as a whole.</p>
+
+            <p>The OpenAI tool use API defines tool definitions consisting of a name, a natural language description, and a JSON Schema for input parameters. The model returns a structured <code>tool_calls</code> array specifying tool name and JSON-encoded arguments; results are injected as messages in the conversation history. The Responses API extends this model with built-in tools for Web search, code execution, and file retrieval, and adds an explicit response-chaining mechanism for stateful multi-turn interactions. The Anthropic tool use API follows a structurally similar pattern, with distinctive support for computer use as a typed built-in tool schema specifying desktop automation actions, and a <code>tool_choice</code> parameter for constraining tool selection. The Google Gemini function calling API introduces native parallel function calling, allowing the model to request multiple tool invocations in a single response turn, alongside built-in code execution and search grounding tools integrated at the model level.</p>
+
+            <p>Despite independent origins, the three providers have converged on a common structural baseline: JSON Schema for input definitions, structured model-generated invocation requests, and conversation-history injection of results. MCP has accelerated this convergence by defining a tool description format that is mechanically compatible with all three provider APIs. However, the convergence remains shallow: output schemas, error handling, streaming of partial results, action lifecycle, and semantic annotations are unstandardized across providers. No provider API includes push-based observation, hypermedia navigation, or semantically typed affordances.</p>
+
+            <aside class="issue" title="Mapping between the provider baseline and richer affordance models">
+              <p>The provider-level function calling baseline represents the practical lowest common denominator for tool-use interoperability. A Web-agent interoperability standard should either define a normative mapping from this baseline to the WoT affordance model, or define a minimal profile of the WoT Thing Description format that is mechanically compatible with provider function calling APIs. Neither currently exists. This standardization gap also bears on the converter and bridge question addressed in Issue 9-9.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h4>Tool Management and Documentation Pipelines</h4>
+
+            <p>In parallel with invocation protocols, a class of tooling addresses the lifecycle concern of how tool descriptions are created, validated, and maintained at scale. Automated pipelines have been developed that convert existing API documentation, including natural language documentation, HTML pages, and OpenAPI specifications, into validated, agent-callable tool definitions, and that test generated descriptions against live endpoints. Such pipelines treat tool description quality as an engineering concern to be managed systematically rather than resolved manually. Protocol-agnostic tool registries provide lifecycle management including registration, versioning, execution tracking, and concurrency control, decoupled from any specific invocation protocol.</p>
+
+            <p>These pipelines and registries are not interoperability standards, but they document engineering practices that a standardization effort should account for. Quality assurance mechanisms, validation schemas, and registry interfaces are natural candidates for standardization if tool-use protocols are to scale in open settings.</p>
+          </section>
+        </section>
+
+        <section id="agent-orchestration-frameworks" data-dfn-for="Foo">
+          <h3>Agent Orchestration Frameworks</h3>
+
+          <aside class="note" title="Frameworks vs. Standards">
+            <p>The initiatives described in this subsection are software frameworks rather than interoperability standards or W3C specifications. They are surveyed here because they represent widely deployed conventions for agent-environment interaction that shape how tool-use protocols are consumed in practice, and because understanding them is necessary context for identifying standardization gaps. Their inclusion does not constitute an endorsement or a recommendation.</p>
+          </aside>
+
+          <aside class="issue" title="Pertinence of framework coverage in this report">
+            <p>The appropriate scope of coverage for non-standard software frameworks in a W3C CG report requires explicit discussion. The inclusion of orchestration frameworks is justified in this section as a means of documenting de facto conventions and identifying gaps that frameworks currently fill by convention rather than by standardized protocol. Whether this rationale extends to other sections of the report where frameworks are referenced, and how to maintain neutrality across commercial products, is an open question that the group should address.</p>
+          </aside>
+
+          <p>LangChain defines a <code>Tool</code> abstraction with name, description, and callable function, bridged to provider-specific function calling via a <code>bind_tools</code> API. LangGraph extends this with a stateful graph execution model for multi-step tool use workflows in which nodes represent agent steps and edges represent conditional transitions, providing a framework-level answer to the tool composition problem discussed in the context of WoT action affordances. LangChain also provides adapters for consuming MCP servers as tool sources and for exposing LangChain tools as MCP servers.</p>
+
+          <p>Microsoft Semantic Kernel structures environment interaction through <i>Plugins</i>, collections of named functions with metadata for language model invocation, which may be defined in code, from OpenAPI specifications, or from MCP server connections. A <i>Planner</i> component supports LLM-driven automatic selection and chaining of plugins. Semantic Kernel is notable for its explicit integration with enterprise identity systems and organizational services, making it the most enterprise-oriented of the surveyed frameworks.</p>
+
+          <p>AutoGen models agents as conversational entities with tools registered via decorator patterns. Its multi-agent conversation model allows agents to delegate tasks to other agents within the same conversational framework, blurring the boundary between agent-to-environment and agent-to-agent interaction. CrewAI similarly provides a delegation mechanism implemented as a tool invocation, allowing one agent to invoke another as if it were a tool. Both frameworks expose MCP servers as tool sources through adapter libraries.</p>
+
+          <aside class="issue" title="Agent delegation as tool invocation">
+            <p>LangGraph, AutoGen, and CrewAI all implement agent delegation as a tool invocation, in which one agent calls another agent through the same protocol channel used for tool use. This pattern also appears in A2A task invocation and MCP Sampling. <a href="#agent-to-agent-interaction">Section 8</a> should analyze whether this convergence justifies a unified affordance model for agent-to-agent and agent-to-tool interaction, and what the implications are for the <i>Embodiment</i> design goal and for the architectural distinction between the agent and environment dimensions.</p>
+          </aside>
+        </section>
+
+        <section id="perception-and-observability" data-dfn-for="Foo">
+          <h3>Perception and Observability Mechanisms</h3>
+
+          <p><a href="#principle3">Principle 3 (Observability)</a> requires that agents be able to selectively monitor resources and receive updates about relevant events using Web standards. The following subsections survey the concrete mechanisms available for realizing the push-based perception channel that the situated agent pattern requires. These mechanisms are the protocol-level instantiation of WoT Event Affordances and Property Monitoring operations, and correspond to the <code>resources/subscribe</code> mechanism in MCP.</p>
+
+          <p>WoT Property Affordances with the <code>observable</code> flag and WoT Event Affordances constitute the semantically richest and most standardized mechanisms: they provide machine-readable payload schemas, typed subscription operations with defined semantics (<code>observeproperty</code>, <code>subscribeevent</code>), protocol-agnostic binding selection, and integration with the WoT security model for authenticated subscriptions. W3C WebSub [[WEBSUB]] defines a publish-subscribe mechanism for Web resources over HTTP in which a subscriber registers interest at a hub and receives updated representations when the publisher posts new content. WebSub is protocol-agnostic at the content level and is supported as a WoT event binding and used in hMAS workspace event propagation. Server-Sent Events [[SSE]] provide a standardized, HTTP-native unidirectional event stream, simple to implement, compatible with HTTP proxies, and with automatic reconnection semantics; they are used as a transport in A2A and as a WoT event binding. WebSocket [[WEBSOCKET]] provides full-duplex, low-latency bidirectional communication over a single TCP connection, supporting richer interaction patterns such as server-initiated actions and streaming of partial results, and is used in WoT Thing Description bindings and in Eclipse LMOS. For IoT and constrained device environments, CoAP Observe [[RFC7641]] enables subscription to resource updates over CoAP, and MQTT [[MQTT]] is a lightweight topic-based publish-subscribe protocol for constrained networks; both are first-class WoT binding targets and represent the primary perception mechanisms for agents deployed in physical environments.</p>
+
+          <aside class="issue" title="Protocol binding heterogeneity and agent capability declaration">
+            <p>Environments may expose affordances over HTTP, WebSocket, CoAP, MQTT, gRPC, or other protocols. WoT Thing Descriptions abstract over this heterogeneity through runtime-selectable protocol bindings. No equivalent negotiation mechanism exists in MCP, UTCP, or provider function calling APIs: agents must implement each transport separately, and there is no standardized means for an agent to declare its supported protocols and automatically receive the appropriate binding. In cross-protocol deployments, this creates integration friction with no standardized resolution. Whether a common capability declaration mechanism for transport protocols should be defined across tool-use standards requires further investigation.</p>
+          </aside>
+        </section>
+
+        <section id="classical-mas-environments" data-dfn-for="Foo">
+          <h3>Classical MAS Environments</h3>
+
+          <section>
+            <h4>CArtAgO and JaCaMo</h4>
+
+            <p>CArtAgO (Common ARTifact infrastructure for AGents Open environments) [[CARTAGO]] provides a programming model for MAS virtual environments structured as collections of <i>Artifacts</i>: shared, stateful objects that agents can perceive and act upon concurrently. Each artifact exposes <i>Observable Properties</i>, named values that agents can read and monitor, with changes automatically generating perception events routed to agents that have joined the artifact's workspace; <i>Operations</i>, named, invocable procedures with typed parameters that may be synchronous or asynchronous; and <i>Signals</i>, typed asynchronous notifications emitted by the artifact. The structural separation of perception and action is architecturally enforced in CArtAgO: agents receive environment events as a continuous stream, independently of their action cycles, conforming exactly to the situated agent pattern from <a href="#architectural-patterns">Section 3.3.2</a>.</p>
+
+            <p>In JaCaMo [[JACAMO20]], Belief-Desire-Intention agents interact with CArtAgO artifacts natively, and organizational structures can constrain which operations are available to agents in specific roles, a direct precursor to hMAS Signifiers. CArtAgO predates WoT Thing Descriptions by nearly a decade and establishes the conceptual baseline that the hMAS ontology formalizes. CArtAgO is not Web-native: artifact identifiers are not IRIs, and interaction is mediated through a Java API. The Yggdrasil server (discussed in the preceding subsection on hMAS) provides a Web-native implementation of the CArtAgO model in which artifacts are Web resources described by WoT Thing Descriptions.</p>
+
+            <aside class="issue" title="Historical annex for classical MAS environments">
+              <p>A comparative analysis of the CArtAgO and JaCaMo programming model and its relationship to WoT Thing Descriptions, hMAS Signifiers, and the Hypermedia MAS architecture would benefit from dedicated treatment in a separate annex. This section covers the key concepts relevant to the interoperability discussion; a full historical and technical treatment is deferred. The same consideration applies to the Semantic Web Services research program (OWL-S, WSMO, SAWSDL), which developed formal models for machine-readable Web service affordances in the early 2000s and constitutes direct prior art to the WoT affordance model, including the IOPE (Inputs, Outputs, Preconditions, Effects) process model in OWL-S.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h4>FIPA Agent Actions and Service Invocation</h4>
+
+            <p>The FIPA standardization work [[FIPAARCH]] does not define an explicit environment interaction model separate from agent communication. In FIPA-based systems such as JADE, environment interaction is modeled as service invocation: agents discover services through the FIPA Directory Facilitator and invoke them by sending ACL request messages to the agents or service wrappers that provide them. This design conflates the agent-to-agent and agent-to-environment interaction channels, which is a recognized architectural limitation relative to the four-dimension model from <a href="#conceptual-dimensions">Section 3.2</a>. There is no FIPA concept equivalent to the observable property, the action affordance lifecycle, or the event subscription; the environment in FIPA-based systems is effectively transparent, accessible to agents only through message returns with no independent perception channel.</p>
+          </section>
+        </section>
+      </section>
+
+      <section data-dfn-for="Foo" id="agent-environment-comparison">
+        <h3>Comparison</h3>
+
+        <aside class="issue" title="Completeness and accuracy of comparison table">
+          <p>The following comparison table is a first draft and has not yet received community review. It is intended to start the discussion and is bound to be incomplete and inaccurate in places. Feedback from implementers and standards editors is particularly invited on the columns for Async Action Support, Cancellation and Status, and Observability.</p>
+        </aside>
+
+        <table class="index">
+          <tr>
+            <td></td>
+            <th>Perception Model</th>
+            <th>Action Model</th>
+            <th>Async Action Support</th>
+            <th>Cancellation / Status</th>
+            <th>Observability (Push)</th>
+            <th>Protocol Bindings</th>
+            <th>Semantic Typing</th>
+            <th>Hypermedia Navigation</th>
+          </tr>
+          <tr>
+            <td>W3C WoT Thing Description</td>
+            <td>Property Affordances (read, observe)</td>
+            <td>Action Affordances (invoke)</td>
+            <td>Yes</td>
+            <td>Yes (queryaction, cancelaction)</td>
+            <td>Event Affordances (SSE, WebSocket, MQTT, CoAP Observe, WebSub)</td>
+            <td>HTTP, CoAP, MQTT, WebSocket, and others via binding templates</td>
+            <td>Yes (JSON-LD with external vocabularies)</td>
+            <td>Yes (forms, links)</td>
+          </tr>
+          <tr>
+            <td>hMAS Signifiers</td>
+            <td>Observable Properties (via WoT)</td>
+            <td>Signifiers + WoT Action Affordances</td>
+            <td>Yes (via WoT)</td>
+            <td>Yes (via WoT)</td>
+            <td>WoT Events + WebSub</td>
+            <td>HTTP (REST), WebSub</td>
+            <td>Yes (RDF, hMAS and WoT ontologies)</td>
+            <td>Yes (HATEOAS, workspace traversal)</td>
+          </tr>
+          <tr>
+            <td>OpenAPI</td>
+            <td>Via response bodies</td>
+            <td>HTTP operations</td>
+            <td>Partial (202 Accepted pattern)</td>
+            <td>No (convention only)</td>
+            <td>Webhooks (extension)</td>
+            <td>HTTP only</td>
+            <td>Weak (optional extensions)</td>
+            <td>Partial (links object)</td>
+          </tr>
+          <tr>
+            <td>UTCP</td>
+            <td>None</td>
+            <td>Tool calls (multi-protocol)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>HTTP, gRPC, CLI, GraphQL, MCP</td>
+            <td>No (JSON Schema)</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>MCP</td>
+            <td>Resources (pull only)</td>
+            <td>Tool calls (synchronous RPC)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Optional: URI-only change signal</td>
+            <td>Streamable HTTP, stdio</td>
+            <td>No (free text + JSON Schema)</td>
+            <td>No (flat tools/list)</td>
+          </tr>
+          <tr>
+            <td>Eclipse LMOS (tool descriptions)</td>
+            <td>WoT Property Affordances</td>
+            <td>WoT Action Affordances</td>
+            <td>Yes</td>
+            <td>Yes (via WoT)</td>
+            <td>WoT Event Affordances</td>
+            <td>HTTP, WebSocket</td>
+            <td>Yes (WoT JSON-LD)</td>
+            <td>Partial (WoT Discovery)</td>
+          </tr>
+          <tr>
+            <td>LLM Provider Function Calling (OpenAI, Anthropic, Gemini)</td>
+            <td>Via action returns</td>
+            <td>Tool invocations + built-in tools</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>HTTP (provider API)</td>
+            <td>No (JSON Schema)</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>LangChain / LangGraph</td>
+            <td>Via action returns</td>
+            <td>Tool invocations (provider-bridged)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Provider-dependent</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Microsoft Semantic Kernel</td>
+            <td>Via action returns</td>
+            <td>Plugin functions</td>
+            <td>Partial (Planner)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Provider-dependent</td>
+            <td>Partial (OpenAPI descriptions)</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>CArtAgO / JaCaMo</td>
+            <td>Observable properties (independent channel)</td>
+            <td>Operations (sync and async)</td>
+            <td>Yes</td>
+            <td>Partial</td>
+            <td>Signals (in-process event stream); Yggdrasil: WoT Events</td>
+            <td>Non-Web (Java API); Yggdrasil: HTTP</td>
+            <td>Partial (domain ontologies); Yggdrasil: WoT JSON-LD</td>
+            <td>Yggdrasil: Yes</td>
+          </tr>
+          <tr>
+            <td>FIPA / JADE</td>
+            <td>Via ACL message returns</td>
+            <td>Service requests (ACL messages)</td>
+            <td>Partial (FIPA Interaction Protocols)</td>
+            <td>Partial (FIPA Interaction Protocols)</td>
+            <td>None</td>
+            <td>Non-Web (IIOP, HTTP wrappers)</td>
+            <td>Partial (FIPA SL ontologies)</td>
+            <td>No</td>
+          </tr>
+        </table>
       </section>
 
       <section data-dfn-for="Foo">
         <h3>Discussion</h3>
 
-        <aside class="issue">
-          <p>Identify commonalities among the different initiatives and pontential gaps</a>.</p>
+        <p>The initiatives surveyed in this section span a wide spectrum of design choices. At one end, WoT Thing Descriptions and hMAS Signifiers provide semantically typed, hypermedia-navigable affordance models with full support for push-based perception and action lifecycle management, grounded in W3C standards. At the other end, MCP, UTCP, and provider function calling APIs provide simple, developer-convenient tool invocation schemas optimized for LLM-based agents in closed settings, without semantic typing, hypermedia navigation, or independent perception channels. CArtAgO and JaCaMo demonstrate that the architectural requirements of the situated agent pattern can be met in a programmatic MAS environment, while Yggdrasil shows that the same model is realizable on the Web using WoT Thing Descriptions. A clear pattern emerges from the comparison: as systems move toward openness, the relevance of alignment with Web standards for affordance description, resource identification, and hypermedia navigation increases.</p>
+
+        <p>Several open questions cut across multiple initiatives and require further investigation by the group.</p>
+
+        <aside class="issue" title="Tool composition and effect modeling">
+          <p>No standardized model exists for describing how tool invocations can be composed or sequenced, that is, how the output of one affordance feeds the input of another, or how the execution of a tool changes the set of available affordances. The OWL-S Process Model and CArtAgO operational semantics address this at the framework level; LangGraph and Semantic Kernel address it at the orchestration level; but no protocol-level mechanism for cross-framework interoperability exists. This gap connects to tool discovery (how agents learn what tools are available after a state change), to normative constraints (which sequences of actions are permissible), and to action lifecycle (how the completion of one action enables or disables others).</p>
+        </aside>
+
+        <aside class="issue" title="Session and context continuity across tool invocations">
+          <p>MCP is stateless at the tool level; provider APIs maintain context through conversation history injection. No standard model exists for maintaining interaction context, such as session state, workflow position, or transaction boundaries, across multiple tool invocations in a multi-session or multi-agent scenario. This gap becomes particularly significant when an agent delegates an ongoing task to another agent and the receiving agent must resume interaction with the same set of tools at the appropriate state. This connects to the treatment of agent delegation in <a href="#agent-to-agent-interaction">Section 8</a>.</p>
+        </aside>
+
+        <aside class="issue" title="Scope of environment in this section">
+          <p>The current coverage of this section focuses primarily on tool and service interaction. The question of whether Section 9 should also address agent interaction with physical environments (sensors and actuators via CoAP and MQTT beyond the brief treatment above), with knowledge representation systems (databases, knowledge graphs, SPARQL endpoints), and with user interface elements (Web pages, forms, browser automation) requires discussion. Each of these modalities raises distinct interoperability considerations and may warrant dedicated subsections or annexes.</p>
         </aside>
       </section>
     </section>
@@ -1083,4 +2175,37 @@
       </p>
     </section> -->
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Add example button selection logic
+      for (const button of document.querySelectorAll(".ds-selector-tabs .selectors button")) {
+        button.onclick = () => {
+          const ex = button.closest(".ds-selector-tabs");
+          ex.querySelector("button.selected").classList.remove("selected");
+          ex.querySelector(".selected").classList.remove("selected");
+          button.classList.add('selected');
+          ex.querySelector("." + button.dataset.selects).classList.add("selected");
+        }
+      }
+
+      // Toggle show/hide changes
+      for (const elem of document.querySelectorAll(".show-changes")) {
+        elem.onclick = () => {
+          if (elem.classList.contains("selected")) {
+            // Remove highlight class from elements having "changed" class
+            elem.classList.remove("selected");
+            for (const changed of document.querySelectorAll(".changed")) {
+              changed.classList.remove("highlight");
+            }
+          } else {
+            // Add highlight class to elements having "changed" class
+            elem.classList.add("selected");
+            for (const changed of document.querySelectorAll(".changed")) {
+              changed.classList.add("highlight");
+            }
+          }
+        }
+      }
+    });
+  </script>
 </html>
