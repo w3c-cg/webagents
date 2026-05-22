@@ -1692,6 +1692,11 @@
               Service (AMS) that is the authority for the creation of FIPA Agent Identifiers and is also an implementation of the Agent
               Directory Service.
             </p>
+            <aside class="issue">
+              <p>
+                Do we need some sections that have common descriptions of approaches that appear repeatedly through the report?
+              </p>
+            </aside>
             <h3>KQML?</h3>
             <p>
             </p>
@@ -1705,6 +1710,39 @@
             </aside>
             <h3>Model Context Protocol</h3>
             <p>
+              <a href="https://modelcontextprotocol.io/">MCP</a> is a standard for making tools accessible to agents that
+              is based on <a href="https://www.jsonrpc.org/specification">JSON-RPC 2.0</a> with pre-defined methods for tool
+              discovery and tool use. At its most basic MCP assumes some other mechanism is provided to discover MCP Servers and then
+              supports tool discovery via the <code>tools/list</code> method. The response is a list of tool descriptions and this 
+              approach is analogous to the direct discovery mechanisms described earlier in this section.
+            </p>
+            <p>
+              Building on the MCP protocol, discussions on tool discovery have extended to the development of frameworks that 
+              support the discovery of MCP tool servers. A number of approaches to delivering this have emerged, including:
+
+              <ul>
+                <li>
+                  <b>mcp.json</b>: This approach uses the <code>mcp.json</code> file to provide a list of valid MCP Servers that
+                  can be used by the agent.  Often,this file is make publicly available as a Well Known URL:
+
+                  <pre>/.well‑known/mcp.json</pre>
+                </li>
+                <li>
+                  <b>MCP Registry</b>: This is the official approach advocated for discovery of MCP Servers. It is based 
+                  on the <a href="https://swagger.io/specification/">Open API</a>, exposing a the available servers via a 
+                  <code>server.json</code> file format that has been defined as part of the
+                  <a href="https://modelcontextprotocol.io/registry/about">MCP Registry</a> specification. An 
+                  <a href="https://registry.modelcontextprotocol.io/">Official MCP Registry</a> is available as a reference
+                  implementation.
+                </li>
+                <li>
+                  <b>SDK‑style clients</b>: This approach basically provides an aggregation framework for MCP Servers providing
+                  a mechanism to allow tools from multiple servers to be aggregated into a single meta-toolset. Examples of this
+                  type of approach tend to be language specific, for example: <a href="https://mastra.ai/">Mastra</a> is an SDK
+                  for TypeScript while <a href="https://composio.dev/">Composio</a> has been developed for both TypeScript and 
+                  Python.
+                </li>
+              </ul>
             </p>
             <h3>Universal Tool Calling Protocol (uTCP)</h3>
             <p>
