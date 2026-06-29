@@ -43,3 +43,4 @@ Below is a list of topics that can be part of TPAC. We will move them to the ses
 Topic ideas:
 
 - "What is the role of the Web in Agentic Web"
+- Environment Design/Engineering, Representing the Environment, Symbolic AI, "Prompt Engineering to Context Engineering"
