@@ -25,7 +25,7 @@ Below is a list of topics that can be part of TPAC. We will move them to the ses
       - https://arxiv.org/abs/2602.11964
       - One more reference coming
     - Where the Agentic Systems are moving towards Manageable Affordances, how WoT can help.
-- "Agentic AI and the WoT”
+- "Web Environments for Agentic AI”
   - Insight into Interoperability Report and mention of WoT
   - Relating existing approaches to it (if they don't already adopt it)
   - Pitching some plugfest scenarios for hands-on tests (WoT WG is doing a plugfest at the same time)
@@ -37,6 +37,21 @@ Below is a list of topics that can be part of TPAC. We will move them to the ses
     - What are the properties of a protocol needed to support agentic systems
 
 ## Monday Session
+
+9-12:30
+
+We will have two 1.5h slots with a 30 min. coffee break in between.
+
+* Introduction of the CG
+* Looking into the details of Agentic Web
+    * Bring people back up to speed on what is underneath the different approaches today
+    * Summary Table: https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html#state-of-web-based-multi-agent-systems
+* Web as a Platform for Agents: Architectural Design Ideas (from Interop Report)
+* Coffee Break
+* Interaction Protocols
+  * Overall goal: Motivate towards hypermedia and the potential conceptual shift to use Web more than a transport
+  * Excerpt of Amit's Presentation
+  * Manageable Affordances: Could also be part of the WoT WG slots on Thursday and Friday. Topic 1 from above.
 
 ## Breakout Session
 
