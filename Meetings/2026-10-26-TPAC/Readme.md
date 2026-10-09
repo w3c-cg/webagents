@@ -5,6 +5,58 @@
 - Location: Clayton Hotel Burlington Road, Dublin, Ireland and online
 - Online link: https://www.w3.org/events/meetings/d5d8738b-a68b-41fa-81e0-87170a8de54b/
 
+## Monday Session (Oct. 26, 09:00–12:30 Dublin time)
+
+Two 90-minute slots with a 30-minute coffee break in between.
+
+### 09:00–10:30 — Meeting slot 1
+
+- 5 min: Introduction to the WebAgents CG
+- 25 min: Placing the Web into the Agentic Web (based on the WebAgents Interop Report)
+  - Overview of what underlies the different approaches today, and to what extent the Web is used ([Summary Table](https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html#state-of-web-based-multi-agent-systems))
+  - The Web as a Platform for Agents: architectural design ideas from the Interop Report
+- 60 min: Web of Things / Manageable Affordances / Link back to the Agentic Web
+  - 20 min: Overview of manageable affordances and initiatives based on W3C WoT recommendations
+  - 40 min: Open discussion
+
+### 10:30–11:00 — Coffee break
+
+### 11:00–12:30 — Meeting slot 2
+
+- 10 min: Interaction Protocols: motivation for hypermedia and the potential conceptual shift towards using the Web as more than a transport layer
+- 20 min: AI Agent Protocol CG: Progress on Protocol, Whitepaper, Use Cases and Demo (Song Xu & Gaowei Chang)
+- 20 min: Interaction-Oriented Standards for Multiagentic AI (Amit Chopra)
+- 40 min: Open discussion
+
+#### Session details
+
+**Title**
+
+AI Agent Protocol CG: Progress on Protocol, Whitepaper, Use Cases and Demo
+
+**Abstract**
+
+We present the latest achievements from the AI Agent Protocol CG in the last six months, covering protocol design, whitepaper, practical use cases and live demo. Integration of Decentralized Identifiers (DID) and verifiable credentials into the protocol stack, which delivers a native trust layer. We discuss how APCG’s agent protocol design works align with and support WebAgents CG to advance the agentic Web.
+
+**Speakers**
+
+- Song Xu — APCG Co-chair; Director, China Mobile
+- Gaowei Chang — APCG Co-chair; Founder, ANP Open-source Community
+
+---
+
+**Title**
+
+Interaction-Oriented Standards for Multiagentic AI
+
+**Abtract**
+
+TBA
+
+**Speakers**
+
+- Amit K. Chopra — Lancaster University
+
 ## Meeting Topics
 
 Below is a list of topics that can be part of TPAC. We will move them to the sessions if they are confirmed.
