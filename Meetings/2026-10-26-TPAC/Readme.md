@@ -5,28 +5,34 @@
 - Location: Clayton Hotel Burlington Road, Dublin, Ireland and online
 - Online link: https://www.w3.org/events/meetings/d5d8738b-a68b-41fa-81e0-87170a8de54b/
 
-## Monday Session (Oct. 26, 09:00–12:30 Dublin time)
+## The Web as a Platform for Agents (Oct. 26, 09:00–12:30 Dublin time)
 
 Two 90-minute slots with a 30-minute coffee break in between.
 
 ### 09:00–10:30 — Meeting slot 1
 
-- 5 min: Introduction to the WebAgents CG
-- 25 min: Placing the Web into the Agentic Web (based on the WebAgents Interop Report)
+- 5 min: Introduction to the WebAgents CG (Ege Korkan)
+- 25 min: Placing the Web into the Agentic Web (Rem Collier)
   - Overview of what underlies the different approaches today, and to what extent the Web is used ([Summary Table](https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html#state-of-web-based-multi-agent-systems))
-  - The Web as a Platform for Agents: architectural design ideas from the Interop Report
-- 60 min: Web of Things / Manageable Affordances / Link back to the Agentic Web
-  - 20 min: Overview of manageable affordances and initiatives based on W3C WoT recommendations
-  - 40 min: Open discussion
+  - The Web as a Platform for Agents: Architectural design ideas from the Interop Report
+    - Core tenet: hypermedia environments as a design space to support openness for agents on the Web
+- 20 min: Web of Things (WoT) WG/CG: The WoT and the Agentic Web (Ege Korkan)
+  - Initiatives related to Agentic AI based on W3C WoT recommendations
+  - Outlook: Manageable affordances for AI Agents
+- 40 min: Open discussion
+
+#### Session details
+
+Open discussion target: Agent-Environment interaction, tool discovery and use.
 
 ### 10:30–11:00 — Coffee break
 
 ### 11:00–12:30 — Meeting slot 2
 
-- 10 min: Interaction Protocols: motivation for hypermedia and the potential conceptual shift towards using the Web as more than a transport layer
+- 10 min: Interaction Protocols: motivation for hypermedia and the potential conceptual shift towards using the Web as more than a transport layer (Andrei Ciortea)
 - 20 min: AI Agent Protocol CG: Progress on Protocol, Whitepaper, Use Cases and Demo (Song Xu & Gaowei Chang)
 - 20 min: Interaction-Oriented Standards for Multiagentic AI (Amit Chopra)
-- 40 min: Open discussion
+- 40 min: Open discussion (Moderator: Rem Collier)
 
 #### Session details
 
@@ -57,7 +63,11 @@ TBA
 
 - Amit K. Chopra — Lancaster University
 
-## Meeting Topics
+---
+
+Open discussion target: Agent-to-Agent interaction on the Web and a roadmap for an Interaction Task Force.
+
+## Scratchpad for Meeting Topics
 
 Below is a list of topics that can be part of TPAC. We will move them to the sessions if they are confirmed.
 
@@ -87,23 +97,6 @@ Below is a list of topics that can be part of TPAC. We will move them to the ses
     - Informative Deliverable
     - https://w3c.github.io/wot/charters/wot-wg-2025-draft.html
     - What are the properties of a protocol needed to support agentic systems
-
-## Monday Session
-
-9-12:30
-
-We will have two 1.5h slots with a 30 min. coffee break in between.
-
-* Introduction of the CG
-* Looking into the details of Agentic Web
-    * Bring people back up to speed on what is underneath the different approaches today
-    * Summary Table: https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html#state-of-web-based-multi-agent-systems
-* Web as a Platform for Agents: Architectural Design Ideas (from Interop Report)
-* Coffee Break
-* Interaction Protocols
-  * Overall goal: Motivate towards hypermedia and the potential conceptual shift to use Web more than a transport
-  * Excerpt of Amit's Presentation
-  * Manageable Affordances: Could also be part of the WoT WG slots on Thursday and Friday. Topic 1 from above.
 
 ## Breakout Session
 
