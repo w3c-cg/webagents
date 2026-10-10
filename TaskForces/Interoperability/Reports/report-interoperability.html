@@ -816,7 +816,7 @@
 
           <!-- <p class="def"><strong>Principle 2 (Single entry point)</strong>: Given a single entry URL into a Hypermedia MAS, agents should be able to discover the rest of the system and the means to participate in it by following hyperlinks.</p> -->
 
-          <p class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
+          <p id="principle2" class="def"><strong>Principle 2 (Single entry point)</strong>: A Hypermedia MAS should expose one or more entry URLs from which the rest of the system and the means to participate in it can be discovered through hyperlinks.</p>
 
           <p>The core idea is to maximize the usage of hypermedia in order to minimize coupling within the MAS, which promotes <i>Discoverability</i> and <i>Evolvability</i> — allowing agents to join and navigate the system dynamically with minimal prior configuration. This principle draws directly on the <i>Hypermedia As The Engine of Application State (HATEOAS)</i> constraint in REST [[FIELDING00]].</p>
 
@@ -1100,7 +1100,7 @@
       </section>
     </section>
 
-    <section>
+    <section id="profiles">
       <h2>Profiles</h2>
     
       <p> Profiles are information resources (i.e., documents) that describe non-information resources in a Web-based MAS, such as agents and tools.</p>
@@ -1563,17 +1563,191 @@
     </section>
     <section>
       <h2>Discovery</h2>
-
+      <p>
+        The role of discovery is to enable Web agents to find other agents, tools or resources in order to support 
+        <a href="#principle2">Principle 2 (Single entry point)</a> which states that a Hypermedia MAS should expose one or more 
+        <a href="https://datatracker.ietf.org/doc/html/rfc3986">Uniform Resource Identifiers [RFC83985]</a> from which the rest 
+        of the system can be discovered through hyperlinks. Discovery may occur through ad-hoc exploration of the Hypermedia
+        Space by link following or through the provision of dedicated <b>discovery mechanisms</b> that allow an agent to learn 
+        what agents, tools or resources exist and what they do.
+      </p>
+      <p>
+        Discovery services typically combine: a registry; a registration mechanism and some form of lookup/query mechanism. The 
+        registry will normally hold information about the agents, tools or resources; including as a minimum some form of
+        <a href="#identification">identifier</a>. Typically, the registry will also hold or link to meta-data about the agent, tool or 
+        resource such as the type of information typically held in a <a href="#profiles">profile</a>.
+      </p>
+      <p>
+        The registry can be either centralised or decentralised. Centralised registries maintain a global list of agents, tools 
+        or resources while decentralised registries consist of multiple lists of local agents, tools or resources. These lists 
+        may be partitioned into discrete sublists or overlapping and are typically based on some notion of locality, such as 
+        network segment, geographical location, or organisational affiliation. Centralised registries may be standalone, replicated
+        or federated, often using some form of internal synchronisation mechanism to maintain consistency.
+      </p>
+      <p>
+        Examples of Discovery methods include: direct methods such as hard-coded URLs, link following or 
+        <a href="https://datatracker.ietf.org/doc/html/rfc8615">Well-Known Uniform Resource Identifiers [RFC8615]</a>;
+        centralised reposities such as the <a href="https://www.w3.org/TR/wot-discovery/#exploration-server">WoT Thing Description 
+        Server</a> or the <a href="https://web.archive.org/web/20250321030044/http://www.fipa.org/">FIPA White and Yellow Pages
+        Services</a>; and decentralised methods such as <a href="https://datatracker.ietf.org/doc/html/rfc6763"></a>DNS-based
+        Service Discovery [RFC6763]</a>.
+      </p>
+      <aside class="note">
+        <p>A relevant W3C specification is the <A href="https://www.w3.org/TR/wot-discovery">Web of Things (WoT) Discovery</A> 
+          recommendation. This document presents a number of broad concepts and approaches that are relevent to Web Agents. It 
+          includes and extensive discussion of the discovery process, identifying two phases for Discovery: Introduction and 
+          Exploration. Introduction is the discovery of a URL that describes an Agent/Tool. Exploration is the consumption of 
+          the resource associated with that URL which may be an identity or profile. In the context of this report, Exploration 
+          is closely linked to the notions of <a href="#identification">Identity</a> and <a href="#profiles">Profile</a>.
+        </p>
+      </aside>
       <section data-dfn-for="Foo">
         <h3>Relevant Standards and Initiatives</h3>
-
+        A number of standards and initiatives exist that address Web Agent or Tool discovery. The following sections focus on agents and tools.
         <section data-dfn-for="Foo">
           <h3>Agent Discovery</h3>
-      
+            <h3>Agent 2 Agent (A2A) Protocol</h3>
+            <p>
+              A2A is an Agentic interaction protocol that supports discovery through the use of <b>Agent Card</b> profiles. According
+              to the <a href="https://a2a-protocol.org/latest/topics/agent-discovery/#discovery-strategies">A2A Specification</a> it
+              supports 3 kinds of discovery mechanism: 
+
+              <ul>
+                <li>
+                  <b>Direct Configuration</b>: This mechanism uses hard-coded URLs to relevant agent cards to support discovery of
+                  other agents. At its extreme, it recommends the direct encoding of agent card information into each agent.
+                </li>
+                <li>
+                  <b>Well Known URLs</b>: This mechanism supports the use the following URL pattern to retrieve the agent card of
+                   a single agent:
+
+                  <pre>https://{agent-server-domain}/.well-known/agent-card.json</pre>
+
+                  This approach pre-supposes that the {agent-server-domain} has somehow been discovered.
+                  
+                  Note that the use of <code>agent-card.json</code> is new; previous versions of the A2A specification used
+                  <code>agent.json</code>.
+                </li>
+                <li>
+                  <b>Curated Registries</b>: This mechanism uses a central registry to store agent cards and provides a lookup
+                  mechanism to allow agents to discover agent cards listed in this registry. Few active implementations of this
+                  mechanism exist. One exception is the <a href="https://a2aregistry.org/">A2A Registry</a>, a live curated registry
+                  that provides support for real-time discovery of published agents. A seconds exception is the similarly named
+                  <a href="https://www.a2a-registry.org/">A2A-Registry</a> which offers a Web API to register agents and provides
+                  a meta agent that can be used to discover other agents.
+                </li>
+              </ul>
+            </p>
+            <h3>Agent Network Protocol (ANP)</h3>
+            <p>
+              <a href="https://agent-network-protocol.com/">ANP</a> is an alternative Agentic interaction protocol 
+              whose core documents are described using <a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a>. Support
+              for discovery is described in the draft
+              <a href="https://agentnetworkprotocol.com/en/specs/08-anp-agent-discovery-protocol-specification/">Agent
+              Discovery Service Protocol (ADSP)</a> specification. This protocol supports two discovery mechansims that
+              both utilize <a href="https://agent-network-protocol.com/specs/agent-description.html">ANP Agent Description</a>
+              documents:
+
+              <ul>
+                <li>
+                  <b>Active Discovery</b>: This mechanism uses <a href="https://datatracker.ietf.org/doc/html/rfc8615">Well
+                  Known URLs</a> to support discovery. In contrast with A2A, the following URL returns a list of registered
+                  agents:
+
+                  <pre>https://{domain}/.well-known/agent-descriptions</pre>
+
+                  What is returned is a JSON-LD document containing a list containing the names of the known agents and the
+                  URL of their associated agent description.
+                </li>
+                <li>
+                  <b>Passive Discovery</b>: This mechanism is used to allow agents to submit their agent descriptions to
+                  other agents, typically search service agents that then use the
+                  <a href="https://agent-network-protocol.com/specs/agent-description.html">ANP Agent Description Protocol 
+                    Specification</a> to discover the registering agents capabilities.
+                </li>
+              </ul>
+
+            </p>
+            <h3>LMOS</h3>
+            <p>
+              <a href="https://eclipse.dev/lmos/">LMOS</a> is an open source platform for enterprise ready multi-agent systems
+              that is inspired by the <a href="https://www.w3.org/WoT/">Web of Things (WoT)</a> standards. In
+              <a href="https://eclipse.dev/lmos/">LMOS</a> agent descriptions are extended
+              <a href="https://w3c.github.io/wot-thing-description/">WoT Thing Descriptions</a>.  Given it is built on
+              <a href="https://www.w3.org/WoT/">Web of Things (WoT)</a> principles, <a href="https://eclipse.dev/lmos/">LMOS</a>
+              naturally supports all forms of Discovery described in the <A href="https://www.w3.org/TR/wot-discovery">Web of
+              Things (WoT) Discovery</A> specification. This includes direct mechanisms, the use of centralised registries,
+              local network discovery and P2P networks.
+            </p>
+            <h3>Foundation for Intelligent Physical Agents (FIPA)</h3>
+            <p>
+              The section on <a href="#identification">Identification</a> includes a brief introduction to the
+              <a href="https://web.archive.org/web/20250321030044/http://www.fipa.org/repository/index.html">FIPA Standards</a>. The 
+              topic of  agent discovery is mentioned in two of the standards: the <a href="https://web.archive.org/web/20250814070600/http://www.fipa.org/specs/fipa00001/SC00001L.html">FIPA Abstract Architecture Specification (FIPA00001)</a>
+              and the <a href="https://web.archive.org/web/20230528171843/http://fipa.org/specs/fipa00023/SC00023K.html">FIPA Agent Management Specification (FIPA00023)</a>.
+              The first of these standards defines an abstract architecture for agent platforms (the runtime infrastructure on which
+              agents are deployed) based on: agents and services. Services are intended to provide the infrastructure supports necessary 
+              to deploy agents. This includes the Agent Directory Service, a support service that agents can register with and which 
+              they can use to find other agents they wish to interact with. The second standard introduces the mandatory Agent Management
+              Service (AMS) that is the authority for the creation of FIPA Agent Identifiers and is also an implementation of the Agent
+              Directory Service.
+            </p>
+            <aside class="issue">
+              <p>
+                Do we need some sections that have common descriptions of approaches that appear repeatedly through the report?
+              </p>
+            </aside>
+            <h3>KQML?</h3>
+            <p>
+            </p>
         </section>
         <section data-dfn-for="Foo">
           <h3>Tool Discovery</h3>
-        
+            <aside class="issue">
+              <p>
+                Should FIPA Yellow Pages be included here (are services the same as tools?)
+              </p>
+            </aside>
+            <h3>Model Context Protocol</h3>
+            <p>
+              <a href="https://modelcontextprotocol.io/">MCP</a> is a standard for making tools accessible to agents that
+              is based on <a href="https://www.jsonrpc.org/specification">JSON-RPC 2.0</a> with pre-defined methods for tool
+              discovery and tool use. At its most basic MCP assumes some other mechanism is provided to discover MCP Servers and then
+              supports tool discovery via the <code>tools/list</code> method. The response is a list of tool descriptions and this 
+              approach is analogous to the direct discovery mechanisms described earlier in this section.
+            </p>
+            <p>
+              Building on the MCP protocol, discussions on tool discovery have extended to the development of frameworks that 
+              support the discovery of MCP tool servers. A number of approaches to delivering this have emerged, including:
+
+              <ul>
+                <li>
+                  <b>mcp.json</b>: This approach uses the <code>mcp.json</code> file to provide a list of valid MCP Servers that
+                  can be used by the agent.  Often,this file is make publicly available as a Well Known URL:
+
+                  <pre>/.well‑known/mcp.json</pre>
+                </li>
+                <li>
+                  <b>MCP Registry</b>: This is the official approach advocated for discovery of MCP Servers. It is based 
+                  on the <a href="https://swagger.io/specification/">Open API</a>, exposing a the available servers via a 
+                  <code>server.json</code> file format that has been defined as part of the
+                  <a href="https://modelcontextprotocol.io/registry/about">MCP Registry</a> specification. An 
+                  <a href="https://registry.modelcontextprotocol.io/">Official MCP Registry</a> is available as a reference
+                  implementation.
+                </li>
+                <li>
+                  <b>SDK‑style clients</b>: This approach basically provides an aggregation framework for MCP Servers providing
+                  a mechanism to allow tools from multiple servers to be aggregated into a single meta-toolset. Examples of this
+                  type of approach tend to be language specific, for example: <a href="https://mastra.ai/">Mastra</a> is an SDK
+                  for TypeScript while <a href="https://composio.dev/">Composio</a> has been developed for both TypeScript and 
+                  Python.
+                </li>
+              </ul>
+            </p>
+            <h3>Universal Tool Calling Protocol (uTCP)</h3>
+            <p>
+              <a href="https://www.utcp.io/">uTCP</a> is an alternativer protocol for interacting with tools.
+            </p>        
         </section>
       </section>
       <section data-dfn-for="Foo">
