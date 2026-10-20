@@ -57,11 +57,60 @@ Interaction-Oriented Standards for Multiagentic AI
 
 **Abtract**
 
-TBA
+Agentic AI has led to a resurgence of interest in multiagent
+interaction protocols. Several multiagent protocol specification and
+standardization efforts are currently underway. Some, as exemplified
+by A2A, address infrastructure for multiagent systems. Others,
+exemplified by the Universal Commerce Protocol (UCP), address domains
+involving autonomous principals.  Although guided by the right
+motivations, protocols in these efforts suffer from several
+limitations.
+
+1. They are informally specified, which hinders verification and
+correct implementation.
+2. They are inflexible, which means they can't exploit the flexible
+reasoning of LLMs.
+3. They suffer from an inadequate conception of multiagent interaction.
+
+My purpose in this talk is to surface foundational requirements for
+multiagent interaction protocols.  To do this, I will draw upon
+Interaction-Oriented Programming (IOP), a formal, declarative approach
+that enables specifying flexible protocols, verifying them, and
+implementing compliant agents.  Unlike traditional approaches, IOP is
+motivated by interaction semantics, broadly, the idea that
+interactions change the normative state of the world.  Thus, IOP can
+provide a suitable basis for flexible and safe reasoning about actions
+by LLM agents.
+
+IOP is backed by running code and its languages (e.g., BSPL, Langshaw,
+and Cupid) are amenable to standardization. In other words, an
+IOP-based standard would be a metastandard that stakeholders in
+various domains could apply to formalize interactions in their
+specific domains.
+
 
 **Speakers**
 
 - Amit K. Chopra — Lancaster University
+
+Amit Chopra is a Senior Lecturer at Lancaster University in the UK. He
+holds a PhD in Computer Science (2008) from North Carolina State
+University.
+
+Amit is a co-founder of Interaction-Oriented Programming, an approach
+that enables the development of decentralized multiagent systems and
+that combines insights from software engineering, systems, and AI.
+His research has been published in AI conferences such as AAMAS,
+IJCAI, and AAAI and journals as AIJ, JAIR, and JAAMAS. Software
+implementations of his work are available at https://gitlab.com/masr
+
+Amit serves on the Board of Directors of the International Foundation
+for Autonomous Agents and Multiagent Systems (IFAAMAS); on the
+Steering Committee of the Engineering Multiagent Systems Workshop; and
+on the Editorial Board of JAIR.  He also co-leads the W3C WebAgents
+CG's newly-constituted task force on multiagent interactions.  Amit
+has given several tutorials and invited talks.  His research has been
+funded by the UKRI and the EU.
 
 ---
 
