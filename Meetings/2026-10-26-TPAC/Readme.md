@@ -29,7 +29,7 @@ Open discussion target: Agent-Environment interaction, tool discovery and use.
 
 ### 11:00–12:30 — Meeting slot 2
 
-- 10 min: Interaction Protocols: motivation for hypermedia and the potential conceptual shift towards using the Web as more than a transport layer (Andrei Ciortea)
+- 10 min: Interaction Protocols: motivation for hypermedia and the potential conceptual shift towards using the Web as more than a transport layer (Rem Collier)
 - 20 min: AI Agent Protocol CG: Progress on Protocol, Whitepaper, Use Cases and Demo (Song Xu & Gaowei Chang)
 - 20 min: Interaction-Oriented Standards for Multiagentic AI (Amit Chopra)
 - 40 min: Open discussion (Moderator: Rem Collier)
