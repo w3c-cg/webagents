@@ -18,3 +18,4 @@ Find our events at <https://www.w3.org/groups/cg/webagents/calendar/>.
 
 - [Interoperability Report](https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html)
 - [Manageable Affordances Report](https://w3c-cg.github.io/webagents/TaskForces/ManageableAffordance/Reports/report-ma-gap-analysis.html)
+- [Requirements for Interaction Protocols Report](https://w3c-cg.github.io/webagents/TaskForces/Interaction/Reports/interaction-requirements.html)
